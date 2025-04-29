@@ -1,0 +1,51 @@
+.button {
+  cursor: pointer;
+  padding: 8px 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  background: var(--Base-White);
+  border: 1px solid var(--Primitive-200);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+.button.active {
+  border-color: var(--Blue-500);
+}
+
+.button:hover {
+  transform: none;
+}
+
+.line {
+  height: 3px;
+  background-color: var(--Blue-500);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  width: 16px; /* Default width for top and bottom lines */
+}
+
+/* Make middle line smaller */
+.middle {
+  width: 12px; /* Smaller width for the middle line */
+}
+
+/* Animation when open (X shape) */
+
+/* Top line moves to form the X (rotate and translate) */
+.topOpen {
+  transform: translateY(7px) rotate(45deg);
+}
+
+/* Middle line fades out */
+.middleOpen {
+  opacity: 0; /* Hide the middle line */
+}
+
+/* Bottom line moves to form the X (rotate and translate) */
+.bottomOpen {
+  transform: translateY(-7px) rotate(-45deg);
+}

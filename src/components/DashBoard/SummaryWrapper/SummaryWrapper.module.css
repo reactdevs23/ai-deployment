@@ -1,0 +1,8 @@
+.spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0 12px;
+}

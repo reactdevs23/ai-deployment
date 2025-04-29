@@ -1,0 +1,119 @@
+.wrapper.mainWrapper {
+  border-top: 1px solid var(--Blue-100);
+  border-bottom: 1px solid var(--Blue-100);
+  gap: 40px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.header,
+.mainHeader {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.steps {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  gap: 12px;
+}
+.step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 80px;
+  border-top: 1px solid var(--Blue-100);
+  border-bottom: 1px solid var(--Blue-100);
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 1px solid var(--Blue-100);
+  border-right: 1px solid var(--Blue-100);
+  padding: 48px;
+}
+.title {
+  margin-bottom: 4px;
+}
+.points {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.point::marker {
+  color: var(--Primitive-600);
+}
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.imgContainer {
+  padding: 48px 64px 0 64px;
+  background-color: var(--Primitive-50);
+  border-right: 1px solid var(--Blue-100);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1199px) {
+  .header,
+  .mainHeader {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .step {
+    padding: 0 48px;
+  }
+  .infoContainer {
+    padding: 32px;
+  }
+  .imgContainer {
+    padding: 32px 48px 0 32px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .mainHeader.header {
+    padding: 0 48px;
+  }
+  .step {
+    padding: 0;
+    grid-template-columns: 1fr;
+  }
+  .infoContainer {
+    padding: 48px;
+  }
+  .imgContainer {
+    padding: 48px 64px 0 48px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mainHeader.header {
+    padding: 0 32px;
+  }
+  .infoContainer {
+    padding: 32px;
+  }
+  .imgContainer {
+    padding: 32px 48px 0 32px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .mainHeader.header {
+    padding: 0 16px;
+  }
+  .infoContainer {
+    padding: 24px 16px;
+  }
+  .imgContainer {
+    padding: 16px;
+    padding-bottom: 0;
+  }
+  .notes,
+  .infoContainer {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,14 @@
+.wrapper {
+  padding: 24px 0;
+  max-width: 640px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    padding: 8px 0;
+  }
+}

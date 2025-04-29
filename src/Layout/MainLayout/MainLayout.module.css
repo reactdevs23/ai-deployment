@@ -1,0 +1,4 @@
+.wrapper {
+  padding-top: var(--navHeight);
+  min-height: 100vh;
+}

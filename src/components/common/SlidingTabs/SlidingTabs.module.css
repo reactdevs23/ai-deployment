@@ -1,0 +1,71 @@
+.tabContainer {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  overflow: hidden;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  overflow: hidden;
+}
+
+.tabContainer::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.tabs {
+  display: flex;
+  gap: 6px;
+  width: max-content;
+  margin: 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 !important;
+}
+
+.tab {
+  color: var(--Primitive-600);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.86%;
+  border-radius: 6px;
+  border: 1px solid var(--Primitive-200);
+  border-bottom: 2px solid var(--Primitive-200);
+
+  padding: 4px 12px;
+  background: var(--Base-White);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  transform: translate(0);
+}
+.tab:active {
+  transform: translate(0);
+}
+
+.activeTab {
+  color: var(--Blue-500);
+  border: 1px solid var(--Blue-500);
+  border-bottom: 2px solid var(--blue-500, #3981f8);
+  font-weight: 500;
+  background: var(--Blue-50);
+}
+@media only screen and (max-width: 991px) {
+  .tabContainer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .tabContainer {
+    width: 110%;
+    transform: translateX(-16px);
+  }
+  .tabs {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}

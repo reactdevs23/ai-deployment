@@ -1,0 +1,91 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 10px;
+  background: var(--Base-White);
+  box-shadow: 0px 1px 2px 0px rgba(3, 7, 18, 0.06),
+    0px 1px 1px 0px rgba(3, 7, 18, 0.04);
+  flex: 1;
+  height: 100%;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  border-radius: 10px 10px 0 0;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.run {
+  margin-top: auto;
+}
+@media only screen and (max-width: 520px) {
+  .infoContainer {
+    padding: 12px;
+  }
+}
+/* .nextButton,
+.previousButton {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transform: translateY(calc(-100% - 50px));
+  position: absolute;
+  top: 0px;
+
+  z-index: 10;
+
+  color: var(--Primitive-Default);
+  font-size: 32px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+}
+.previousButton {
+  right: 0px;
+}
+.previousButton:hover,
+.nextButton:hover {
+  transform: translateY(calc(-100% - 50px));
+}
+.nextButton {
+  right: 50px;
+}
+
+.activeButton {
+  color: var(--Primitive-Default);
+  opacity: 1;
+} */
+/* @media only screen and (max-width: 767px) {
+
+   .nextButton,
+  .previousButton {
+    transform: translateY(calc(-100% - 30px));
+  }
+  .previousButton:hover,
+  .nextButton:hover {
+    transform: translateY(calc(-100% - 30px));
+  }
+  .nextButton {
+    right: 42px;
+  } 
+}
+@media only screen and (max-width: 520px) {
+  .nextButton,
+  .previousButton {
+    font-size: 24px;
+  }
+  .nextButton {
+    right: 30px;
+  }
+} */

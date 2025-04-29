@@ -1,0 +1,99 @@
+.button {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 16px;
+  background: var(--Blue-500);
+  color: var(--Base-White);
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 6px;
+  border: none;
+  border-bottom: 2px solid var(--Blue-600);
+}
+.button:disabled {
+  cursor: not-allowed;
+}
+.semiBold {
+  font-weight: 600;
+}
+
+.radius {
+  border-radius: 24px;
+}
+.sm {
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 142.86%;
+}
+.xsm {
+  padding: 6px 12px;
+  font-size: 15px;
+  line-height: 133.33%;
+}
+.lxs {
+  font-size: 13px;
+  line-height: 123.077%;
+}
+.lsm {
+  padding: 8px 12px;
+  font-size: 15px;
+  line-height: 160%;
+}
+.lg {
+  font-size: 18px;
+  padding: 12px 20px;
+}
+.primitive800 {
+  background: var(--Primitive-800);
+  color: var(--Primitive-400);
+}
+/* .btnPrimary {
+  border-bottom: 2px solid var(--Blue-600);
+} */
+
+.transparent {
+  padding: 6.5px 12px;
+  background: transparent;
+  color: var(--Blue-500);
+  border: 1px solid var(--Primitive-200);
+  border-bottom-width: 2px;
+}
+.arrowButton {
+  border: none;
+  padding: 0;
+  color: var(--Blue-500);
+  background: transparent;
+  gap: 6px;
+}
+.primitiveTransparent8 {
+  background: var(--Primitive-Transparent-8);
+  color: var(--Primitive-Default);
+}
+.wFull {
+  width: 100%;
+}
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  margin-right: 5px; /* Add some space between the spinner and the text */
+}
+.loading {
+  gap: 8px;
+  opacity: 0.6;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

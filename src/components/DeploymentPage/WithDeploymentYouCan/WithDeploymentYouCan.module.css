@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.container,
+.mainContainer {
+  border: none;
+  gap: 6px;
+}
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media only screen and (max-width: 640px) {
+  .items {
+    grid-template-columns: 1fr;
+  }
+}

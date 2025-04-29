@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  padding: 80px 64px;
+  border-left: 1px solid var(--Blue-100);
+  border-right: 1px solid var(--Blue-100);
+  position: relative;
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  background: var(--Blue-100);
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -1px);
+}
+@media only screen and (max-width: 1199px) {
+  .wrapper {
+    padding: 64px 48px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    padding: 48px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    padding: 48px 32px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    padding: 48px 16px;
+  }
+}

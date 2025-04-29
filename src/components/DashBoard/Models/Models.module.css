@@ -1,0 +1,79 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+.models {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* .item.singleModel {
+  max-width: 204px;
+} */
+.domainAndVersion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.domain {
+  display: block; /* or inline-block */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: var(--Primitive-100);
+  max-width: 168px;
+  width: 100%;
+
+  white-space: nowrap;
+}
+
+.version {
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: var(--Primitive-100);
+  width: max-content;
+}
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 5px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.status {
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.status.live {
+  color: var(--Green);
+  background: rgba(51, 191, 119, 0.1);
+}
+.status.offline {
+  color: var(--Error);
+  background: rgba(235, 69, 33, 0.1);
+}
+
+/* .mySlider :global(.slick-list) {
+  max-width: 636px;
+}
+.mySlider :global(.slick-track) {
+  gap: 8px;
+} */
+@media only screen and (max-width: 1340px) {
+  .domain {
+    max-width: 160px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .domain {
+    max-width: 165px;
+  }
+}
