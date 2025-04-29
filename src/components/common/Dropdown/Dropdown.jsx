@@ -14,6 +14,7 @@ const Dropdown = ({
   onSelect,
   setIsActive,
   label,
+  type2,
 }) => {
   const ref = useRef();
 
@@ -25,7 +26,7 @@ const Dropdown = ({
         onClick={() => setIsActive((prev) => !prev)}
       >
         <Text sm primitive700 medium className={classes.label}>
-          {label}
+          {!type2 && label} {type2 && selectedValue}
         </Text>
         {isActive ? (
           <FaAngleUp className={clsx(classes.arrow, classes.active)} />
@@ -37,18 +38,20 @@ const Dropdown = ({
         <div className={clsx(classes.list, "overflow")}>
           {dropdownItems?.map((item, idx) => {
             return (
-              <button key={idx} className={classes.listItemContainer}>
+              <button
+                key={idx}
+                className={classes.listItemContainer}
+                onClick={() => {
+                  setIsActive(false);
+                  onSelect(item);
+                }}
+              >
                 <Text
                   className={clsx(
                     classes.listItem,
                     item === selectedValue && classes.active
                   )}
                   sm
-                  key={"id-" + idx}
-                  onClick={() => {
-                    setIsActive(false);
-                    onSelect(item);
-                  }}
                 >
                   {item}
                 </Text>

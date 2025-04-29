@@ -1,3 +1,8 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 .dropdown {
   position: relative;
 }
@@ -99,13 +104,4 @@
 }
 .listItemContainer:hover {
   transform: none;
-}
-
-.above {
-  bottom: 100%;
-  top: auto;
-}
-.dropdownMain.above {
-  bottom: 100%;
-  top: auto;
 }

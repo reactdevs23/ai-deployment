@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { ActionDropdown } from "@/components/common";
 import { HiDotsVertical } from "react-icons/hi";
-
 import clsx from "clsx";
 import classes from "./Table.module.css";
 
@@ -20,7 +19,7 @@ const SingleRow = ({ row, parentRef }) => {
   return (
     <tr className={classes.row}>
       {row.cells.map((cell, j) => {
-        // Check if this is the action column
+        // Action column rendering
         if (cell.column.id === "actions") {
           return (
             <td key={j} className={classes.cell}>
@@ -50,9 +49,18 @@ const SingleRow = ({ row, parentRef }) => {
           );
         }
 
+        // Regular cell rendering with fallback
+        const renderedContent = cell.render("Cell");
+        const safeContent =
+          renderedContent === undefined ||
+          renderedContent === null ||
+          renderedContent === ""
+            ? "-"
+            : renderedContent;
+
         return (
           <td key={j} className={classes.cell}>
-            {cell.render("Cell")}
+            {safeContent}
           </td>
         );
       })}

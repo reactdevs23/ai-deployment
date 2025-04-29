@@ -1,9 +1,53 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  width: 100%;
+  gap: 16px;
 }
-
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.searchInput {
+  max-width: 220px;
+}
+.dropdownContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.filterBy {
+  white-space: nowrap;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.modelWrapper {
+  border-radius: 8px;
+  background: var(--Base-White);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.singleModel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 8px 8px 0px 0px;
+  border-top: 1px solid var(--Blue-100);
+  border-right: 1px solid var(--Blue-100);
+  border-left: 1px solid var(--Blue-100);
+  background: var(--Base-White);
+  padding: 16px;
+  flex-grow: 1;
+}
 .domainAndVersion {
   display: flex;
   flex-direction: column;
@@ -18,7 +62,7 @@
   border-radius: 3px;
   background: var(--Primitive-100);
   max-width: 168px;
-  width: 100%;
+  width: max-content;
 
   white-space: nowrap;
 }
@@ -29,6 +73,11 @@
   background: var(--Primitive-100);
   width: max-content;
 }
+.hardwareContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 .spaceBetween {
   display: flex;
   justify-content: space-between;
@@ -38,18 +87,46 @@
   width: 100%;
 }
 .status {
-  padding: 2px 4px;
+  padding: 2px 8px;
   border-radius: 4px;
+  width: max-content;
 }
-.status.live {
+.status.active {
   color: var(--Green);
   background: rgba(51, 191, 119, 0.1);
 }
-.status.offline {
+.status.failed {
   color: var(--Error);
-  background: rgba(235, 69, 33, 0.1);
+  background: var(--Error-10);
 }
-
+.status.idle {
+  color: var(--Warning);
+  background: var(--Warning-10);
+}
+.status.scaling {
+  color: var(--Purple);
+  background: var(--Purple-10);
+}
+.manageButton {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-radius: 0px 0px 8px 8px;
+  border-right: 1px solid var(--Blue-100);
+  border-bottom: 1px solid var(--Blue-100);
+  border-left: 1px solid var(--Blue-100);
+  background: var(--Blue-50);
+  border: none;
+  transition: 0.5s;
+}
+.modelWrapper:hover .manageButton {
+  border-color: transparent;
+  background: var(--Blue-500);
+  color: var(--Base-White);
+  transform: none;
+}
+.modelWrapper:hover .singleModel {
+  border-color: var(--Blue-300);
+}
 @media only screen and (max-width: 1340px) {
   .domain {
     max-width: 160px;
@@ -58,5 +135,28 @@
 @media only screen and (max-width: 1280px) {
   .domain {
     max-width: 165px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    gap: 12px;
+  }
+  .filterBy {
+    display: none;
   }
 }

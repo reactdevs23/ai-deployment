@@ -15,6 +15,8 @@ import ProtectedRoute from "@/components/common/ProtectedRoute/ProtectedRoute"; 
 
 import ModelsPage from "./pages/ModelsPage/ModelsPage";
 import DeploymentPage from "./pages/DeploymentPage/DeploymentPage";
+import DeploymentsListPage from "./pages/DeploymentsListPage/DeploymentsListPage";
+import CreateDeploymentPage from "./pages/CreateDeploymentPage/CreateDeploymentPage";
 
 function App() {
   // Example Authentication State
@@ -36,6 +38,11 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="models" element={<ModelsPage />} />
             <Route path="deployments" element={<DeploymentPage />} />
+            <Route path="/deployments-list" element={<DeploymentsListPage />} />
+            <Route
+              path="/create-deployment"
+              element={<CreateDeploymentPage />}
+            />
           </Route>
         </Route>
       </Route>

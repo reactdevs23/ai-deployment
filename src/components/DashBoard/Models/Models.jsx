@@ -52,49 +52,52 @@ const Models = () => {
             100: { slidesPerView: 1.3 },
           }}
         >
-          {models.map((el, i) => (
-            <SwiperSlide key={i}>
-              <Wrapper className={clsx(classes.item, classes.singleModel)}>
-                <Heading base medium primitive800>
-                  {el.name}
-                </Heading>
-                <div className={classes.domainAndVersion}>
-                  <Text className={classes.domain} xs primitive700>
-                    {el.domain}
-                  </Text>
-                  <Text className={classes.version} xs primitive700>
-                    {el.version}
-                  </Text>
-                </div>
-                <div className={classes.spaceBetween}>
-                  <Text lxs primitive700>
-                    Status
-                  </Text>
-                  <Text
-                    className={clsx(
-                      classes.status,
-                      el.status.toLowerCase() === "live" && classes.live,
-                      el.status.toLowerCase() === "offline" && classes.offline
-                    )}
-                    lxs
-                    medium
-                  >
-                    {el.status.toLowerCase() === "live" && "✅"}
-                    {el.status.toLowerCase() === "offline" && "🛑"}
-                    {el.status}
-                  </Text>
-                </div>
-                <div className={classes.spaceBetween}>
-                  <Text lxs primitive700>
-                    Last Updated
-                  </Text>
-                  <Text sm primitive700 medium>
-                    {el.lastUpdated}
-                  </Text>
-                </div>
-              </Wrapper>
-            </SwiperSlide>
-          ))}
+          {models.map((el, i) => {
+            const status = el?.status?.toLowerCase() ?? "";
+            return (
+              <SwiperSlide key={i}>
+                <Wrapper className={clsx(classes.item, classes.singleModel)}>
+                  <Heading base medium primitive800>
+                    {el?.name || "-"}
+                  </Heading>
+                  <div className={classes.domainAndVersion}>
+                    <Text className={classes.domain} xs primitive700>
+                      {el?.domain || "-"}
+                    </Text>
+                    <Text className={classes.version} xs primitive700>
+                      {el?.version || "-"}
+                    </Text>
+                  </div>
+                  <div className={classes.spaceBetween}>
+                    <Text lxs primitive700>
+                      Status
+                    </Text>
+                    <Text
+                      className={clsx(
+                        classes.status,
+                        status.toLowerCase() === "live" && classes.live,
+                        status.toLowerCase() === "offline" && classes.offline
+                      )}
+                      lxs
+                      medium
+                    >
+                      {status.toLowerCase() === "live" && "✅"}
+                      {status.toLowerCase() === "offline" && "🛑"}
+                      {el?.status || "-"}
+                    </Text>
+                  </div>
+                  <div className={classes.spaceBetween}>
+                    <Text lxs primitive700>
+                      Last Updated
+                    </Text>
+                    <Text sm primitive700 medium>
+                      {el?.lastUpdated || "-"}
+                    </Text>
+                  </div>
+                </Wrapper>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
       <Button sm arrowButton>

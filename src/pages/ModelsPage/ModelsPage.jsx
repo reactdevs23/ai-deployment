@@ -211,13 +211,13 @@ const ModelsPage = () => {
   const [searchValue, setSearchValue] = useState("");
 
   const [selectedType, setSelectedType] = useState("All");
-  const [isTypesActive, setIsTypesActive] = useState(false);
+  const [showTypeDropdown, setShowTypeDropdown] = useState(false);
 
   const [selectedFramework, setSelectedFramework] = useState("All");
-  const [isFrameworkActive, setIsFrameworkActive] = useState(false);
+  const [showFrameworDropdown, setShowFrameworkDropdown] = useState(false);
 
   const [selectedStatus, setSelectedStatus] = useState("All");
-  const [isStatusActive, setIsStatusActive] = useState(false);
+  const [showStatusDropdown, setShowStatusDropdown] = useState(false);
 
   // Filtering logic
   const filteredData = data.filter((item) => {
@@ -261,8 +261,8 @@ const ModelsPage = () => {
           <Dropdown
             label="Type"
             dropdownItems={allTypes}
-            isActive={isTypesActive}
-            setIsActive={setIsTypesActive}
+            isActive={showTypeDropdown}
+            setIsActive={setShowTypeDropdown}
             selectedValue={selectedType}
             onSelect={(val) => setSelectedType(val)}
           />
@@ -271,16 +271,16 @@ const ModelsPage = () => {
             dropdownItems={allFrameworks}
             selectedValue={selectedFramework}
             onSelect={setSelectedFramework}
-            isActive={isFrameworkActive}
-            setIsActive={setIsFrameworkActive}
+            isActive={showFrameworDropdown}
+            setIsActive={setShowFrameworkDropdown}
           />
           <Dropdown
             label="Status"
             dropdownItems={allStatuses}
             selectedValue={selectedStatus}
             onSelect={setSelectedStatus}
-            isActive={isStatusActive}
-            setIsActive={setIsStatusActive}
+            isActive={showStatusDropdown}
+            setIsActive={setShowStatusDropdown}
           />
         </div>
       </div>

@@ -84,7 +84,6 @@ const data = [
 const columns = [
   {
     id: "timeCell",
-
     Header: () => (
       <Text xs primitive600 className={classes.timeHeader}>
         Time
@@ -93,7 +92,7 @@ const columns = [
     accessor: "time",
     Cell: ({ value }) => (
       <Text lxs primitive600 className={classes.time}>
-        {value}
+        {value || "-"}
       </Text>
     ),
   },
@@ -105,11 +104,15 @@ const columns = [
       </Text>
     ),
     accessor: "event",
-
     Cell: ({ value }) => (
       <Text lxs primitive600 className={classes.event}>
-        <span> {value.description}</span>
-        <span className={classes.emphasizedText}> {value.emphasizedText}</span>
+        <span>{value?.description || "-"}</span>
+        {value?.emphasizedText && (
+          <span className={classes.emphasizedText}>
+            {" "}
+            {value.emphasizedText}
+          </span>
+        )}
       </Text>
     ),
   },
@@ -123,7 +126,7 @@ const columns = [
     accessor: "model",
     Cell: ({ value }) => (
       <Text lxs primitive600 medium className={classes.model}>
-        {value}
+        {value || "-"}
       </Text>
     ),
   },

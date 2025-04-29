@@ -7,6 +7,7 @@ const Text = ({
   xs,
   lxs,
   sm,
+  lsm,
   base,
 
   md,
@@ -74,6 +75,7 @@ const Text = ({
         xs && classes.xs,
         lxs && classes.lxs,
         sm && classes.sm,
+        lsm && classes.lsm,
         md && classes.md,
         base && classes.base,
         lg && classes.lg,

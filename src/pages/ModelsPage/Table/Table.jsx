@@ -18,7 +18,7 @@ const ModelsTable = ({ data }) => {
             primitive600
             className={clsx(classes.item, classes.model, classes.firstItem)}
           >
-            {value}
+            {value || "-"}
           </Text>
         ),
       },
@@ -27,7 +27,7 @@ const ModelsTable = ({ data }) => {
         accessor: "type",
         Cell: ({ value }) => (
           <Text lxs primitive600 className={clsx(classes.item, classes.type)}>
-            {value}
+            {value || "-"}
           </Text>
         ),
       },
@@ -40,7 +40,7 @@ const ModelsTable = ({ data }) => {
             primitive600
             className={clsx(classes.item, classes.frameWork)}
           >
-            {value}
+            {value || "-"}
           </Text>
         ),
       },
@@ -53,7 +53,7 @@ const ModelsTable = ({ data }) => {
             primitive600
             className={clsx(classes.item, classes.version)}
           >
-            {value}
+            {value || "-"}
           </Text>
         ),
       },
@@ -66,7 +66,7 @@ const ModelsTable = ({ data }) => {
             primitive600
             className={clsx(classes.item, classes.lastUpdate)}
           >
-            {value}
+            {value || "-"}
           </Text>
         ),
       },

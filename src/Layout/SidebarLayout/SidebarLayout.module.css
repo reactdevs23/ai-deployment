@@ -3,7 +3,7 @@
   grid-template-columns: 200px 1fr;
   position: relative;
   overflow-x: hidden;
-  height: calc(100vh - var(--navHeight));
+  min-height: calc(100vh - var(--navHeight));
 }
 .container {
   border-left: 1px solid var(--Blue-100);

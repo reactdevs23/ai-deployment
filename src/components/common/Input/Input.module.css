@@ -23,6 +23,9 @@
   border-bottom: 1px solid var(--Primitive-200);
   background: var(--Primitive-50);
 }
+.lsm {
+  padding: 8px 14px;
+}
 .focused {
   border: 1px solid var(--Blue-500);
 }
@@ -54,7 +57,7 @@
   color: var(--Primitive-400);
 }
 .input {
-  color: var(--Primitive-600);
+  color: var(--Primitive-900);
   background: transparent;
   font-size: 14px;
   font-style: normal;
@@ -66,6 +69,10 @@
   outline: none;
   height: 100%;
   resize: none;
+}
+.lsm .input {
+  font-size: 15px;
+  line-height: 160px;
 }
 .input::placeholder {
   color: var(--Primitive-400);

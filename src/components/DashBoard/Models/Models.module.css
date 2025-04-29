@@ -54,11 +54,11 @@
 }
 .status.live {
   color: var(--Green);
-  background: rgba(51, 191, 119, 0.1);
+  background: var(--Green-10);
 }
 .status.offline {
   color: var(--Error);
-  background: rgba(235, 69, 33, 0.1);
+  background: var(--Error-10);
 }
 
 /* .mySlider :global(.slick-list) {

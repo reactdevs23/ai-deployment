@@ -54,6 +54,11 @@
   background: var(--Primitive-800);
   color: var(--Primitive-400);
 }
+.blue50 {
+  border: 1px solid var(--Blue-10);
+  background: var(--Blue-50);
+  color: var(--Blue-500);
+}
 /* .btnPrimary {
   border-bottom: 2px solid var(--Blue-600);
 } */
