@@ -1,0 +1,53 @@
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 32px;
+  border-bottom: 1px solid var(--Blue-100);
+  background: var(--Base-White);
+  height: calc(var(--navHeight));
+  margin: 0 auto;
+  width: 100%;
+}
+
+.headingContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 14px;
+}
+.showSidebarButton {
+  display: none;
+}
+.sidebarIcon {
+  max-width: 17px;
+  width: 100%;
+}
+.viewCodeButton {
+  gap: 6px;
+}
+.settingsButton {
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  padding: 0;
+}
+.settingsIcon {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .settingsButton {
+    display: flex;
+  }
+  .header {
+    grid-template-columns: 1fr auto auto;
+    height: calc(var(--navHeight) + 40px);
+    padding: 8px 16px;
+  }
+  .dropdown {
+    order: 4;
+    grid-column: 1/-1;
+  }
+}

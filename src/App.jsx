@@ -21,6 +21,7 @@ import DeploymentDetailsLayout from "./Layout/DeploymentDetailsLayout/Deployment
 import Api from "./pages/DeploymentDetails/Api/Api";
 import SetupLogs from "./pages/DeploymentDetails/SetupLogs/SetupLogs";
 import Settings from "./pages/DeploymentDetails/Settings/Settings";
+import Playground from "./pages/Playground/Playground";
 
 function App() {
   // Example Authentication State
@@ -38,6 +39,7 @@ function App() {
 
         {/* Protected Dashboard Routes */}
         <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
+          <Route path="playground" element={<Playground />} />
           <Route element={<SidebarLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="models" element={<ModelsPage />} />
@@ -48,6 +50,7 @@ function App() {
               element={<CreateDeploymentPage />}
             />{" "}
           </Route>
+
           <Route element={<SidebarLayout noPadding />}>
             <Route
               path="/deployment-details/"

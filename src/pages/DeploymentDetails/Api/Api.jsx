@@ -1,7 +1,7 @@
 import { Header } from "@/components/common";
 import classes from "./Api.module.css";
 import CopyWrapper from "@/components/common/CopyWrapper/CopyWrapper";
-import CodeBlock from "@/components/CodeBlock/CodeBlock";
+import CodeBlock from "./CodeBlock/CodeBlock";
 import { maskToken } from "@/utils/utils";
 
 const Api = () => {
