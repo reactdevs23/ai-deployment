@@ -24,6 +24,9 @@
   background: var(--Blue-50);
 }
 @media only screen and (max-width: 991px) {
+  .navs {
+    border-top: 1px solid var(--Blue-100);
+  }
 }
 @media only screen and (max-width: 520px) {
   .navs {

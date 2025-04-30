@@ -25,7 +25,12 @@ const StartDeploying = () => {
           </Button>
         </div>
       </div>
-      <Button lsm wFull className={classes.deploymentButton} onClick={() => {}}>
+      <Button
+        lsm
+        wFull
+        className={classes.deploymentButton}
+        to="/create-deployment"
+      >
         Create a Deployment
       </Button>
     </section>

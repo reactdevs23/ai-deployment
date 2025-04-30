@@ -92,7 +92,7 @@ const CreateDeploymentForm = () => {
         selectedValue={selectedVersion}
         setSelectedValue={setSelectedVersion}
         onSelect={(val) => setSelectedVersion(val)}
-      />{" "}
+      />
       <HardwareDropdown
         label="Hardware"
         placholder="Select hardware"

@@ -53,6 +53,10 @@
 .xs {
   font-size: 12px;
 }
+.lxs {
+  font-size: 13px;
+  line-height: 123.07%;
+}
 .sm {
   font-size: 14px;
   line-height: 142.86%;

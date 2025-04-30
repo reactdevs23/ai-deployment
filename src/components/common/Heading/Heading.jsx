@@ -3,6 +3,7 @@ import classes from "./Heading.module.css";
 import clsx from "clsx";
 const Heading = ({
   children,
+  lxs,
   xs,
   md,
   sm,
@@ -62,6 +63,7 @@ const Heading = ({
         primitive950 && classes.primitive950,
         textPrimitive && classes.textPrimitive,
         textWhite && classes.textWhite,
+        lxs && classes.lxs,
         xs && classes.xs,
         lsm && classes.lsm,
         sm && classes.sm,

@@ -20,6 +20,7 @@ import CreateDeploymentPage from "./pages/CreateDeploymentPage/CreateDeploymentP
 import DeploymentDetailsLayout from "./Layout/DeploymentDetailsLayout/DeploymentDetailsLayout";
 import Api from "./pages/DeploymentDetails/Api/Api";
 import SetupLogs from "./pages/DeploymentDetails/SetupLogs/SetupLogs";
+import Settings from "./pages/DeploymentDetails/Settings/Settings";
 
 function App() {
   // Example Authentication State
@@ -28,7 +29,7 @@ function App() {
   return (
     <Routes>
       {/* Main Layout */}
-      {/* <Route path="/" element={<CodeBlock />} /> */}
+
       <Route path="/" element={<MainLayout />}>
         {/* Landing pages */}
         <Route element={<LandingLayout />}>
@@ -49,11 +50,12 @@ function App() {
           </Route>
           <Route element={<SidebarLayout noPadding />}>
             <Route
-              path="/deployment-details"
+              path="/deployment-details/"
               element={<DeploymentDetailsLayout />}
             >
               <Route path="api" element={<Api />} />
               <Route path="setup-logs" element={<SetupLogs />} />
+              <Route path="settings" element={<Settings />} />
             </Route>
           </Route>
         </Route>

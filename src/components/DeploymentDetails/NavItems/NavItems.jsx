@@ -8,15 +8,15 @@ const navItems = [
   },
   {
     navItem: "Playground",
-    to: "/playground",
+    to: "/deployment-details/playground",
   },
   {
     navItem: "Setup Logs",
-    to: "/setup-logs",
+    to: "/deployment-details/setup-logs",
   },
   {
     navItem: "Settings",
-    to: "/settings",
+    to: "/deployment-details/settings",
   },
 ];
 const NavItems = () => {

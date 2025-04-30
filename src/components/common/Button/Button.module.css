@@ -16,6 +16,10 @@
   border-radius: 6px;
   border: none;
   border-bottom: 2px solid var(--Blue-600);
+  transition: 0.3s;
+}
+.button:hover {
+  transform: translateY(-3px);
 }
 .button:disabled {
   cursor: not-allowed;

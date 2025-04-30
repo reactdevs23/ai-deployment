@@ -128,5 +128,1041 @@ const deploymentData = [
     ],
   },
 ];
+const setupLogs = [
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Error",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Error",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Error",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Error",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Successful",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+  {
+    date: "4 Apr 2025",
+    deploymentId: "#1234567890",
+    status: "Error",
+    completedIn: "24 seconds",
+    logs: [
+      {
+        time: "12:02:01",
+        icon: "🚀",
+        description: " Starting deployment for ",
+        modelName: "sentiment-analyzer",
+      },
+      {
+        time: "12:02:05",
+        icon: "🏗️",
+        description:
+          "️️️ Allocating 1x GPU instance Allocating 1x GPU instance",
+      },
+      {
+        time: "12:02:09",
+        icon: "📦",
+        description: " Pulling model artifact: v1.2.0",
+      },
+      {
+        time: "12:02:13",
+        icon: "🔍",
+        description:
+          "Validating model inputs and outputs Validating model inputs and outputs",
+      },
+      {
+        time: "12:02:25",
+        icon: "✅",
+        description: "Model loaded successfully",
+      },
+      {
+        time: "12:02:37",
+        icon: "🔐",
+        description: "Configuring secure API endpoint...",
+      },
+      {
+        time: "12:02:50",
+        icon: "🟢",
+        description:
+          "Deployment is live at https://api.domain.com/sentiment-analyzer",
+      },
+    ],
+  },
+];
 
-export { generateImages, generateVideos, modlesSharedByCommunity };
+export { generateImages, generateVideos, modlesSharedByCommunity, setupLogs };

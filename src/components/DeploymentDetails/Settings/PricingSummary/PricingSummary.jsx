@@ -1,5 +1,5 @@
 import { Button, Heading, Line, Text } from "@/components/common";
-import classes from "./EstimatedCost.module.css";
+import classes from "./PricingSummary.module.css";
 import clsx from "clsx";
 import { FaArrowRight } from "react-icons/fa";
 import React from "react";
@@ -17,19 +17,10 @@ const data = [
     costPerDay: "$0.00",
   },
 ];
-const EstimatedCost = () => {
+const PricingSummary = () => {
   return (
     <div className={classes.wrapper}>
-      <Text primitive600 sm>
-        <span className={classes.highlight}>
-          Deployments give you full control over how your model runs through a
-          private, fixed API endpoint.
-        </span>{" "}
-        You can manage the model version, choose the hardware it runs on, and
-        define how it scales to match your needs.
-      </Text>
-
-      <div className={clsx(classes.costContainer)}>
+      <div className={clsx(classes.priceContainer)}>
         <Heading blue500 lsm medium>
           Base Cost
         </Heading>
@@ -57,10 +48,10 @@ const EstimatedCost = () => {
           </React.Fragment>
         ))}{" "}
       </div>
-      <Button sm arrowButton>
-        Learn more about pricing <FaArrowRight />
+      <Button lsm wFull className={classes.saveButton}>
+        Save Settings
       </Button>
     </div>
   );
 };
-export default EstimatedCost;
+export default PricingSummary;

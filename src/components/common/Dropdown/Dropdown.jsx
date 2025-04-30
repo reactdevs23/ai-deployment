@@ -15,6 +15,7 @@ const Dropdown = ({
   setIsActive,
   label,
   type2,
+  labelBreak,
 }) => {
   const ref = useRef();
 
@@ -25,8 +26,14 @@ const Dropdown = ({
         className={clsx(classes.labelContainer, isActive && classes.active)}
         onClick={() => setIsActive((prev) => !prev)}
       >
-        <Text sm primitive700 medium className={classes.label}>
-          {!type2 && label} {type2 && selectedValue}
+        <Text
+          sm
+          primitive700
+          medium
+          className={(classes.label, labelBreak && classes.labelBreak)}
+        >
+          {!type2 && label}{" "}
+          {type2 && selectedValue ? selectedValue : label ? label : ""}
         </Text>
         {isActive ? (
           <FaAngleUp className={clsx(classes.arrow, classes.active)} />

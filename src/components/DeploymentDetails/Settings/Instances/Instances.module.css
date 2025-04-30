@@ -1,0 +1,19 @@
+.wrapper,
+.mainWrapper {
+  gap: 12px;
+  width: 100%;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.labelContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 12px;
+  width: 100%;
+}

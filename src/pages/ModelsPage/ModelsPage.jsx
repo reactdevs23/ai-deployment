@@ -230,7 +230,6 @@ const ModelsPage = () => {
     const matchesFramework =
       selectedFramework === "All" || item.framework === selectedFramework;
 
-    // Since there is no `status` field in your data, just skip filtering or implement a fake field if needed
     const matchesStatus = selectedStatus === "All"; // Show all because no data has 'status'
 
     return matchesSearch && matchesType && matchesFramework && matchesStatus;

@@ -45,6 +45,7 @@
 .box {
   border-radius: 8px;
   border: 1px solid var(--Blue-100);
+  border-bottom: none;
   background: var(--Base-white);
   box-shadow: 0px 1px 2px 0px rgba(3, 7, 18, 0.06),
     0px 1px 1px 0px rgba(3, 7, 18, 0.04);
@@ -140,7 +141,7 @@
     top: 0;
     cursor: pointer;
     background: rgba(17, 24, 39, 40%);
-    z-index: 10;
+    z-index: 99;
 
     position: fixed;
     cursor: pointer;

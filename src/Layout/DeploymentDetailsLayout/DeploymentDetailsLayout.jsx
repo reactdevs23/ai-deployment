@@ -40,17 +40,17 @@ const DeploymentDetailsLayout = () => {
           heading="sentiment-analyzer"
           domain="    api.domain.com/sentiment-analyzer"
         />
-        <Line />
+        <Line className={classes.line} />
         <ModelInfo items={modelInfo} />
-        <Line />
+        <Line className={classes.line} />
         <ModelDetails
           heading="HARDWARE"
           title="CPU Based"
           items={hardwareDetails}
         />
-        <Line />
+        <Line className={classes.line} />
         <ModelDetails heading="SCALING" items={scalingDetails} />
-        <Line />
+        <Line className={classes.line} />
         <ModelDetails heading="PERFORMANCE METRICS" items={performanceDetails}>
           <Button arrowButton lxs>
             View Full Metrics <FaArrowRight />

@@ -3,7 +3,7 @@ import classes from "./CheckBox.module.css";
 
 import Text from "../Text/Text";
 
-const Checkbox = ({ className, label, checked, setChecked, ...rest }) => {
+const CheckBox = ({ className, label, checked, setChecked, ...rest }) => {
   return (
     <label className={clsx(className, classes.container)}>
       <Text primitive600 medium className={classes.label}>
@@ -15,7 +15,6 @@ const Checkbox = ({ className, label, checked, setChecked, ...rest }) => {
         checked={checked}
         onChange={() => {
           setChecked((prev) => !prev);
-          localStorage.setItem("agreeToTerms", !checked);
         }}
       />
       <span className={classes.checkmark}></span>
@@ -23,4 +22,4 @@ const Checkbox = ({ className, label, checked, setChecked, ...rest }) => {
   );
 };
 
-export default Checkbox;
+export default CheckBox;
