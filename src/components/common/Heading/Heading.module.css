@@ -77,6 +77,7 @@
   font-size: 20px;
   line-height: 140%;
 }
+
 .xl2 {
   font-size: 24px;
 }
@@ -177,7 +178,8 @@
     font-size: 32px;
   }
 
-  /* .lg {
+  .lg,
+  .xl {
     font-size: 16px;
-  } */
+  }
 }

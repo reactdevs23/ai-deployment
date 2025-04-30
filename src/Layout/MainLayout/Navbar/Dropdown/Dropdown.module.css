@@ -76,7 +76,7 @@
   background: var(--Blue-50);
   color: var(--Blue-500);
 }
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 1199px) {
   .dropdown {
     margin-top: 16px;
     padding-top: 16px;
@@ -90,6 +90,7 @@
     opacity: 1;
     pointer-events: all;
     border: none;
+    box-shadow: none;
   }
   .list {
     max-height: auto;

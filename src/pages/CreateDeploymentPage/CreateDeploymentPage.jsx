@@ -1,6 +1,6 @@
-import EstimatedCost from "@/components/CreateDeploymentPage/EstimatedCost/EstimatedCost";
+import EstimatedCost from "@/components/CreateDeployment/EstimatedCost/EstimatedCost";
 import classes from "./CreateDeploymentPage.module.css";
-import CreateDeploymentForm from "@/components/CreateDeploymentPage/CreateDeploymentForm/CreateDeploymentForm";
+import CreateDeploymentForm from "@/components/CreateDeployment/CreateDeploymentForm/CreateDeploymentForm";
 const CreateDeploymentPage = () => {
   return (
     <section className={classes.wrapper}>

@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0 12px;
+  width: 100%;
+}
+.copyIcon {
+  max-width: 16px;
+  width: 100%;
+}
+.status {
+  padding: 2px 8px;
+  border-radius: 4px;
+  width: max-content;
+}
+.status.active {
+  color: var(--Green);
+  background: rgba(51, 191, 119, 0.1);
+}
+.status.failed {
+  color: var(--Error);
+  background: var(--Error-10);
+}
+.status.idle {
+  color: var(--Warning);
+  background: var(--Warning-10);
+}
+.status.scaling {
+  color: var(--Purple);
+  background: var(--Purple-10);
+}

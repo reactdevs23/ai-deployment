@@ -10,6 +10,7 @@ const Heading = ({
   base,
   lg,
   xl,
+
   xxl,
   xl2,
   xl3,
@@ -67,6 +68,7 @@ const Heading = ({
         md && classes.md,
         base && classes.base,
         lg && classes.lg,
+
         xl && classes.xl,
         xxl && classes.xxl,
         xl2 && classes.xl2,

@@ -1,8 +1,8 @@
 import { Button, Heading, Text } from "@/components/common";
-import classes from "./CreateDeployment.module.css";
+import classes from "./StartDeploying.module.css";
 import { FaArrowRight } from "react-icons/fa";
 
-const CreateDeployment = () => {
+const StartDeploying = () => {
   return (
     <section className={classes.mainWrapper}>
       <div className={classes.wrapper}>
@@ -31,4 +31,4 @@ const CreateDeployment = () => {
     </section>
   );
 };
-export default CreateDeployment;
+export default StartDeploying;

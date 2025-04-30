@@ -78,7 +78,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   : classes.navItem
               }
               onClick={() => {
-                setSidebar((prev) => !prev);
+                setSidebar(false);
               }}
             >
               {({ isActive }) => (

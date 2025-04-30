@@ -1,0 +1,10 @@
+.editButton {
+  font-size: 16px;
+  color: var(--Primitive-400);
+  cursor: pointer;
+}
+
+.copyIcon {
+  max-width: 16px;
+  width: 100%;
+}

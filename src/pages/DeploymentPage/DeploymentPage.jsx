@@ -1,12 +1,12 @@
-import CreateDeployment from "@/components/DeploymentPage/CreateDeployment/CreateDeployment";
+import StartDeploying from "@/components/Deployment/StartDeploying/StartDeploying";
 import classes from "./DeploymentPage.module.css";
-import WhatAreDeployments from "@/components/DeploymentPage/WhatAreDeployments/WhatAreDeployments";
-import WithDeploymentYouCan from "@/components/DeploymentPage/WithDeploymentYouCan/WithDeploymentYouCan";
+import WhatAreDeployments from "@/components/Deployment/WhatAreDeployments/WhatAreDeployments";
+import WithDeploymentYouCan from "@/components/Deployment/WithDeploymentYouCan/WithDeploymentYouCan";
 
 const DeploymentPage = () => {
   return (
     <main className={classes.wrapper}>
-      <CreateDeployment />
+      <StartDeploying />
       <WhatAreDeployments />
       <WithDeploymentYouCan />
     </main>

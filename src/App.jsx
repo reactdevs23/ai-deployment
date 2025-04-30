@@ -17,6 +17,8 @@ import ModelsPage from "./pages/ModelsPage/ModelsPage";
 import DeploymentPage from "./pages/DeploymentPage/DeploymentPage";
 import DeploymentsListPage from "./pages/DeploymentsListPage/DeploymentsListPage";
 import CreateDeploymentPage from "./pages/CreateDeploymentPage/CreateDeploymentPage";
+import DeploymentDetailsLayout from "./Layout/DeploymentDetailsLayout/DeploymentDetailsLayout";
+import Api from "./pages/DeploymentDetails/Api/Api";
 
 function App() {
   // Example Authentication State
@@ -38,11 +40,19 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="models" element={<ModelsPage />} />
             <Route path="deployments" element={<DeploymentPage />} />
-            <Route path="/deployments-list" element={<DeploymentsListPage />} />
+            <Route path="deployments-list" element={<DeploymentsListPage />} />
             <Route
-              path="/create-deployment"
+              path="create-deployment"
               element={<CreateDeploymentPage />}
-            />
+            />{" "}
+          </Route>
+          <Route element={<SidebarLayout noPadding />}>
+            <Route
+              path="/deployment-details/"
+              element={<DeploymentDetailsLayout />}
+            >
+              <Route path="api" element={<Api />} />{" "}
+            </Route>
           </Route>
         </Route>
       </Route>

@@ -11,10 +11,10 @@ const SummaryWrapper = ({ title, items, children }) => {
       {items?.map((item, i) => (
         <div className={classes.spaceBetween} key={i}>
           <Text lxs primitive700>
-            {item.label}
+            {item.label || "-"}
           </Text>
           <Text sm primitive700 medium>
-            {item.value}
+            {item.value || "-"}
           </Text>
         </div>
       ))}

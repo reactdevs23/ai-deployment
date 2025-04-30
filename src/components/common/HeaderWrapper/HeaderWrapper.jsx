@@ -6,7 +6,7 @@ import { memo } from "react";
 const HeaderWrapper = memo(
   ({ children, className, topHeading, heading, info, xl4, xl5, center }) => {
     return (
-      <div
+      <header
         className={clsx(classes.header, className, center && classes.center)}
       >
         {topHeading && (
@@ -31,7 +31,7 @@ const HeaderWrapper = memo(
           </Text>
         )}
         {children}
-      </div>
+      </header>
     );
   }
 );

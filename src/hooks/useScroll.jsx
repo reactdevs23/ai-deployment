@@ -10,9 +10,7 @@ export const useScroll = (threshold = 50) => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isScrolled]);
+  }, [isScrolled, threshold]);
 
   return isScrolled;
 };
-
-export default useScroll;

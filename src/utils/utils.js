@@ -29,3 +29,8 @@ export const copyToClipboard = (value) => {
 export function convertMBtoGB(mb) {
   return `${mb / 1024} GB`;
 }
+export const maskToken = (token) => {
+  if (!token) return "";
+  const visiblePart = token.slice(0, 10); // Show only first 10 chars
+  return `${visiblePart}${"*".repeat(token.length - 10)}`;
+};

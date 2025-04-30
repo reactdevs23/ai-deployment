@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inconsolata:wght@200..900&display=swap");
 :root {
   /* new news */
   --Primitive-0: #ffffff;
@@ -6,7 +6,9 @@
   --Primitive-50: #f9fafb;
   --Primitive-100: #f3f4f6;
   --Primitive-200: #e5e7eb;
+  --Primitive-250: #f6f7f9;
   --Primitive-400: #9ca3af;
+
   --Primitive-500: #6b7280;
 
   --Primitive-600: #4b5563;
@@ -32,8 +34,13 @@
   --Warning-10: rgba(248, 160, 48, 0.1);
   --Error-10: rgba(222, 82, 84, 0.1);
   --navHeight: 60px;
+  --headerHeight: 60px;
 }
-
+@media only screen and (max-width: 520px) {
+  * {
+    --headerHeight: 48px;
+  }
+}
 * {
   box-sizing: border-box;
   text-decoration: none;
@@ -178,4 +185,10 @@ input::placeholder {
 .medium {
   font-weight: 500;
 }
+.outletPadding {
+  padding: 24px 32px;
+}
 /* FaArrowRight */
+.token {
+  color: #db2a79;
+}

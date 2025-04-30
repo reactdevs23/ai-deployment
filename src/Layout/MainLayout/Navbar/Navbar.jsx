@@ -63,9 +63,9 @@ const Navbar = () => {
               <NavLink
                 key={i}
                 className={({ isActive }) =>
-                  isActive
-                    ? clsx(classes.navItem, classes.navActive)
-                    : classes.navItem
+                  clsx(classes.navItem, {
+                    [classes.navActive]: isActive,
+                  })
                 }
                 to={to}
                 // onClick={() => setSidebar((prev) => !prev)}
@@ -75,7 +75,6 @@ const Navbar = () => {
             ))}
 
             <Dropdown
-              label="Service"
               isActive={isResourcesDropdownActive}
               setIsActive={setIsResourcesDropdownActive}
               onSelect={() => {

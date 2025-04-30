@@ -8,6 +8,10 @@ import createDeploymentImg from "./createDeploymentImg.png";
 import apiImg from "./apiImg.png";
 import playgroundImg from "./playGroundImg.png";
 
+// Icons
+import copyIcon from "./icons/copyIcon.svg";
+import editIcon from "./icons/editIcon.svg";
+
 // withourplatform
 import idogramAiImg from "./platform/idogram-ai.png";
 import lumaImg from "./platform/luma.png";
@@ -66,6 +70,10 @@ export {
   createDeploymentImg,
   apiImg,
   playgroundImg,
+
+  // icons
+  copyIcon,
+  editIcon,
   // platform
   idogramAiImg,
   lumaImg,

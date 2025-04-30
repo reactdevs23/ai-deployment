@@ -1,9 +1,19 @@
 .wrapper {
   display: grid;
   grid-template-columns: 200px 1fr;
-  position: relative;
+  /* position: relative;
   overflow-x: hidden;
-  min-height: calc(100vh - var(--navHeight));
+  overflow-y: auto;
+  height: calc(100vh - var(--navHeight)); */
+} /* Hide scrollbar for Chrome, Safari and Opera */
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .container {
   border-left: 1px solid var(--Blue-100);
@@ -11,6 +21,7 @@
   background-color: var(--Base-White);
   position: relative;
   width: 100%;
+  min-width: 0;
 }
 
 .header {
@@ -22,8 +33,10 @@
   align-items: center;
   position: sticky;
   position: -webkit-sticky;
+  z-index: 1;
   top: 0;
   gap: 8px;
+  height: var(--headerHeight);
 }
 .sidebarIcon {
   display: none;
@@ -35,6 +48,11 @@
 }
 .outlet {
   padding: 24px 32px;
+  min-width: 0;
+  width: 100%;
+}
+.noPadding {
+  padding: 0;
 }
 @media only screen and (max-width: 1199px) {
   .wrapper {
@@ -47,6 +65,9 @@
 @media only screen and (max-width: 991px) {
   .outlet {
     padding: 24px;
+  }
+  .noPadding {
+    padding: 0;
   }
   .header {
     padding: 12px 24px;
@@ -69,8 +90,12 @@
   .outlet {
     padding: 16px 16px;
   }
+  .noPadding {
+    padding: 0;
+  }
   .header {
     padding: 12px 16px;
+    height: var(--headerHeight);
   }
   .container {
     border: none;
