@@ -1,7 +1,7 @@
 .navs {
   position: sticky;
   position: -webkit-sticky;
-  top: var(--headerHeight);
+  top: calc(var(--headerHeight) + var(--navHeight));
   padding: 4px;
   z-index: 10;
   display: flex;
@@ -32,7 +32,7 @@
     padding: 4px 16px;
   }
   .navs {
-    top: var(--headerHeight);
+    top: calc(var(--headerHeight) + var(--navHeight));
   }
 }
 @media only screen and (max-width: 360px) {

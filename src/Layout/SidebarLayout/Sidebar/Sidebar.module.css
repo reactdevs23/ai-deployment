@@ -9,7 +9,7 @@
 
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: var(--navHeight);
   z-index: 100;
   background: var(--Base-White);
   overflow-y: auto;

@@ -1,11 +1,10 @@
 import { Header } from "@/components/common";
 import classes from "./Api.module.css";
-import CopyWrapper from "@/components/DeploymentDetails/Api/CopyWrapper/CopyWrapper";
-import CodeBlock from "@/components/DeploymentDetails/Api/CodeBlock/CodeBlock";
+import CopyWrapper from "@/components/common/CopyWrapper/CopyWrapper";
+import CodeBlock from "@/components/CodeBlock/CodeBlock";
 import { maskToken } from "@/utils/utils";
 
 const Api = () => {
-  const apiToken = "abc_d19sdhfuiwhe38r29r2f2e9fhs98"; // Your real token
   return (
     <div className={classes.wrapper}>
       <Header
