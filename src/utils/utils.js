@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-
+import hljs from "highlight.js";
 const ScrollToTop = () => {
   // Extracts pathname property(key) from an object
   const { pathname } = useLocation();
@@ -12,15 +12,11 @@ const ScrollToTop = () => {
 };
 
 export default ScrollToTop;
-export const nameInitial = (name) => {
-  const parts = name.split(" ");
-  if (parts.length < 2) return name; // return the original name if it's not in "Firstname Lastname" format
-
-  const firstNameInitial = parts[0].charAt(0);
-  const lastNameInitial = parts[1].charAt(0);
-
-  return `${firstNameInitial}${lastNameInitial}`;
+export const detectLanguage = (code) => {
+  const result = hljs.highlightAuto(code);
+  return result.language || "text"; // Default to "text" if no language is detected
 };
+
 export const copyToClipboard = (value) => {
   // Copy deposit address to clipboard
   navigator.clipboard.writeText(value);
@@ -33,4 +29,10 @@ export const maskToken = (token) => {
   if (!token) return "";
   const visiblePart = token.slice(0, 10); // Show only first 10 chars
   return `${visiblePart}${"*".repeat(token.length - 10)}`;
+};
+export const scrollToBottom = () => {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth",
+  });
 };

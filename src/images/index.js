@@ -60,6 +60,11 @@ import supportActiveIcon from "./sidebar/supportIctiveIcon.svg";
 import twiterIcon from "./sidebar/twitter.svg";
 import discordIcon from "./sidebar/discordIcon.svg";
 import youtubeIcon from "./sidebar/youtubeIcon.svg";
+
+// playground
+
+import llamaLogo from "./playground/llama.png";
+import imgIcon from "./icons/imgIcon.svg";
 export {
   Logo,
   secondLogo,
@@ -118,4 +123,8 @@ export {
   twiterIcon,
   discordIcon,
   youtubeIcon,
+
+  // playground
+  llamaLogo,
+  imgIcon,
 };

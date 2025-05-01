@@ -3,10 +3,113 @@
   flex-direction: column;
   gap: 24px;
   padding: 20px;
+  background: var(--Primitive-0);
+  position: sticky;
+  position: -webkit-sticky;
+  top: var(--navHeight);
+  right: 0;
+  height: calc(100vh - var(--navHeight));
+  overflow-y: auto;
+  z-index: 100;
+  width: 100%;
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+}
+.closeButton {
+  cursor: pointer;
+  display: none;
+}
+.configure,
+.advance {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.spaeBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  width: 100%;
+}
+.seedInput {
+  max-width: 80px;
+}
+.input label {
+  font-size: 14px;
+  line-height: 142.86%;
+  font-weight: 400;
+  color: var(--Primitive-800);
+}
+.overlay {
+  display: none;
+}
+@media only screen and (max-width: 1199px) {
+  .wrapper {
+    transform: translateX(250%);
+    transition: 0.3s;
+    position: fixed;
+    top: var(--navHeight);
+    right: 0;
+    max-width: 300px;
+    padding: 16px;
+  }
+
+  .showSidebar {
+    transform: translateX(0);
+    right: 0;
+  }
+  .overlay {
+    display: block;
+    width: 100vw;
+    background: rgba(17, 24, 39, 40%);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 99;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
+    cursor: pointer;
+  }
+  .overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .closeIcon {
+    display: block;
+    font-size: 24px;
+    color: var(--Base-White);
+    position: fixed;
+    right: calc(300px + 10px);
+    z-index: 100;
+    top: calc(var(--navHeight) + 10px);
+    cursor: pointer;
+  }
+
+  .closeButton {
+    display: block;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .wrapper {
+    max-width: 280px;
+  }
+  .closeIcon {
+    right: calc(280px + 10px);
+  }
 }

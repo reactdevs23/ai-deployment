@@ -170,16 +170,15 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           </div>
         </div>
       </aside>
-      {sidebar && (
-        <div className={classes.overlay}>
-          <button
-            className={classes.closeIcon}
-            onClick={() => setSidebar(false)}
-          >
-            <MdClose />
-          </button>
-        </div>
-      )}
+
+      <div
+        className={clsx(classes.overlay, sidebar && classes.active)}
+        onClick={() => setSidebar(false)}
+      >
+        <button className={classes.closeIcon}>
+          <MdClose />
+        </button>
+      </div>
     </>
   );
 };

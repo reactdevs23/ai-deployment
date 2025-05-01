@@ -1,0 +1,80 @@
+/* Slider styling */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.labelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 8px;
+  width: 100%;
+}
+.inputWrapper {
+  max-width: 80px;
+}
+.inputWrapper input {
+  text-align: center;
+}
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 10px; /* Apply rounded corners to the track */
+  background: var(--Primitive-200);
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+/* WebKit thumb - Default green thumb */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--Blue-500); /* Default green thumb */
+  border-radius: 50%;
+  border: 2px solid var(--Base-White);
+  cursor: pointer;
+  box-shadow: 0 0 2px var(--Primitive-200);
+}
+
+/* Firefox thumb - Default green thumb */
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--Blue-500); /* Default green thumb */
+  border-radius: 50%;
+  border: 2px solid var(--Base-White);
+  cursor: pointer;
+  box-shadow: 0 0 2px var(--Primitive-200);
+}
+
+/* Change to green if positive */
+.greenThumb::-webkit-slider-thumb {
+  background: var(--Blue-500);
+}
+
+.greenThumb::-moz-range-thumb {
+  background: var(--Blue-500);
+}
+
+/* Change to red if negative */
+.redThumb::-webkit-slider-thumb {
+  background: var(--Error);
+}
+
+.redThumb::-moz-range-thumb {
+  background: var(--Error);
+}
+
+/* Change to neutral gray if 0 */
+.neutralThumb::-webkit-slider-thumb {
+  background: var(--Blue-500);
+}
+
+.neutralThumb::-moz-range-thumb {
+  background: var(--Blue-500);
+}

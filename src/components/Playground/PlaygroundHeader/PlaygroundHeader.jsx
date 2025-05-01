@@ -1,10 +1,11 @@
 import { Button, Heading } from "@/components/common";
-import Dropdown from "../Dropdown/Dropdown";
+import Dropdown from "./Dropdown/Dropdown";
 import classes from "./PlaygroundHeader.module.css";
 import { useState } from "react";
 import { FaCode } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
 import { sidebarIcon } from "@/images";
+import clsx from "clsx";
 
 const items = [
   "meta-llama/llama-4-scount-17b-16e-instruct",
@@ -12,7 +13,7 @@ const items = [
   "meta-llama/llama-6-scount-17b-16e-instruct",
   "meta-llama/llama-7-scount-17b-16e-instruct",
 ];
-const PlaygroundHeader = () => {
+const PlaygroundHeader = ({ sidebar, setSidebar }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedValue, setSelectedValue] = useState(
     "meta-llama/llama-4-scount-17b-16e-instruct"
@@ -43,7 +44,15 @@ const PlaygroundHeader = () => {
       <Button blue50 sm className={classes.viewCodeButton}>
         <FaCode /> View Code
       </Button>
-      <Button sm transparent className={classes.settingsButton}>
+      <Button
+        sm
+        transparent
+        className={clsx(
+          classes.settingsButton,
+          sidebar && classes.activeButton
+        )}
+        onClick={() => setSidebar(true)}
+      >
         <IoSettingsOutline className={classes.settingsIcon} />
       </Button>
     </header>

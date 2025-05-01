@@ -9,6 +9,11 @@
   height: calc(var(--navHeight));
   margin: 0 auto;
   width: 100%;
+  flex: 0 0 auto;
+  position: sticky;
+  position: -webkit-sticky;
+  top: var(--navHeight);
+  z-index: 10;
 }
 
 .headingContainer {
@@ -33,6 +38,10 @@
   align-items: center;
   padding: 0;
 }
+/* .activeButton {
+  background: var(--Blue-50);
+  border: 1px solid var(--Blue-500);
+} */
 .settingsIcon {
   font-size: 20px;
 }

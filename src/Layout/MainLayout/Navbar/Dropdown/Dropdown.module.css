@@ -9,6 +9,9 @@
   cursor: pointer;
   padding: 8px 12px;
 }
+.label {
+  white-space: nowrap;
+}
 
 .arrow {
   font-size: 14px;
@@ -17,7 +20,7 @@
   margin-left: auto;
 }
 .arrow.active {
-  color: var(--Primitive-Default);
+  color: var(--Blue-500);
 }
 .dropdownMain {
   min-width: calc(100% + 5px);

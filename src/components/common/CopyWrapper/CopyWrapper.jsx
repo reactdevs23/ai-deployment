@@ -11,6 +11,7 @@ const CopyWrapper = ({
   medium,
   className,
   children,
+  textToCopy = "No Value",
 }) => {
   return (
     <div className={clsx(classes.wrapper, className)}>
@@ -26,7 +27,7 @@ const CopyWrapper = ({
         <Text sm primitive800 className={classes.content}>
           {children}
         </Text>
-        <CopyButton className={classes.copyButton} textToCopy={children} />
+        <CopyButton className={classes.copyButton} textToCopy={textToCopy} />
       </div>
       {notes && (
         <Text primitive600 sm>

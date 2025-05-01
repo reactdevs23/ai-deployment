@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 
-const CopyButton = ({ className, textToCopy }) => {
+const CopyButton = ({ className, textToCopy = "No Value" }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {

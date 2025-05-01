@@ -1,0 +1,131 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+  padding: 6px;
+  padding-right: 6px;
+  border-radius: 8px;
+  border: 1px solid var(--Blue-200);
+  background: var(--Base-White);
+  /* drop-shadow/sm */
+  box-shadow: 0px 2px 8px -2px rgba(3, 7, 18, 0.12),
+    0px 1px 4px -2px rgba(3, 7, 18, 0.12);
+  position: fixed;
+
+  left: 50%;
+  transform: translateX(calc(-50% - 160px));
+  bottom: 24px;
+  width: calc(90%);
+}
+.inputContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  padding-left: 6px;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.buttonContainer .imgUploadButton {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  aspect-ratio: 1/1;
+  background: var(--Primitive-50);
+  border: none;
+}
+.imgIcon {
+  max-width: 24px;
+  width: 100%;
+}
+.previewContainer {
+  position: relative;
+  display: inline-block;
+
+  max-width: 48px;
+  border-radius: 8px;
+}
+
+.previewImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: filter 0.3s ease;
+}
+
+.blur {
+  filter: blur(3px) brightness(0.8);
+}
+
+.loaderOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.loader {
+  border: 4px solid var(--Primitive-100);
+  border-top: 4px solid var(--Primitive-500);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cancelButton {
+  color: var(--Primitive-900);
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: var(--Primitive-0);
+  border: 1px solid var(--Primitive-200);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgUploadButton img {
+  width: 20px;
+  height: 20px;
+}
+@media only screen and (max-width: 1199px) {
+  .wrapper {
+    transform: translateX(-50%);
+    width: calc(90% - 32px);
+  }
+}
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+  }
+}

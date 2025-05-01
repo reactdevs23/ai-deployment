@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import React from "react";
+import React, { useEffect } from "react";
 
 import MainLayout from "@/Layout/MainLayout/MainLayout";
 import LandingLayout from "@/Layout/LandingLayout/LandingLayout";

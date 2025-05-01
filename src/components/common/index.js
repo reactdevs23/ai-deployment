@@ -17,6 +17,7 @@ import SlidingTabs from "./SlidingTabs/SlidingTabs";
 import Line from "./Line/Line";
 import Dropdown from "./Dropdown/Dropdown";
 import ActionDropdown from "./ActionDropdown/ActionDropdown";
+import InputRangeSlider from "./InputRangeSlider/InputRangeSlider";
 export {
   Wrapper,
   Button,
@@ -36,4 +37,5 @@ export {
   Line,
   Dropdown,
   ActionDropdown,
+  InputRangeSlider,
 };

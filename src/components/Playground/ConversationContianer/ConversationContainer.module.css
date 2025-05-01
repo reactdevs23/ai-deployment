@@ -1,1 +1,118 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
 
+  padding: 24px;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-bottom: calc(100px);
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+.hScreen {
+  justify-content: flex-start;
+
+  min-height: calc(var(--real-vh, 1vh) * 100 - var(--navHeight) - 60px - 170px);
+}
+
+/* .chatBox {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+} */
+.userMessage {
+  border-radius: 6px;
+  background: var(--Primitive-100);
+
+  max-width: 280px;
+  width: max-content;
+  margin-left: auto;
+  padding: 8px 12px;
+  align-self: flex-end;
+}
+.responseContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+}
+
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    padding: 16px;
+    max-width: 100%;
+  }
+  .hScreen {
+    justify-content: flex-start;
+    min-height: calc(100vh - var(--navHeight) - 100px - 85px);
+  } /* ConversationContainer.module.css */
+
+  .wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
+
+  .messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .hScreen {
+    justify-content: flex-start;
+    min-height: calc(
+      var(--real-vh, 1vh) * 100 - var(--navHeight) - 60px - 170px
+    );
+  }
+
+  .userMessage {
+    border-radius: 6px;
+    background: var(--Primitive-100);
+    max-width: 280px;
+    width: max-content;
+    margin-left: auto;
+    padding: 8px 12px;
+    align-self: flex-end;
+  }
+
+  .responseContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 991px) {
+    .wrapper {
+      padding: 16px;
+      max-width: 100%;
+    }
+    .hScreen {
+      min-height: calc(
+        var(--real-vh, 1vh) * 100 - var(--navHeight) - 100px - 85px
+      );
+    }
+  }
+}

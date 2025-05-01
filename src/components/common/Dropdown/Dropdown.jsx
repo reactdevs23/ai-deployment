@@ -30,7 +30,7 @@ const Dropdown = ({
           sm
           primitive700
           medium
-          className={(classes.label, labelBreak && classes.labelBreak)}
+          className={clsx(classes.label, labelBreak && classes.labelBreak)}
         >
           {!type2 && label}{" "}
           {type2 && selectedValue ? selectedValue : label ? label : ""}

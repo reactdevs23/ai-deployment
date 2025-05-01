@@ -22,15 +22,26 @@ const useOnClickOutside = (ref, handler) => {
 
 export default useOnClickOutside;
 export const handleKeyDown = (event) => {
-  if (
-    !(
-      /[0-9]/.test(event.key) ||
-      event.key === "Backspace" ||
-      event.key === "ArrowUp" ||
-      event.key === "ArrowDown" ||
-      event.key === "."
-    )
-  ) {
-    event.preventDefault();
+  const allowedKeys = [
+    "Backspace",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowRight",
+    "ArrowLeft",
+    "Tab",
+  ];
+
+  if (/[0-9]/.test(event.key) || allowedKeys.includes(event.key)) {
+    return;
   }
+
+  if (event.key === ".") {
+    // Only allow one decimal point
+    if (event.target.value.includes(".")) {
+      event.preventDefault();
+    }
+    return;
+  }
+
+  event.preventDefault();
 };

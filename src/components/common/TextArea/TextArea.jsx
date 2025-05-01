@@ -1,35 +1,51 @@
-import React, { useState } from "react";
-import { CiSearch } from "react-icons/ci";
-import { FaRegEyeSlash } from "react-icons/fa";
-import { FaRegEye } from "react-icons/fa6";
-import { MdClose } from "react-icons/md";
-
-import classes from "./TextArea.module.css";
+import React, { useRef, useEffect } from "react";
 import clsx from "clsx";
+import classes from "./TextArea.module.css";
 
 const TextArea = ({
   value,
   setValue,
-
   placeholder,
-  type,
   className,
   name,
-
-  rows,
+  onKeyDown,
 }) => {
+  const textareaRef = useRef(null);
+
+  // Adjust height based on content
+  const adjustHeight = () => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = "32px"; // Reset height to auto
+      textareaRef.current.style.height = `${Math.min(
+        textareaRef.current.scrollHeight,
+        220
+      )}px`; // Max height 220px
+    }
+  };
+
+  useEffect(() => {
+    adjustHeight();
+  }, [value]);
+
+  useEffect(() => {
+    adjustHeight();
+  }, []);
+
   return (
     <textarea
+      ref={textareaRef}
       name={name}
-      id=""
       value={value}
-      onChange={(e) => setValue(e.target.value)}
-      className={clsx(classes.textArea, className)}
+      onChange={(e) => {
+        setValue(e.target.value);
+        adjustHeight(); // Adjust height on user input
+      }}
+      className={clsx(classes.textArea, className, "overflow")}
       placeholder={placeholder}
-      required
-      rows={rows}
-      cols={10}
-    ></textarea>
+      rows={1}
+      required={true}
+      onKeyDown={onKeyDown}
+    />
   );
 };
 

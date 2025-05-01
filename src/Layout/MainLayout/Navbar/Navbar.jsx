@@ -146,14 +146,13 @@ const Navbar = () => {
           </div>{" "}
         </header>
       </div>
-      {sidebar && (
-        <div className={classes.overlay}>
-          {" "}
-          <button className={classes.closeIcon}>
-            <MdClose />
-          </button>
-        </div>
-      )}
+
+      <div className={clsx(classes.overlay, sidebar && classes.sidebarActive)}>
+        {" "}
+        <button className={classes.closeIcon}>
+          <MdClose />
+        </button>
+      </div>
     </>
   );
 };

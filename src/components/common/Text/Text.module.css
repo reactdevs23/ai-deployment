@@ -35,18 +35,19 @@
 .primitive600 {
   color: var(--Primitive-600);
 }
-.primitive900 {
-  color: var(--Primitive-900);
-}
-.primitive950 {
-  color: var(--Primitive-950);
-}
 .primitive700 {
   color: var(--Primitive-700);
 }
 .primitive800 {
   color: var(--Primitive-800);
 }
+.primitive900 {
+  color: var(--Primitive-900);
+}
+.primitive950 {
+  color: var(--Primitive-950);
+}
+
 .green {
   color: var(--Green);
 }

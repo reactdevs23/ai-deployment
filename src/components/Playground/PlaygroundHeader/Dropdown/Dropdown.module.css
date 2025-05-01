@@ -30,9 +30,9 @@
   cursor: pointer;
   margin-left: auto;
 }
-.arrow.active {
-  color: var(--Primitive-Default);
-}
+/* .arrow.active {
+  color: var(--Blue-500);
+} */
 .dropdownMain {
   min-width: calc(100%);
   width: max-content;

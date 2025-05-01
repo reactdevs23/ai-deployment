@@ -1,16 +1,22 @@
-.wrapper {
+.dropdown {
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.dropdown {
-  position: relative;
-}
+.length {
+  color: var(--Primitive-400);
 
-.labelContainer {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 133.33%;
+}
+.valueContainer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+
   gap: 8px;
   cursor: pointer;
   padding: 8px 12px;
@@ -19,11 +25,28 @@
   background: var(--Primitive-50);
   border: 1px solid transparent;
 }
-.labelContainer.active {
+.valueContainer.active {
   border: 1px solid var(--Blue-500);
 }
-.label {
+.selectedValue {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.logoAndName {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.logo {
+  max-width: 16px;
+  width: 100%;
+}
+.platform {
   white-space: nowrap;
+}
+.labelBreak {
+  white-space: break-all;
 }
 .arrow {
   font-size: 14px;
@@ -56,7 +79,6 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
   height: 0;
   overflow: hidden;
 }
@@ -76,13 +98,12 @@
 .listItem {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 10px;
+  gap: 6px;
+  padding: 8px 16px;
   cursor: pointer;
   transition: 0.4s ease;
+
   border-radius: 5px;
-  width: 100%;
 }
 
 .listItem.active {
@@ -99,50 +120,15 @@
 } */
 .listItem:hover {
   color: var(--Blue-500);
-
+  transform: none;
   background: var(--Primitive-50);
 }
-.listItemContainer:hover {
-  transform: none;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.priceContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.line {
-  padding: 0 10px;
-}
-.line:first-child {
-  display: none;
-}
-.listItem.active .info {
-  color: var(--Blue-500);
-}
+
 @media only screen and (max-width: 520px) {
-  .listItem {
-    flex-direction: column;
-    gap: 4px;
-    align-items: flex-start;
-  }
-  .priceContainer {
-    align-items: flex-start;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .name,
-  .specification {
-    max-width: 190px;
-    text-overflow: ellipsis;
+  .label {
+    width: 100%;
+    display: block;
     overflow: hidden;
-    white-space: nowrap;
-  }
-  .info {
-    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }

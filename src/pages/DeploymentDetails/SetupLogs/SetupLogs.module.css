@@ -48,3 +48,13 @@
     display: none;
   }
 }
+@media only screen and (max-width: 360px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .searchInput {
+    max-width: 100%;
+  }
+}

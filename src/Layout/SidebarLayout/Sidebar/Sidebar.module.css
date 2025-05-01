@@ -120,6 +120,9 @@
   width: 100%;
   display: block;
 }
+.overlay {
+  display: none;
+}
 @media only screen and (max-width: 1199px) {
   .sidebar {
     transform: translateX(-250%);
@@ -133,18 +136,26 @@
 
   .showSidebar {
     transform: translateX(0);
-    right: 0;
   }
   .overlay {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    cursor: pointer;
+    display: block;
+    min-width: 100vw;
     background: rgba(17, 24, 39, 40%);
-    z-index: 99;
-
+    backdrop-filter: blur(12px);
     position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 99;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
     cursor: pointer;
+  }
+  .overlay.active {
+    opacity: 1;
+    pointer-events: all;
   }
   .closeIcon {
     display: block;
@@ -153,7 +164,7 @@
     position: fixed;
     left: calc(240px + 10px);
     z-index: 100;
-    top: 70px;
+    top: calc(var(--navHeight) + 10px);
     cursor: pointer;
   }
 }
