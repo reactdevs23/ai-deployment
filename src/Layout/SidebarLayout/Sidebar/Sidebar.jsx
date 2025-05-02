@@ -1,13 +1,7 @@
 import classes from "./Sidebar.module.css";
 import { Link, NavLink } from "react-router-dom";
-import { useRef } from "react";
-import { Button, Heading, Input, Text } from "@/components/common";
-import { RiDiscordLine } from "react-icons/ri";
-
+import { Button, Text } from "@/components/common";
 import clsx from "clsx";
-
-import useOnClickOutside from "@/hooks";
-
 import {
   dashboardActiveIcon,
   dashboardIcon,

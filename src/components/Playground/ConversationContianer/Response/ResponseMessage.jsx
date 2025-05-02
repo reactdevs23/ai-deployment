@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
@@ -20,6 +20,7 @@ import { Text } from "@/components/common";
 import { HiOutlineDownload } from "react-icons/hi";
 import { copyToClipboard, detectLanguage } from "@/utils/utils";
 import { preprocessContent } from "@/utils/preprocessContent";
+import { customTheme } from "@/utils/codeBlockCustomTheme";
 
 const ResponseMessage = ({ msg }) => {
   const [copied, setCopied] = useState(false);
@@ -39,11 +40,7 @@ const ResponseMessage = ({ msg }) => {
     const language = match ? match[1] : detectLanguage(codeContent); // Fallback to detection
 
     return !inline ? (
-      <CodeBlock
-        code={codeContent}
-        language={language}
-        handleCopy={handleCopy}
-      />
+      <CodeBlock code={codeContent} language={language} />
     ) : (
       <code className={className} {...props}>
         {children}
@@ -105,11 +102,25 @@ const CodeBlock = ({ code, language }) => {
     setCopied(true);
     setTimeout(() => setCopied(false), 1000);
   };
+  const handleDownload = useCallback((code) => {
+    const fileExtension = "txt";
+
+    const blob = new Blob([code], { type: "text/plain" });
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = `code.${fileExtension}`;
+    link.click();
+
+    URL.revokeObjectURL(url);
+  }, []);
 
   return (
     <div className={classes.codeBlockWrapper}>
       <div className={classes.codeHeader}>
-        <Text sm primitive50 className={classes.language}>
+        <Text sm primitive900 className={classes.language}>
           {language}
         </Text>
         <div className={classes.copyAndDownload}>
@@ -119,7 +130,7 @@ const CodeBlock = ({ code, language }) => {
           >
             {copied ? <FaCheck /> : <LuCopy />}
           </button>
-          <button className={classes.downloadButton}>
+          <button className={classes.downloadButton} onClick={handleDownload}>
             <HiOutlineDownload />
           </button>
         </div>
@@ -128,19 +139,7 @@ const CodeBlock = ({ code, language }) => {
         className={classes.customSyntaxHighlighter}
         language={language}
         PreTag="div"
-        style={{
-          ...atomDark, // Use atomOneDark for better token separation
-          'code[class*="language-"]': {
-            color: "#E6E6E6", // Adjust default text color
-          },
-          backgroundColor: "var(--Primitive-900)",
-          "span.token.keyword": { color: "#A9E246" },
-          "span.token.function": { color: "#A6E22E" },
-          "span.token.variable": { color: "#FD971F" },
-          "span.token.string": { color: "#E6DB74" },
-          "span.token.operator": { color: "#FA417B" },
-          "span.token.comment": { color: "#75715E", fontStyle: "italic" },
-        }}
+        style={customTheme}
         ref={codeRef} // Attach ref to the SyntaxHighlighter
       >
         {code}

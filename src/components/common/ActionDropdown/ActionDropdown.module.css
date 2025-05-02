@@ -13,6 +13,7 @@
   border-bottom: 1px solid var(--Primitive-200);
   background: var(--Primitive-50);
   border: 1px solid transparent;
+  border-bottom: 1px solid var(--gray-200, #e5e7eb);
 }
 .labelContainer.active {
   border: 1px solid var(--Blue-500);
@@ -106,6 +107,6 @@
   top: auto;
 }
 .dropdownMain.above {
-  bottom: 100%;
+  bottom: calc(100% + 2px);
   top: auto;
 }

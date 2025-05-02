@@ -1,6 +1,5 @@
 .modalOverlay {
-  background: rgb(18, 18, 18, 0.48);
-
+  background: rgba(17, 24, 39, 0.4);
   backdrop-filter: blur(12px);
   position: fixed;
   left: 0;
@@ -8,7 +7,7 @@
   right: 0;
   bottom: 0;
   opacity: 0;
-  z-index: 1500;
+  z-index: 199;
   transition: 0.3s ease-in-out;
   pointer-events: none;
   cursor: pointer;
@@ -18,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 24px;
+
   position: fixed;
 
   left: 50%;
@@ -27,12 +26,11 @@
   opacity: 0;
   pointer-events: none;
 
-  z-index: 1501;
+  z-index: 200;
 
   /* my */
   margin: 0 auto;
-  max-width: 448px;
-  width: 95%;
+
   max-height: calc(100vh - 5%);
 
   height: max-content;
@@ -40,12 +38,11 @@
 
   overflow: auto;
   border-radius: 8px;
-  background: var(--Primitive-900);
+  background: var(--Base-White);
   box-shadow: 0px -40px 64px -16px rgba(0, 0, 0, 0.2);
-  bottom: 20px;
+  max-width: 600px;
 
-  padding: 24px;
-  padding-top: 0 !important;
+  width: 95%;
 }
 .modal > * {
   width: 100%;
@@ -64,29 +61,22 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--Primitive-800);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--Blue-100);
   position: sticky;
   top: 0;
   z-index: 1;
-  background: var(--Primitive-900);
-  padding-top: 18px;
+  background: var(--Base-White);
 }
 
 .closeButton {
   margin-left: auto;
 
-  font-size: 20px;
   background: transparent;
   border: none;
   cursor: pointer;
 }
 .closeIcon {
-  color: var(--Primitive-600);
-  font-size: 28px;
-}
-@media only screen and (max-width: 767px) {
-  .modal {
-    padding: 24px;
-  }
+  color: var(--Primitive-400);
+  font-size: 16px;
 }

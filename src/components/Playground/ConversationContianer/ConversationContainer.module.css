@@ -5,11 +5,11 @@
   justify-content: center;
   gap: 24px;
 
-  padding: 24px;
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
   padding-bottom: calc(100px);
+  padding-top: 24px;
 }
 
 .messages {
@@ -107,7 +107,6 @@
   @media only screen and (max-width: 991px) {
     .wrapper {
       padding: 16px;
-      max-width: 100%;
     }
     .hScreen {
       min-height: calc(

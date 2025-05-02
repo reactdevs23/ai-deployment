@@ -9,3 +9,8 @@
   display: block;
   border-radius: 6px;
 }
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

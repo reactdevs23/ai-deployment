@@ -13,39 +13,51 @@ export const preprocessContent = (content) => {
     (match) => htmlEntities[match] || match
   );
 
-  // Step 2: Process <think> tags and wrap each word with <u> (underline)
+  // Step 2: Extract code blocks so we don't mess with them
+  const codeBlockRegex = /```[\s\S]*?```/g;
+  const codeBlocks = [];
+  processedContent = processedContent.replace(codeBlockRegex, (match) => {
+    codeBlocks.push(match);
+    return `[[CODE_BLOCK_${codeBlocks.length - 1}]]`;
+  });
+
+  // Step 3: Process <think> tags and wrap each word with <u> (underline)
   processedContent = processedContent.replace(
     /<think>([\s\S]*?)<\/think>|<think>([\s\S]*)/g,
     (_, p1, p2) => {
-      const contentToWrap = p1 || p2; // Use p1 if </think> exists, otherwise p2
-      if (!contentToWrap.trim()) return ""; // Skip empty content
+      const contentToWrap = p1 || p2;
+      if (!contentToWrap.trim()) return "";
 
-      // Split content into words (including punctuation and spaces)
       return contentToWrap
-        .split(/(\b)/) // Split by word boundaries
+        .split(/(\b)/)
         .map((word) =>
           word.trim() ? `<u class="underline">${word}</u>` : word
-        ) // Wrap with <u> for underline
+        )
         .join("");
     }
   );
 
-  // Step 3: Handle *only single backticks* (`content`) as italic
+  // Step 4: Handle single backticks as italic (but only outside code blocks)
   processedContent = processedContent.replace(
-    /(?<!`)`([^`]+)`(?!`)/g, // Ensure it's a single backtick, not part of `code` or ``code``
+    /(?<!`)`([^`]+)`(?!`)/g,
     (_, p1) => `<i>${p1}</i>`
   );
 
-  // Step 4: Handle single asterisks (*content*) as italic
+  // Step 5: Handle *italic* and **bold**
+  processedContent = processedContent.replace(
+    /(?<!\\)\*\*([^*]+)\*\*/g,
+    (_, p1) => `<b>${p1}</b>`
+  );
+
   processedContent = processedContent.replace(
     /(?<!\\)\*([^*]+)\*/g,
     (_, p1) => `<i>${p1}</i>`
   );
 
-  // Step 5: Handle double asterisks (**content**) as bold
+  // Step 6: Put back the untouched code blocks
   processedContent = processedContent.replace(
-    /(?<!\\)\*\*([^*]+)\*\*/g,
-    (_, p1) => `<b>${p1}</b>`
+    /\[\[CODE_BLOCK_(\d+)\]\]/g,
+    (_, index) => codeBlocks[Number(index)]
   );
 
   return processedContent;

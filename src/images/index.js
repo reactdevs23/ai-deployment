@@ -7,10 +7,21 @@ import dashboradImg from "./dashboardImg.png";
 import createDeploymentImg from "./createDeploymentImg.png";
 import apiImg from "./apiImg.png";
 import playgroundImg from "./playGroundImg.png";
+import userImg from "./userImg.png";
 
 // Icons
 import copyIcon from "./icons/copyIcon.svg";
 import editIcon from "./icons/editIcon.svg";
+import accountSettingsIcon from "./icons/accountSettingsIcon.svg";
+
+import logoutIcon from "./icons/logoutIcon.svg";
+import plusIcon from "./icons/plusIcon.svg";
+import generalIcon from "./icons/generalIcon.svg";
+import generalActiveIcon from "./icons/generalActiveIcon.svg";
+import apiTokenIcon from "./icons/apiTokenIcon.svg";
+import apiTokenActiveIcon from "./icons/apiTokenActiveIcon.svg";
+import billingIcon from "./icons/billingIcon.svg";
+import billingActiveIcon from "./icons/billingActiveIcon.svg";
 
 // withourplatform
 import idogramAiImg from "./platform/idogram-ai.png";
@@ -75,10 +86,20 @@ export {
   createDeploymentImg,
   apiImg,
   playgroundImg,
-
+  userImg,
   // icons
   copyIcon,
   editIcon,
+  accountSettingsIcon,
+  logoutIcon,
+  plusIcon,
+  generalIcon,
+  generalActiveIcon,
+  apiTokenIcon,
+  apiTokenActiveIcon,
+  billingIcon,
+  billingActiveIcon,
+
   // platform
   idogramAiImg,
   lumaImg,

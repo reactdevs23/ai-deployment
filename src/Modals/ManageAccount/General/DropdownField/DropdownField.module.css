@@ -1,0 +1,15 @@
+.wrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.icon {
+  max-width: 16px;
+  width: 100%;
+}
+.button {
+  margin-left: auto;
+  display: block;
+}

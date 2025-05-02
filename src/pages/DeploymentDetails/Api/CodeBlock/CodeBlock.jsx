@@ -3,6 +3,7 @@ import CopyButton from "@/components/common/CopyButton/CopyButton";
 import classes from "./CodeBlock.module.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"; // You can choose other styles too!
+import { customTheme } from "@/utils/codeBlockCustomTheme";
 
 const code = `// File: run-model.js
 
@@ -34,33 +35,6 @@ async function runModel(inputText) {
 // Example usage
 runModel("This product is absolutely amazing!");
 `;
-
-const customTheme = {
-  'pre[class*="language-"]': {
-    background: "transparent",
-    padding: "10px 14px",
-    overflow: "auto",
-    borderRadius: "0px",
-  },
-  'code[class*="language-"]': {
-    color: "#1F2937",
-    fontFamily: "Inconsolata, monospace",
-    fontSize: "14px",
-    lineHeight: "142.86%",
-  },
-  comment: { color: "#9ca3af", fontStyle: "italic" },
-  keyword: { color: "#3996D0" },
-  string: { color: "#22A77E" },
-  "template-string": { color: "#22863a" },
-  function: { color: "#BA2037" },
-  "attr-name": { color: "#005cc5" },
-  variable: { color: "#DB2A79" },
-  'variable[class*="language-"]': { color: "#DB2A79" },
-  identifier: { color: "#DB2A79" },
-  number: { color: "#005cc5" },
-  operator: { color: "#1F2937" },
-  punctuation: { color: "#24292e" },
-};
 
 const CodeBlock = ({ language = "javascript" }) => {
   return (

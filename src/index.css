@@ -29,11 +29,12 @@
   --Green-10: rgba(51, 191, 119, 0.1);
   --Green-20: rgba(51, 191, 119, 0.2);
   --Error: #de5254;
+
   --Warning: #f8a030;
   --Purple: #d672cb;
   --Purple-10: rgba(247, 122, 232, 0.1);
   --Warning-10: rgba(248, 160, 48, 0.1);
-  --Error-10: rgba(222, 82, 84, 0.1);
+  --Error-10: rgba(222, 82, 84, 0.8);
   --navHeight: 60px;
   --headerHeight: 60px;
 }
@@ -74,6 +75,7 @@ button {
   outline: none;
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 button:hover {
   transform: translateY(-3px);

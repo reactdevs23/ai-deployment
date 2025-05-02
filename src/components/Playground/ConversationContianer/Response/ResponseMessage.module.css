@@ -18,12 +18,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--Primitive-800);
+  background: var(--Primitive-200);
   padding: 8px 12px;
   border-radius: 8px 8px 0 0;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+}
+.codeHeader .language {
+  margin: 0;
 }
 
 .copyAndDownload {
@@ -35,23 +38,27 @@
   margin: 10px 0;
   max-height: calc(100vh - 200px);
   overflow-y: auto;
-  padding-bottom: 15px;
 }
 .customSyntaxHighlighter {
   padding: 16px !important;
   margin: 0 !important;
-  background: var(--Primitive-900) !important;
+  border-top-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  background: var(--Primitive-250) !important;
 }
 .copyButton,
 .downloadButton {
-  color: var(--Primitive-0);
+  color: var(--Primitive-900);
   cursor: pointer;
   padding: 4px 6px;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .copyButton:hover,
 .downloadButton:hover {
-  background: var(--Primitive-900);
+  background: var(--Primitive-100);
   transform: none;
 }
 .header {
@@ -103,115 +110,82 @@
 /* markdown */
 /* style.css */
 
-/* Container for the markdown content */
-.markdownContainer {
-  padding-top: 6px;
-
-  border-radius: 12px;
-  line-height: 140%;
-}
-/* .markdownContainer think {
-  font-style: italic;
-} */
-/* Styling for paragraphs */
-.markdownContainer p {
-  font-size: 14px;
-  color: var(--Primitive-700);
-  margin-bottom: 12px;
-  line-height: 142.86%;
-}
-.markdownContainer hr {
-  margin-bottom: 12px;
-}
-.markdownContainer p i {
-  padding-bottom: 12px;
-}
-
-/* Header Styling */
-.markdownContainer h1,
-.markdownContainer h2,
-.markdownContainer h3,
-.markdownContainer h4,
-.markdownContainer h5,
-.markdownContainer h6 {
-  color: var(--Primitive-800);
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  line-height: 110%;
-  font-weight: 500;
-}
-
-/* Define different header levels */
 .markdownContainer h1 {
-  font-size: 32px;
+  font-size: 48px;
+  line-height: 100%;
+  color: var(--Primitive-800);
 }
-
 .markdownContainer h2 {
-  font-size: 34px;
+  line-height: 100%;
+  color: var(--Primitive-800);
+  font-size: 40px;
 }
 
 .markdownContainer h3 {
-  font-size: 20px;
+  font-size: 28px;
+  line-height: 100%;
+  color: var(--Primitive-800);
 }
 
 .markdownContainer h4 {
   font-size: 18px;
+  line-height: 155.56%;
+  color: var(--Primitive-800);
 }
 
 .markdownContainer h5 {
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 155.56%;
 }
 
 .markdownContainer h6 {
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--Primitive-800);
+}
+.markdownContainer hr {
+  border: none;
+  border-top: 1px solid var(--Primitive-200);
+  margin-bottom: 12px;
+  height: 1px;
+  width: 100%;
+}
+/* Paragraphs */
+.markdownContainer p {
+  font-size: 14px; /* Consider bumping to 16px from 14px */
+  color: var(--Primitive-700);
+  margin-bottom: 12px;
+  line-height: 142.86%;
 }
 
-/* Code block Styling */
+/* List items */
+.markdownContainer li {
+  font-size: 14px; /* Matches paragraph for consistency */
+  line-height: 150%;
+}
+
+/* Inline Code */
+.markdownContainer code {
+  font-size: 14px;
+  line-height: 142.86%;
+}
+
+/* Code Block */
 .markdownContainer pre {
   font-size: 14px;
-  line-height: 140%;
+  line-height: 142.86%;
 }
 
-/* Inline code styling */
-.markdownContainer code {
-  padding: 3px 5px;
-  border-radius: 5px;
-  font-size: 14px;
-  line-height: 160%;
+/* Info / Metadata Text */
+.markdownContainer .info,
+.markdownContainer small {
+  font-size: 13px;
+  line-height: 123.07%;
 }
 
-/* Links Styling */
-.markdownContainer a {
-  color: var(--Blue-500);
-  text-decoration: none;
-}
-
-.markdownContainer a:hover {
-  text-decoration: underline;
-}
-
-/* Blockquote styling */
-.markdownContainer blockquote {
-  border-left: 4px solid var(--Blue-200);
-  padding-left: 20px;
+/* Optional: Extremely fine text (rarely used) */
+.markdown :global(.tiny) {
+  font-size: 12px;
+  line-height: 150%;
   color: var(--Primitive-600);
-  font-style: italic;
-  margin: 20px 0;
-}
-
-/* Lists Styling */
-.markdownContainer ul,
-.markdownContainer ol {
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-
-.markdownContainer li {
-  font-size: 16px;
-  line-height: 1.8;
-}
-.wrapper .language {
-  text-transform: capitalize;
-  margin: 0;
 }

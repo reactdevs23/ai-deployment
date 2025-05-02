@@ -8,7 +8,7 @@ import useViewportHeight from "@/hooks/useViewportHeight";
 
 const Playground = () => {
   useViewportHeight();
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
   return (
     <div
       className={clsx(
@@ -17,10 +17,10 @@ const Playground = () => {
         "container sectionPattern"
       )}
     >
-      <div className={classes.container}>
+      <div className={clsx(classes.container, !sidebar && classes.noSidebar)}>
         <div className={classes.sidebarAndConversation}>
           <PlaygroundHeader sidebar={sidebar} setSidebar={setSidebar} />
-          <ConversationContainer />
+          <ConversationContainer sidebar={sidebar} />
         </div>
 
         <Perameters sidebar={sidebar} setSidebar={setSidebar} />

@@ -1,0 +1,30 @@
+.wrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 100px 1fr auto;
+  gap: 10px;
+}
+.wrapper2 {
+  grid-template-columns: 1fr auto;
+}
+.icon {
+  max-width: 16px;
+  width: 100%;
+}
+.button {
+  margin-left: auto;
+  display: block;
+  border-radius: 6px;
+
+  border-bottom: 1px solid var(--Primitive-200);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.button:hover {
+  background: var(--Primitive-50);
+  border-bottom: 1px solid var(--Primitive-200);
+}

@@ -31,7 +31,10 @@ function App() {
     <Routes>
       {/* Main Layout */}
 
-      <Route path="/" element={<MainLayout />}>
+      <Route
+        path="/"
+        element={<MainLayout isAuthenticated={isAuthenticated} />}
+      >
         {/* Landing pages */}
         <Route element={<LandingLayout />}>
           <Route index element={<Home />} />

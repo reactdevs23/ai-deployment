@@ -6,7 +6,6 @@ import classes from "./Dropdown.module.css";
 import React from "react";
 import useOnClickOutside from "@/hooks";
 import { Text } from "@/components/common";
-import { Link } from "react-router-dom";
 
 const Dropdown = ({
   isActive,
@@ -14,7 +13,7 @@ const Dropdown = ({
   selectedValue,
   onSelect,
   setIsActive,
-  label,
+
   className,
 }) => {
   const ref = useRef();

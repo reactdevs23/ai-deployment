@@ -2,15 +2,18 @@ import React, { useState, useEffect, useRef } from "react";
 import classes from "./Navbar.module.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import clsx from "clsx";
+import { FaUserAlt } from "react-icons/fa";
 
 import { Button, HamburgerButton, Input } from "@/components/common";
 import { useScroll } from "@/hooks/useScroll";
-import Dropdown from "./Dropdown/Dropdown";
 
 import { LuSearch } from "react-icons/lu";
 import useOnClickOutside from "@/hooks";
 import { MdClose } from "react-icons/md";
-import { Logo } from "@/images";
+import { Logo, userImg } from "@/images";
+import ResourceDropdown from "./ResourceDropdown/ResourceDropdown";
+import UserDropdown from "./UserDropdown/UserDropdown";
+import NavDropdown from "./NavDropdown/NavDropdown";
 // resource dropdownItems
 
 const navItems = [
@@ -25,15 +28,24 @@ const resources = [
   { navItem: "Support", to: "/support" },
   { navItem: "Contact Us ", to: "/contact-us" },
 ];
-const Navbar = () => {
+const Navbar = ({ isAuthenticated }) => {
+  const userInfo = {
+    img: userImg,
+    name: "Imam Hossain",
+    email: "example@gmail.com",
+  };
   const [showSeacrhField, setShowSearchField] = useState(false);
   const searchRef = useRef(null);
   const inputRef = useRef(null);
   const [searchValue, setSearchValue] = useState("");
+
   // resource dropdown
-  const resourcesRef = useRef(null);
+
   const [isResourcesDropdownActive, setIsResourcesDropdownActive] =
     useState(false);
+
+  const [isUserDropdownActive, setIsUserDropdownActive] = useState(false);
+  const [isNavDropdownActive, setIsNavDropdownActive] = useState(false);
 
   const sidebarRef = useRef(null);
   const [sidebar, setSidebar] = useState(false);
@@ -74,14 +86,13 @@ const Navbar = () => {
               </NavLink>
             ))}
 
-            <Dropdown
+            <ResourceDropdown
               isActive={isResourcesDropdownActive}
               setIsActive={setIsResourcesDropdownActive}
               onSelect={() => {
                 setIsResourcesDropdownActive(false);
               }}
               dropdownItems={resources}
-              dropdownRef={resourcesRef}
             >
               <span
                 className={clsx(
@@ -93,7 +104,7 @@ const Navbar = () => {
                 {" "}
                 Resources
               </span>
-            </Dropdown>
+            </ResourceDropdown>
           </div>
           <div className={classes.searchAndMobileButton}>
             <div className={classes.mobileButtons}>
@@ -136,14 +147,31 @@ const Navbar = () => {
             />
           </div>
           <div className={classes.buttonContainer}>
-            {" "}
-            <Button xsm transparent to="/sign-in">
-              Login
-            </Button>
-            <Button xsm className={classes.getStartedButton} btnPrimary>
-              Get Started
-            </Button>
-          </div>{" "}
+            {isAuthenticated ? (
+              <>
+                <NavDropdown
+                  isActive={isNavDropdownActive}
+                  setIsActive={setIsNavDropdownActive}
+                />
+                <UserDropdown
+                  userInfo={userInfo}
+                  isActive={isUserDropdownActive}
+                  setIsActive={setIsUserDropdownActive}
+                >
+                  Explorer
+                </UserDropdown>
+              </>
+            ) : (
+              <>
+                <Button xsm transparent to="/sign-in">
+                  Login
+                </Button>
+                <Button xsm className={classes.getStartedButton} btnPrimary>
+                  Get Started
+                </Button>
+              </>
+            )}
+          </div>
         </header>
       </div>
 

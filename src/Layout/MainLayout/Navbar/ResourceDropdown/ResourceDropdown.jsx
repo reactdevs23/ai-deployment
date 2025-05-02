@@ -1,18 +1,16 @@
 import { useRef } from "react";
 import clsx from "clsx";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa6";
-import classes from "./Dropdown.module.css";
+import classes from "./ResourceDropdown.module.css";
 import React from "react";
 import useOnClickOutside from "@/hooks";
 import { Text } from "@/components/common";
 import { Link } from "react-router-dom";
 
-const Dropdown = ({
+const ResourceDropdown = ({
   children,
   isActive,
   dropdownItems,
-  selectedValue,
-  onSelect,
   setIsActive,
 }) => {
   const ref = useRef();
@@ -56,4 +54,4 @@ const Dropdown = ({
   );
 };
 
-export default Dropdown;
+export default ResourceDropdown;

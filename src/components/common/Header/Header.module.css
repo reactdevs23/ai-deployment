@@ -9,6 +9,9 @@
   margin: 0 auto;
   width: 100%;
 }
+.header2 {
+  gap: 4px;
+}
 .center {
   align-items: center;
 }

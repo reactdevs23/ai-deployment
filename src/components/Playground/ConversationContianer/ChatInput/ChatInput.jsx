@@ -6,7 +6,7 @@ import { imgIcon } from "@/images";
 import classes from "./ChatInput.module.css";
 import ImgUpload from "./ImgUpload";
 
-const ChatInput = ({ sendMessage }) => {
+const ChatInput = ({ sidebar, sendMessage }) => {
   const [input, setInput] = useState("");
   const [image, setImage] = useState({
     preview: null,
@@ -40,7 +40,13 @@ const ChatInput = ({ sendMessage }) => {
   };
 
   return (
-    <div className={clsx(classes.wrapper, "playgroundContainer")}>
+    <div
+      className={clsx(
+        classes.wrapper,
+        "playgroundContainer",
+        !sidebar && classes.wrapper2
+      )}
+    >
       <ImgUpload {...image} handleCancelUpload={handleCancelUpload} />
 
       <div className={classes.inputContainer}>

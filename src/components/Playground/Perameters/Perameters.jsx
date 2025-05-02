@@ -42,7 +42,7 @@ const Perameters = ({ sidebar, setSidebar }) => {
         className={clsx(
           classes.wrapper,
           sidebar && classes.showSidebar,
-          !sidebar && classes.hide
+          !sidebar && classes.hideSidebar
         )}
       >
         <div className={classes.header}>

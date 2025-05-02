@@ -3,25 +3,27 @@ import classes from "./ConversationContainer.module.css";
 import clsx from "clsx";
 import { Text } from "@/components/common";
 import ResponseMessage from "./Response/ResponseMessage";
-
 import ChatInput from "./ChatInput/ChatInput";
 import ResponseHeader from "./Response/ResponseHeader/ResponseHeader";
 import WelComeMessage from "../WelComeMessage/WelComeMessage";
 import { scrollToBottom } from "@/utils/utils";
 
-const ConversationContainer = () => {
+const ConversationContainer = ({ sidebar }) => {
   const [messages, setMessages] = useState([
     { role: "user", content: "Hi!" },
-    { role: "assistant", content: "Hello! How can I help you?" },
+    {
+      role: "assistant",
+      content: "Hello! How can I help you?",
+      loading: false,
+    },
     { role: "user", content: "Tell me a joke." },
     {
       role: "assistant",
       content:
         "Why don’t scientists trust atoms? Because they make up everything!",
+      loading: false,
     },
   ]);
-
-  const [loading, setLoading] = useState(false);
 
   const sendMessage = async (inputMessage) => {
     if (!inputMessage.trim()) return;
@@ -29,7 +31,8 @@ const ConversationContainer = () => {
     const userMessage = { role: "user", content: inputMessage };
     const assistantMessage = {
       role: "assistant",
-      content: "", // empty until "response" is ready
+      content: "",
+      loading: true,
     };
 
     setMessages((prevMessages) => [
@@ -38,22 +41,20 @@ const ConversationContainer = () => {
       assistantMessage,
     ]);
 
-    setLoading(true);
     setTimeout(scrollToBottom, 0);
 
-    // Simulate assistant response after delay
+    // Simulate assistant response after a delay
     setTimeout(() => {
       const updatedAssistantMessage = {
         role: "assistant",
         content: `You said: "${inputMessage}", how can I assist you further?`,
+        loading: false, // Set loading to false once the response is ready
       };
 
       setMessages((prevMessages) => [
-        ...prevMessages.slice(0, -1), // remove the empty assistant message
+        ...prevMessages.slice(0, -1), // Remove the empty assistant message
         updatedAssistantMessage,
       ]);
-
-      setLoading(false);
     }, 1500);
   };
 
@@ -82,7 +83,8 @@ const ConversationContainer = () => {
 
             {msg.role === "assistant" && (
               <div className={classes.responseContainer}>
-                <ResponseHeader />
+                {/* Pass loading state for this specific message */}
+                <ResponseHeader isLoading={msg.loading} />
                 <ResponseMessage msg={msg} />
               </div>
             )}
@@ -90,7 +92,7 @@ const ConversationContainer = () => {
         );
       })}
 
-      <ChatInput sendMessage={sendMessage} loading={loading} />
+      <ChatInput sidebar={sidebar} sendMessage={sendMessage} loading={false} />
     </div>
   );
 };
