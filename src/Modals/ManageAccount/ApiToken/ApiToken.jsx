@@ -42,8 +42,8 @@ const ApiToken = () => {
         </Button>
       </div>
       <div className={classes.tokens}>
-        {tokens.map((tokenInfo) => (
-          <SingleToken {...tokenInfo} key={tokenInfo.id} />
+        {tokens?.map((tokenInfo) => (
+          <SingleToken {...tokenInfo} key={tokenInfo?.id} />
         ))}
       </div>
     </>

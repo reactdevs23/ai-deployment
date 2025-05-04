@@ -77,6 +77,10 @@ import youtubeIcon from "./sidebar/youtubeIcon.svg";
 
 import llamaLogo from "./playground/llama.png";
 import imgIcon from "./icons/imgIcon.svg";
+
+//billing
+import masterCardLogo from "./billing/masterCardLogo.png";
+import visaCardLogo from "./billing/visaCardLogo.png";
 export {
   Logo,
   secondLogo,
@@ -150,4 +154,8 @@ export {
   // playground
   llamaLogo,
   imgIcon,
+
+  // billing
+  masterCardLogo,
+  visaCardLogo,
 };

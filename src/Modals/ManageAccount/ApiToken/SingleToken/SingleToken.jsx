@@ -5,7 +5,7 @@ import { deleteIcon } from "@/images";
 import { maskToken } from "@/utils/utils";
 import Warning from "../Warning/Warning";
 import { useState } from "react";
-import VerififyNow from "../../VerififyNow/VerififyNow";
+import VerifyNow from "../../VerifyNow/VerifyNow";
 import SuccessMessage from "../../SuccessMessage/SuccessMessage";
 const STEPS = {
   WARNING: 1,
@@ -54,7 +54,7 @@ const SingleToken = ({ name, token }) => {
           />
         )}{" "}
         {STEPS.VERIFICATION === step && (
-          <VerififyNow
+          <VerifyNow
             handleCancel={handleCancel}
             handleVerification={handleVerification}
           />

@@ -20,10 +20,8 @@ import {
 import General from "@/Modals/ManageAccount/General/General";
 import Sidebar from "./Sidebar/Sidebar";
 import ApiToken from "@/Modals/ManageAccount/ApiToken/ApiToken";
-// import Profile from "@/Modals/ManageAccount/Profile/Profile";
-// import Security from "@/Modals/ManageAccount/Security/Security";
-// import Subscription from "@/Modals/ManageAccount/Subscription/Subscription";
-// import ChatData from "@/Modals/ManageAccount/ChatData/ChatData";
+import Billing from "@/Modals/ManageAccount/Billing/Billing";
+
 const navItems = [
   { icons: [generalIcon, generalActiveIcon], navItem: "General" },
   { icons: [apiTokenIcon, apiTokenActiveIcon], navItem: "API Token" },
@@ -60,6 +58,7 @@ const ManageAccountLayout = ({ isActive, onClose }) => {
         <div className={classes.container}>
           {activeNavItem === "General" && <General parentRef={parentRef} />}{" "}
           {activeNavItem === "API Token" && <ApiToken />}
+          {activeNavItem === "Billing" && <Billing parentRef={parentRef} />}
         </div>
 
         {/* {activeNavItem === "Subscription" && <Subscription />}

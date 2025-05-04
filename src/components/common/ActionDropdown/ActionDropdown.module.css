@@ -31,7 +31,7 @@
   color: var(--Primitive-Default);
 }
 .dropdownMain {
-  min-width: calc(100%);
+  min-width: 112px;
   width: max-content;
   position: absolute;
   right: 0;

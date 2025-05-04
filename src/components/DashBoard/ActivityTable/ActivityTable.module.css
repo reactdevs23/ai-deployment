@@ -57,9 +57,11 @@
 }
 .time {
   padding-left: 6px;
+  white-space: nowrap;
 }
 .model {
   padding-right: 6px;
+  white-space: nowrap;
 }
 
 .event .emphasizedText {

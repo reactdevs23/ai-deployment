@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  width: 100%;
+}
+.header {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.backButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: none;
+
+  color: var(--Blue-500);
+}
+.arrowLeft {
+  font-size: 14px;
+  transform: translateY(1px);
+}
+.pagination {
+  padding-top: 6px;
+}

@@ -1,11 +1,11 @@
 import { Button } from "@/components/common";
-import classes from "./VerififyNow.module.css";
+import classes from "./VerifyNow.module.css";
 import clsx from "clsx";
 import { useState } from "react";
 import VerificationCode from "@/components/Authentication/VerificationCode/VerificationCode";
 import { maskEmail } from "@/utils/utils";
 
-const VerififyNow = ({
+const VerifyNow = ({
   handleCancel,
   handleVerification,
   email = "your@gmail.com",
@@ -54,4 +54,4 @@ const VerififyNow = ({
     </>
   );
 };
-export default VerififyNow;
+export default VerifyNow;
