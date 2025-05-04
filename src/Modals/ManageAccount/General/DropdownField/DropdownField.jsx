@@ -10,7 +10,7 @@ const DropdownField = ({
   setSelectedValue,
   parentRef,
 }) => {
-  const [showDropdown, setShowDropdown] = useState();
+  const [showDropdown, setShowDropdown] = useState(null);
   return (
     <div className={classes.wrapper}>
       <Text className={classes.label} lxs primitive700>

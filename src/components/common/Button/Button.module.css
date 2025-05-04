@@ -54,10 +54,7 @@
   font-size: 18px;
   padding: 12px 20px;
 }
-.primitive800 {
-  background: var(--Primitive-800);
-  color: var(--Primitive-400);
-}
+
 .blue50 {
   border: 1px solid var(--Blue-10);
   background: var(--Blue-50);
@@ -80,6 +77,11 @@
   color: var(--Blue-500);
   background: transparent;
   gap: 6px;
+}
+.primitive100 {
+  background: var(--Primitive-100);
+  color: var(--Primitive-400);
+  border-bottom: 2px solid var(--Primitive-200);
 }
 .primitiveTransparent8 {
   background: var(--Primitive-Transparent-8);

@@ -20,7 +20,8 @@ import ActionDropdown from "./ActionDropdown/ActionDropdown";
 import InputRangeSlider from "./InputRangeSlider/InputRangeSlider";
 import Loader from "./Loader/Loader";
 import Modal from "./Modal/Modal";
-
+import IconButton from "./IconButton/IconButton";
+import MiniModal from "./MiniModal/MiniModal";
 export {
   Wrapper,
   Button,
@@ -42,4 +43,6 @@ export {
   InputRangeSlider,
   Loader,
   Modal,
+  IconButton,
+  MiniModal,
 };

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
 import OTPInput, { ResendOTP } from "otp-input-react";
-import { Button, Text } from "@/components/common";
+import { Button, Header, Text } from "@/components/common";
 import classes from "./VerificationCode.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -30,9 +30,23 @@ const VerificationCode = ({
 
   buttonText,
   onVerify,
+  header,
 }) => {
   return (
     <div className={classes.wrapper}>
+      {header && (
+        <Header
+          center
+          heading="Check Your Inbox"
+          description={
+            <span>
+              We’ve sent a 6-digit code to{" "}
+              <b className={classes.bold}>yo**ur@email.com</b> — Enter the code
+              below to complete sign-in.
+            </span>
+          }
+        />
+      )}
       <OTPInput
         inputClassName={clsx(classes.input, otpInvalid && classes.hasError)}
         value={otp}
@@ -49,9 +63,9 @@ const VerificationCode = ({
         </Text>
       )}
 
-      <Button wFull onClick={onVerify}>
+      {/* <Button wFull onClick={onVerify}>
         {buttonText ? buttonText : "Verify"}
-      </Button>
+      </Button> */}
 
       <ResendOTP
         renderButton={renderButton}

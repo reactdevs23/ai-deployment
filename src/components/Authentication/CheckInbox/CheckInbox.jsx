@@ -26,14 +26,14 @@ const CheckInbox = ({ img, setStep, buttonText, to }) => {
       <div className={classes.wrapper}>
         <Header
           heading="Check Your Inbox"
-          info={
+          description={
             <span>
               We’ve sent a 6-digit code to{" "}
               <b className={classes.bold}>yo**ur@email.com</b> — Enter the code
               below to complete sign-in.
             </span>
           }
-        />{" "}
+        />
         <VerificationCode
           otp={OTP}
           setOTP={setOTP}

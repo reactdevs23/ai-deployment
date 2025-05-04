@@ -58,7 +58,7 @@
   color: var(--Primitive-Warning);
 }
 .error {
-  color: var(--Primitive-Error);
+  color: var(--Error);
 }
 .success {
   color: var(--Primitive-Default);

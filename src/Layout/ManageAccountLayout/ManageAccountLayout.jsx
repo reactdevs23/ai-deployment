@@ -32,13 +32,17 @@ const navItems = [
 const ManageAccountLayout = ({ isActive, onClose }) => {
   const navigate = useNavigate();
   const [isSidebarActive, setIsSidebarActive] = useState(false);
-
+  const toggleSidebar = () => {
+    setIsSidebarActive((prev) => !prev);
+  };
   const [activeNavItem, setActiveNavItem] = useState("General");
   const handleLogout = () => {};
-
+  const parentRef = useRef(null);
   return (
     <Modal
-      className={classes.modal}
+      className={clsx(classes.modal, classes.mainModal)}
+      toggleSidebar={toggleSidebar}
+      parentRef={parentRef}
       isActive={isActive}
       onClose={onClose}
       heading="Account Settings"
@@ -53,7 +57,7 @@ const ManageAccountLayout = ({ isActive, onClose }) => {
           setActiveNavItem={setActiveNavItem}
         />
         <div className={classes.container}>
-          {activeNavItem === "General" && <General />}
+          {activeNavItem === "General" && <General parentRef={parentRef} />}
         </div>
         {/* {activeNavItem === "Security" && <Security />}
         {activeNavItem === "Subscription" && <Subscription />}

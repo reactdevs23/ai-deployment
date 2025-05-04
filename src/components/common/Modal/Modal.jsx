@@ -1,7 +1,8 @@
 import { IoClose } from "react-icons/io5";
-import { Heading } from "..";
+import { Heading, IconButton } from "..";
 import classes from "./Modal.module.css";
 import clsx from "clsx";
+import { sidebarIcon } from "@/images";
 
 const Modal = ({
   isActive,
@@ -10,7 +11,8 @@ const Modal = ({
 
   heading,
   children,
-
+  parentRef,
+  toggleSidebar,
   ...rest
 }) => {
   return (
@@ -22,6 +24,7 @@ const Modal = ({
         />
       )}
       <div
+        ref={parentRef}
         className={clsx(
           className,
           isActive && classes.active,
@@ -32,12 +35,23 @@ const Modal = ({
         {...rest}
       >
         <div className={classes.header}>
-          <Heading primitive900 medium sm>
-            {heading}
-          </Heading>
-          <button className={classes.closeButton} onClick={onClose}>
+          <div className={classes.heading}>
+            {toggleSidebar && (
+              <button className={classes.sidebarButton} onClick={toggleSidebar}>
+                <img
+                  src={sidebarIcon}
+                  alt="#"
+                  className={classes.sidebarIcon}
+                />
+              </button>
+            )}
+            <Heading primitive900 medium sm>
+              {heading}
+            </Heading>
+          </div>
+          <IconButton className={classes.closeButton} onClick={onClose}>
             <IoClose className={classes.closeIcon} />
-          </button>
+          </IconButton>
         </div>
         {children}
       </div>
