@@ -16,7 +16,7 @@ const CopyButton = ({ className, textToCopy = "No Value" }) => {
 
   return (
     <button
-      className={clsx(classes.editButton, className)}
+      className={clsx(classes.editButton, className, classes.button)}
       onClick={handleCopy}
     >
       {copied ? (

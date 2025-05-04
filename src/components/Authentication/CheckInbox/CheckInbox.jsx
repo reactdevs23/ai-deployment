@@ -4,6 +4,7 @@ import { apiSkeletonImg } from "@/images";
 import { useState } from "react";
 import classes from "./CheckInbox.module.css";
 import { Link, useNavigate } from "react-router-dom";
+import { maskEmail } from "@/utils/utils";
 import VerificationCode from "../VerificationCode/VerificationCode";
 const CheckInbox = ({ img, setStep, buttonText, to }) => {
   const navigate = useNavigate();
@@ -24,16 +25,7 @@ const CheckInbox = ({ img, setStep, buttonText, to }) => {
   return (
     <AuthentictionWrapper img={img}>
       <div className={classes.wrapper}>
-        <Header
-          heading="Check Your Inbox"
-          description={
-            <span>
-              We’ve sent a 6-digit code to{" "}
-              <b className={classes.bold}>yo**ur@email.com</b> — Enter the code
-              below to complete sign-in.
-            </span>
-          }
-        />
+        <Header center />
         <VerificationCode
           otp={OTP}
           setOTP={setOTP}
@@ -42,6 +34,10 @@ const CheckInbox = ({ img, setStep, buttonText, to }) => {
           onVerify={handleVerify}
           buttonText={buttonText}
         />
+
+        <Button wFull onClick={handleVerify} disabled={OTP.length !== 6}>
+          {buttonText ? buttonText : "Verify"}
+        </Button>
       </div>
     </AuthentictionWrapper>
   );

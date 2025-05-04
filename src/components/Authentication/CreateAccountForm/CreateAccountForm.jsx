@@ -17,8 +17,10 @@ const CreateAccountForm = ({ setStep }) => {
   // step 3 === success
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStep(2);
-    setLoading(true);
+    if (subribeUs) {
+      setStep(2);
+      setLoading(true);
+    }
   };
   return (
     <AuthentictionWrapper img={dashboardSkeletonImg}>
@@ -57,6 +59,7 @@ const CreateAccountForm = ({ setStep }) => {
             label="Email"
           />
           <CheckBox
+            required
             checked={subribeUs}
             setChecked={setSubscribeUs}
             label="Subscribe to our newsletter for get latest updates, news and offers."

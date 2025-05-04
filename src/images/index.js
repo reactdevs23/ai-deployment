@@ -22,6 +22,7 @@ import apiTokenIcon from "./icons/apiTokenIcon.svg";
 import apiTokenActiveIcon from "./icons/apiTokenActiveIcon.svg";
 import billingIcon from "./icons/billingIcon.svg";
 import billingActiveIcon from "./icons/billingActiveIcon.svg";
+import deleteIcon from "./icons/deleteIcon.svg";
 
 // withourplatform
 import idogramAiImg from "./platform/idogram-ai.png";
@@ -99,6 +100,7 @@ export {
   apiTokenActiveIcon,
   billingIcon,
   billingActiveIcon,
+  deleteIcon,
 
   // platform
   idogramAiImg,

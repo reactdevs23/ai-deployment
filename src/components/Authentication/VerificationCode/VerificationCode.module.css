@@ -3,7 +3,11 @@
   flex-direction: column;
   gap: 20px;
 }
-
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 .input {
   padding: 11px;
   text-align: center;

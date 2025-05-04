@@ -1,0 +1,19 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.button.okayButton:hover {
+  transform: none;
+}
+
+.button.okayButton {
+  border-radius: 8px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}

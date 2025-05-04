@@ -27,8 +27,13 @@ export function convertMBtoGB(mb) {
 }
 export const maskToken = (token) => {
   if (!token) return "";
-  const visiblePart = token.slice(0, 10); // Show only first 10 chars
-  return `${visiblePart}${"*".repeat(token.length - 10)}`;
+  const visiblePart = token.slice(0, 20); // Show only first 10 chars
+  return `${visiblePart}${"x".repeat(token.length - 10)}`;
+};
+export const maskEmail = (email) => {
+  if (!email) return "you****@email.com";
+  const [username, domain] = email.split("@");
+  return `${username.substring(0, 2)}****@${domain}`;
 };
 export const scrollToBottom = () => {
   window.scrollTo({

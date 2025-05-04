@@ -4,6 +4,7 @@ import OTPInput, { ResendOTP } from "otp-input-react";
 import { Button, Header, Text } from "@/components/common";
 import classes from "./VerificationCode.module.css";
 import { useNavigate } from "react-router-dom";
+import { maskEmail } from "@/utils/utils";
 
 const renderButton = (buttonProps) => {
   return (
@@ -28,44 +29,49 @@ const VerificationCode = ({
   otp,
   setOTP,
 
-  buttonText,
-  onVerify,
   header,
+  heading,
+  description,
 }) => {
   return (
     <div className={classes.wrapper}>
-      {header && (
-        <Header
-          center
-          heading="Check Your Inbox"
-          description={
-            <span>
-              We’ve sent a 6-digit code to{" "}
-              <b className={classes.bold}>yo**ur@email.com</b> — Enter the code
-              below to complete sign-in.
-            </span>
-          }
-        />
-      )}
-      <OTPInput
-        inputClassName={clsx(classes.input, otpInvalid && classes.hasError)}
-        value={otp}
-        onChange={setOTP}
-        autoFocus
-        OTPLength={6}
-        otpType="number"
-        disabled={false}
+      <Header
+        center
+        heading={heading || "Check Your Inbox"}
+        description={
+          <span>
+            We’ve sent a digit code to{" "}
+            <b className={classes.bold}>{maskEmail("your@email.com")}</b> —
+            Enter the code below to complete sign-in.
+          </span>
+        }
       />
 
-      {otpInvalid && (
-        <Text xs className={classes.helperError}>
-          Please enter valid verification code.
-        </Text>
-      )}
+      <div className={classes.inputWrapper}>
+        <OTPInput
+          inputClassName={clsx(
+            classes.input,
+            otpInvalid && otp.length === 6 && classes.hasError
+          )}
+          value={otp}
+          onChange={(value) => {
+            setOTP(value);
+            if (otpInvalid) {
+              setOtpInvalid(false);
+            }
+          }}
+          autoFocus
+          OTPLength={6}
+          otpType="number"
+          disabled={false}
+        />
 
-      {/* <Button wFull onClick={onVerify}>
-        {buttonText ? buttonText : "Verify"}
-      </Button> */}
+        {otpInvalid && otp.length === 6 && (
+          <Text xs className={classes.helperError}>
+            Please enter valid verification code.
+          </Text>
+        )}
+      </div>
 
       <ResendOTP
         renderButton={renderButton}

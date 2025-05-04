@@ -8,3 +8,25 @@
   max-width: 16px;
   width: 100%;
 }
+.button {
+  margin-left: auto;
+  display: block;
+  border-radius: 6px;
+
+  border-bottom: 1px solid var(--Primitive-200);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+.icon {
+  color: var(--Primitive-400);
+  font-size: 16px;
+}
+.button:hover {
+  background: var(--Primitive-100);
+  border-bottom: 1px solid var(--Primitive-200);
+}

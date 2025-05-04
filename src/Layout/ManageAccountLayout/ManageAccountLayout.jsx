@@ -19,6 +19,7 @@ import {
 } from "@/images";
 import General from "@/Modals/ManageAccount/General/General";
 import Sidebar from "./Sidebar/Sidebar";
+import ApiToken from "@/Modals/ManageAccount/ApiToken/ApiToken";
 // import Profile from "@/Modals/ManageAccount/Profile/Profile";
 // import Security from "@/Modals/ManageAccount/Security/Security";
 // import Subscription from "@/Modals/ManageAccount/Subscription/Subscription";
@@ -57,11 +58,12 @@ const ManageAccountLayout = ({ isActive, onClose }) => {
           setActiveNavItem={setActiveNavItem}
         />
         <div className={classes.container}>
-          {activeNavItem === "General" && <General parentRef={parentRef} />}
+          {activeNavItem === "General" && <General parentRef={parentRef} />}{" "}
+          {activeNavItem === "API Token" && <ApiToken />}
         </div>
-        {/* {activeNavItem === "Security" && <Security />}
-        {activeNavItem === "Subscription" && <Subscription />}
-        {activeNavItem === "Chat Data" && <ChatData onClose={onClose} />} */}
+
+        {/* {activeNavItem === "Subscription" && <Subscription />}
+        {activeNavItem === "Chat Data" && <ChatData onClose={onClose} />}  */}
       </div>
     </Modal>
   );

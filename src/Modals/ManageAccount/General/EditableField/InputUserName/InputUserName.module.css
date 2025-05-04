@@ -28,7 +28,7 @@
 .focused {
   border: 1px solid var(--Blue-500);
 }
-.focused.notValid {
+.notValid {
   border: 1px solid var(--Error);
 }
 
@@ -59,4 +59,7 @@
   color: var(--Error);
 
   font-size: 16px;
+}
+.error {
+  transform: translateY(-2px);
 }

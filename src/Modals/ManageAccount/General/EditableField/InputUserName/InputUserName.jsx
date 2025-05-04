@@ -70,8 +70,8 @@ const InputUserName = memo(
           {isValid && <FaCheckCircle className={classes.validIcon} />}
         </div>
         {!isValid && value && (
-          <Text error xs>
-            Already Taken or Not valid
+          <Text error xs className={classes.error}>
+            Not Available or Not valid
           </Text>
         )}
       </div>

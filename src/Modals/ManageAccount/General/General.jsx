@@ -43,12 +43,12 @@ const General = ({ parentRef }) => {
         />{" "}
         <EditableField
           emailEditing
-          label="Enter new email"
+          label="Email"
           value={email}
           setValue={setEmail}
         />
       </div>
-      <div className={classes.container} ref={parentRef}>
+      <div className={classes.container}>
         <DropdownField
           dropdownItems={timezoneList}
           label="Time Zone"

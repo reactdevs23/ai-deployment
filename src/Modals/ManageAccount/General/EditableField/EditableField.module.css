@@ -20,15 +20,19 @@
   gap: 20px;
   width: 100%;
 }
-.value {
+.valueAndButton {
   flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px 10px;
 }
 .label {
   flex-shrink: 0;
   flex-basis: 100px;
   white-space: nowrap;
 }
-.wrapper2 .value {
+.wrapper2 .valueAndButton {
   flex: 0 1 auto;
 }
 
@@ -52,10 +56,11 @@
 
   transform: none;
 }
-.buttonContainer .saveButton {
+.buttonContainer .saveButton,
+.buttonContainer .verifyButton,
+.buttonContainer .continueButton {
   border-radius: 0;
   border-bottom-right-radius: 8px;
-  transform: none;
 }
 .buttonContainer .okayButton {
   border-radius: 8px;

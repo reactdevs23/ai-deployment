@@ -8,7 +8,7 @@
   right: 0;
   bottom: 0;
   opacity: 0;
-  z-index: 199;
+  z-index: 100;
   transition: 0.3s ease-in-out;
   pointer-events: none;
   cursor: pointer;
@@ -22,7 +22,7 @@
   position: absolute;
 
   left: 50%;
-  top: 50%;
+  top: calc(50%);
   transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
