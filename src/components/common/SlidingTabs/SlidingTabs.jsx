@@ -1,26 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import { Tabs, Tab } from "react-tabs-scrollable";
 import "react-tabs-scrollable/dist/rts.css";
 import classes from "./SlidingTabs.module.css";
-import "./SlidingTabs.module.css"; // Your existing CSS
 import clsx from "clsx";
 
 const SlidingTabs = ({ tabs, activeTab, setActiveTab }) => {
-  // If you need to control the active tab from parent component,
-  // use the props directly. Otherwise, manage it internally:
-  // const [activeTab, setActiveTab] = useState(0);
+  // Find the index of the active tab
+  const activeTabIndex = tabs.findIndex((tab) => tab.name === activeTab.name);
 
   const onTabClick = (e, index) => {
+    // Set the active tab using the tab object from your tabs array
     setActiveTab(tabs[index]);
   };
 
-  const activeTabIndex = tabs.findIndex((tab) => tab.name === activeTab.name);
   return (
     <div className={classes.tabContainer}>
       <Tabs
-        activeTab={activeTabIndex}
+        activeTab={activeTabIndex} // This should be the index
         onTabClick={onTabClick}
-        hideNavBtns={true} // This completely hides navigation buttons
+        hideNavBtns={true}
         tabsScrollable={true}
         tabsContainerClassName={classes.tabs}
       >
@@ -28,7 +26,7 @@ const SlidingTabs = ({ tabs, activeTab, setActiveTab }) => {
           <Tab
             key={index}
             className={clsx(classes.tab, {
-              [classes.activeTab]: tab.name === activeTab.name,
+              [classes.activeTab]: index === activeTabIndex,
             })}
           >
             {tab.name}
