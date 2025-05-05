@@ -26,8 +26,9 @@ const CreateAccountForm = ({ setStep }) => {
     <AuthentictionWrapper img={dashboardSkeletonImg}>
       <div className={classes.wrapper}>
         <Header
+          center
           heading="Create Your Account"
-          info="Fill in your details to get started. We’ll send you a one-time code to verify your email."
+          description="Fill in your details to get started. We’ll send you a one-time code to verify your email."
         />
         <form action="" onSubmit={handleSubmit} className={classes.form}>
           <Input

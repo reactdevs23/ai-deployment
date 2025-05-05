@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import React, { useEffect } from "react";
 
 import MainLayout from "@/Layout/MainLayout/MainLayout";
@@ -22,11 +22,20 @@ import Api from "./pages/DeploymentDetails/Api/Api";
 import SetupLogs from "./pages/DeploymentDetails/SetupLogs/SetupLogs";
 import Settings from "./pages/DeploymentDetails/Settings/Settings";
 import Playground from "./pages/Playground/Playground";
+import NotFound from "./components/common/NotFound/NotFound";
+import PricingPage from "./pages/PricingPage/PricingPage";
 
 function App() {
   // Example Authentication State
   const isAuthenticated = true;
-
+  const { pathname } = useLocation();
+  const routeLayoutMap = {
+    "/create-deployment": { cancelDeployment: true },
+    "/deployments": { createDeployment: true },
+  };
+  const layoutProps =
+    routeLayoutMap[pathname] ||
+    (pathname.startsWith("/deployment-details") ? { noPadding: true } : {});
   return (
     <Routes>
       {/* Main Layout */}
@@ -38,12 +47,13 @@ function App() {
         {/* Landing pages */}
         <Route element={<LandingLayout />}>
           <Route index element={<Home />} />
+          <Route path="/pricing" element={<PricingPage />} />
         </Route>
 
         {/* Protected Dashboard Routes */}
         <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
           <Route path="playground" element={<Playground />} />
-          <Route element={<SidebarLayout />}>
+          <Route element={<SidebarLayout {...layoutProps} />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="models" element={<ModelsPage />} />
             <Route path="deployments" element={<DeploymentPage />} />
@@ -51,10 +61,7 @@ function App() {
             <Route
               path="create-deployment"
               element={<CreateDeploymentPage />}
-            />{" "}
-          </Route>
-
-          <Route element={<SidebarLayout noPadding />}>
+            />
             <Route
               path="/deployment-details/"
               element={<DeploymentDetailsLayout />}
@@ -72,6 +79,7 @@ function App() {
         <Route path="sign-in" element={<SignIn />} />
         <Route path="sign-up" element={<CreateAccount />} />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

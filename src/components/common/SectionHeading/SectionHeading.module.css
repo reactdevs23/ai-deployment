@@ -1,13 +1,1 @@
-.wrapper {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 6px;
-}
 
-.hr {
-  height: 2px;
-  width: 48px;
-
-  background: var(--Primitive-Blue-500);
-}

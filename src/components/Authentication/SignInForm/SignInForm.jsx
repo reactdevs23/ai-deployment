@@ -22,8 +22,9 @@ const SignInForm = ({ setStep }) => {
       <AuthentictionWrapper img={apiSkeletonImg}>
         <div className={classes.wrapper}>
           <Header
+            center
             heading="Welcome Back!"
-            info="Enter your email to continue. We'll send you a one-time code to verify."
+            description="Enter your email to continue. We'll send you a one-time code to verify."
           />
           <form action="" onSubmit={handleSubmit} className={classes.form}>
             <Input

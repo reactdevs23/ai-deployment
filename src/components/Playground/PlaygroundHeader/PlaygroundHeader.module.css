@@ -4,15 +4,17 @@
   align-items: center;
   gap: 6px;
   padding: 12px 32px;
+
   border-bottom: 1px solid var(--Blue-100);
   background: var(--Base-White);
   height: calc(var(--navHeight));
   margin: 0 auto;
-  width: 100%;
+  width: calc(100% - 1px);
   flex: 0 0 auto;
   position: sticky;
   position: -webkit-sticky;
   top: var(--navHeight);
+
   z-index: 10;
 }
 

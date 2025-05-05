@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left: 2px solid var(--Blue-500);
+  background: var(--Blue-50);
+  width: 100%;
+}
+.highlight {
+  font-weight: 500;
+}

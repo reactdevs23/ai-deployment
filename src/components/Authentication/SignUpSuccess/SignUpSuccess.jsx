@@ -22,7 +22,9 @@ const SignUpSuccess = () => {
             <span className={classes.email}>yo**ur@email.com</span>
           </Text>
         </div>
-        <Button to="/dashboard">Go to Dashboard</Button>
+        <Button sm to="/dashboard">
+          Go to Dashboard
+        </Button>
       </div>
     </section>
   );

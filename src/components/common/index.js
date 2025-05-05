@@ -22,6 +22,8 @@ import Loader from "./Loader/Loader";
 import Modal from "./Modal/Modal";
 import IconButton from "./IconButton/IconButton";
 import MiniModal from "./MiniModal/MiniModal";
+import ParagraphWrapper from "./ParagraphWrapper/ParagraphWrapper";
+import PatternContainer from "./PatternContainer/PatternContainer";
 export {
   Wrapper,
   Button,
@@ -45,4 +47,6 @@ export {
   Modal,
   IconButton,
   MiniModal,
+  ParagraphWrapper,
+  PatternContainer,
 };

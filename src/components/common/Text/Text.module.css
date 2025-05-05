@@ -86,6 +86,7 @@
 }
 .base {
   font-size: 16px;
+  line-height: 162.5%;
 }
 .lg {
   font-size: 18px;

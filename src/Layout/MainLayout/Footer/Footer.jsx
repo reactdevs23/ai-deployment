@@ -89,10 +89,10 @@ const Footer = () => {
     <section className={classes.wrapper}>
       <footer className={clsx(classes.container, "container")}>
         <div className={classes.infoContainer}>
-          <span className={classes.logo}>
+          <Link to="/" className={classes.logo}>
             {" "}
             <Logo color="#fff" />{" "}
-          </span>
+          </Link>
 
           <div className={classes.title}>
             <Heading primitive0 medium className={classes.topHeading}>

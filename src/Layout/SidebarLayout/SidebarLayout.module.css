@@ -22,6 +22,8 @@
   padding: 12px 32px;
 
   display: flex;
+  justify-content: space-between;
+  gap: 12px;
   align-items: center;
   position: sticky;
   position: -webkit-sticky;
@@ -29,7 +31,8 @@
   top: var(--navHeight);
   gap: 8px;
   height: var(--headerHeight);
-  margin-left: 2px;
+  width: calc(100% - 1px);
+  margin: 0 auto;
 }
 .breadCram {
   display: flex;
@@ -62,6 +65,9 @@
 }
 .noPadding {
   padding: 0;
+}
+.cancelButton {
+  color: var(--Primitive-400);
 }
 @media only screen and (max-width: 1199px) {
   .wrapper {

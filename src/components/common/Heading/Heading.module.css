@@ -1,6 +1,6 @@
 .heading {
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 100%;
   font-size: 30px;
   color: var(--Primitive-900);
@@ -85,6 +85,10 @@
 .xl2 {
   font-size: 24px;
 }
+.xxl2 {
+  font-size: 28px;
+  line-height: 114.286%;
+}
 .xxl {
   font-size: 22px;
   line-height: 127.27%;
@@ -161,10 +165,16 @@
   .xl2 {
     font-size: 20px;
   }
+  .xxl2 {
+    font-size: 24px;
+  }
 }
 @media only screen and (max-width: 520px) {
   .xxl {
     font-size: 20px;
+  }
+  .xxl2 {
+    font-size: 22px;
   }
   .xl3 {
     font-size: 28px;

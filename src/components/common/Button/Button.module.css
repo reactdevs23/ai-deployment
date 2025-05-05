@@ -67,7 +67,7 @@
 
 .transparent {
   padding: 6.5px 12px;
-  background: transparent;
+  background: var(--Base-White);
   color: var(--Blue-500);
   border: 1px solid var(--Primitive-200);
   border-bottom-width: 2px;
@@ -114,5 +114,13 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 520px) {
+  .button {
+    padding: 7px 12px;
+  }
+  .sm {
+    padding: 6px 10px;
   }
 }

@@ -149,9 +149,9 @@ const Sidebar = ({ sidebar, setSidebar }) => {
         <div className={classes.line}></div>
 
         <div className={classes.socialInfo}>
-          <span className={classes.logo}>
+          <Link to="/" className={classes.logo}>
             <Logo color="#3981F8" />
-          </span>
+          </Link>
           <Text primitive600 xs>
             © 2025, ScalaNodes
           </Text>
