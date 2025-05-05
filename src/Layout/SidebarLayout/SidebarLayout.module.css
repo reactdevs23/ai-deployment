@@ -29,6 +29,7 @@
   top: var(--navHeight);
   gap: 8px;
   height: var(--headerHeight);
+  margin-left: 2px;
 }
 .breadCram {
   display: flex;

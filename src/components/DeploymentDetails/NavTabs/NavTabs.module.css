@@ -8,6 +8,7 @@
   align-items: center;
   border-bottom: 1px solid var(--Blue-100);
   background: var(--Primitive-0);
+  margin-left: 2px;
 }
 .navItem {
   font-size: 14px;
