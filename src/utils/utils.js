@@ -41,3 +41,7 @@ export const scrollToBottom = () => {
     behavior: "smooth",
   });
 };
+export const maskDigits = (num) => {
+  const str = String(num);
+  return "****" + str.slice(-4);
+};

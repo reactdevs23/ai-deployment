@@ -2,6 +2,7 @@ import { ActionDropdown, Heading, IconButton, Text } from "@/components/common";
 import classes from "./SingleBillingMethod.module.css";
 import { HiDotsVertical } from "react-icons/hi";
 import { useState } from "react";
+import { maskDigits } from "@/utils/utils";
 
 const SingleBillingMethod = ({
   logo,
@@ -9,14 +10,13 @@ const SingleBillingMethod = ({
   cardHolder,
   cardNumber,
   parentRef,
-  ...rest
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedAction, setSelectedAction] = useState(null);
   return (
     <>
       <div className={classes.cardContainer}>
-        <button className={classes.cardInfo} {...rest}>
+        <div className={classes.cardInfo}>
           <div className={classes.logoAndName}>
             <img src={logo} alt="#" className={classes.logo} />
             <Heading sm primitive700 medium>
@@ -27,9 +27,9 @@ const SingleBillingMethod = ({
             <Text lxx primitive600 className={classes.cardHolder}>
               {cardHolder}
             </Text>
-            <Text className={classes.cardNumber}>{cardNumber}</Text>
+            <Text className={classes.cardNumber}>{maskDigits(cardNumber)}</Text>
           </div>
-        </button>
+        </div>
 
         <ActionDropdown
           parentRef={parentRef}

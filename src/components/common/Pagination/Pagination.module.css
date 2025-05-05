@@ -66,6 +66,9 @@
 .pagination .paginationItem .arrow {
   transform: none;
 }
+.pagination .paginationItem .arrow:hover {
+  color: var(--Blue-500);
+}
 .pagination .paginationItem.disabled .arrow {
   cursor: not-allowed;
 }

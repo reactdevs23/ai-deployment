@@ -1,3 +1,4 @@
+import { createPortal } from "react-dom";
 import { IoClose } from "react-icons/io5";
 import { Button, Header, Heading, IconButton } from "..";
 import classes from "./MiniModal.module.css";
@@ -15,7 +16,7 @@ const MiniModal = ({
 
   ...rest
 }) => {
-  return (
+  return createPortal(
     <>
       {isActive && (
         <div
@@ -35,7 +36,8 @@ const MiniModal = ({
       >
         {children}
       </div>
-    </>
+    </>,
+    document.body
   );
 };
 

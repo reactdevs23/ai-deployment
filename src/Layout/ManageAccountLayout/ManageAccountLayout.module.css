@@ -1,8 +1,10 @@
 .mainModal,
 .modal {
-  --modalMinHeight: 250px;
+  --modalMinHeight: 500px;
   min-height: var(--modalMinHeight);
   --modalHeaderHeight: 46px;
+
+  max-height: 90%;
 }
 
 .wrapper {
@@ -32,6 +34,7 @@
     right: 0;
     top: 0;
     bottom: 0;
+    --modalMinHeight: 150px;
   }
   .wrapper {
     grid-template-columns: 1fr;

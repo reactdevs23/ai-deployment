@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import SingleBill from "./SingleBillingMethod/SingleBillingMethod";
 import { masterCardLogo, visaCardLogo } from "@/images";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import TopupModal from "../Topup/TopupModal";
+
 const data = [
   {
     id: "1",
@@ -61,14 +64,20 @@ const BillingMethods = ({ parentRef, setStep }) => {
 
       <div className={classes.cards}>
         {data?.map((cardInfo) => (
-          <SingleBill
-            {...cardInfo}
-            key={cardInfo?.id}
-            parentRef={parentRef}
-            onClick={() => setStep((prev) => prev + 1)}
-          />
+          <SingleBill {...cardInfo} key={cardInfo?.id} parentRef={parentRef} />
         ))}
       </div>
+      <Button
+        sm
+        className={clsx(classes.seeBillingHistoryButton, classes.historyButton)}
+        onClick={() => setStep((prev) => prev + 1)}
+      >
+        See Billing History <FaArrowRight className={classes.arrow} />
+      </Button>
+      <TopupModal
+        isActive={showTopupModal}
+        onClose={() => setShowTopupModal(false)}
+      />
     </>
   );
 };

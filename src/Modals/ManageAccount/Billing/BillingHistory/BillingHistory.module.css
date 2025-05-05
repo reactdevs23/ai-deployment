@@ -24,9 +24,9 @@
   color: var(--Blue-500);
 }
 .arrowLeft {
-  font-size: 14px;
+  font-size: 13px;
   transform: translateY(1px);
 }
 .pagination {
-  padding-top: 6px;
+  padding-top: 2px;
 }

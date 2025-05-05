@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.or {
+  color: var(--Primitive-400);
+}
+.addressContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.address {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border-bottom: 1px solid var(--Primitive-200);
+  background: var(--Primitive-50);
+  word-break: break-all;
+}
+.wrapper .copyButton {
+  border: none;
+  border-bottom: 2px solid var(--Blue-100);
+}

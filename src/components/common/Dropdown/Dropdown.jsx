@@ -32,8 +32,7 @@ const Dropdown = ({
           medium
           className={clsx(classes.label, labelBreak && classes.labelBreak)}
         >
-          {!type2 && label}{" "}
-          {type2 && selectedValue ? selectedValue : label ? label : ""}
+          {selectedValue ? selectedValue : label}
         </Text>
         {isActive ? (
           <FaAngleUp className={clsx(classes.arrow, classes.active)} />

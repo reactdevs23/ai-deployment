@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  width: 100%;
+}
+.heading {
+  width: 100%;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+}
+.buttonContainer .button:hover {
+  transform: none;
+}
+.buttonContainer .cancelButton {
+  border-radius: 0;
+  border-bottom-left-radius: 8px;
+
+  transform: none;
+}
+.buttonContainer .topupButton {
+  border-radius: 0;
+  border-bottom-right-radius: 8px;
+}

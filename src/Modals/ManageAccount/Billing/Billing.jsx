@@ -9,7 +9,7 @@ const STEPS = {
 };
 
 const Billing = () => {
-  const [step, setStep] = useState(STEPS.BILLING_HISTORY);
+  const [step, setStep] = useState(STEPS.BILLING_METHODS);
   return (
     <>
       {STEPS.BILLING_METHODS === step && <BillingMethods setStep={setStep} />}

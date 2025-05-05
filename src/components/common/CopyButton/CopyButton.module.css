@@ -26,6 +26,9 @@
   color: var(--Primitive-400);
   font-size: 16px;
 }
+.checkIcon {
+  font-size: 14px;
+}
 .button:hover {
   background: var(--Primitive-100);
   border-bottom: 1px solid var(--Primitive-200);

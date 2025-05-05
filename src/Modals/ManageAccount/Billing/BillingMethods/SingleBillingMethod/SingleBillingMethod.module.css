@@ -27,11 +27,12 @@
   width: 100%;
 }
 .cardHolderAndCardNumber {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   justify-content: space-between;
   gap: 6px 12px;
+  width: 100%;
 }
 .cardHolder {
   max-width: 150px;
