@@ -11,14 +11,28 @@ import { FaUserAlt } from "react-icons/fa";
 import { accountSettingsIcon, apiTokenIcon, logoutIcon } from "@/images";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 
-const UserDropdown = ({ children, isActive, setIsActive, userInfo }) => {
-  const handleHide = () => {
-    setIsActive(false);
-  };
+const UserDropdown = ({
+  setActiveTab,
+  setShowManageAccountModal,
+  children,
+  isActive,
+  setIsActive,
+  userInfo,
+}) => {
   const handleLogout = () => {
     setIsActive(false);
   };
   const ref = useRef();
+
+  const handleUserAccount = () => {
+    setIsActive(false);
+    setShowManageAccountModal(true);
+  };
+  const handleApiToken = () => {
+    setIsActive(false);
+    setActiveTab("API Token");
+    setShowManageAccountModal(true);
+  };
 
   useOnClickOutside(ref, () => setIsActive(false));
   return (
@@ -59,7 +73,7 @@ const UserDropdown = ({ children, isActive, setIsActive, userInfo }) => {
             </Text>
           </div>
           <Line />
-          <button className={classes.listItem} onClick={handleHide}>
+          <button className={classes.listItem} onClick={handleUserAccount}>
             <img
               src={accountSettingsIcon}
               alt="#"
@@ -67,7 +81,7 @@ const UserDropdown = ({ children, isActive, setIsActive, userInfo }) => {
             />
             <Text className={classes.navItem}>Account Settings</Text>
           </button>
-          <button className={classes.listItem} onClick={handleHide}>
+          <button className={classes.listItem} onClick={handleApiToken}>
             <img src={apiTokenIcon} alt="#" className={classes.navIcon} />
             <Text className={classes.navItem}>API Token</Text>
           </button>{" "}

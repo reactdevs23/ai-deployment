@@ -62,7 +62,7 @@ const NavDropdown = ({
         onClick={() => setIsActive((prev) => !prev)}
       >
         <Text primitive700 sm className={clsx(classes.label)}>
-          {currentPath}
+          {currentPath ? currentPath : "Home"}
         </Text>
         <div
           className={clsx(classes.arrowContainer, isActive && classes.active)}

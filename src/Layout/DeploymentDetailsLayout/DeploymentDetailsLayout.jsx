@@ -7,7 +7,7 @@ import ModelInfo from "@/components/DeploymentDetails/ModelInfo/ModelInfo";
 import { FaArrowRight } from "react-icons/fa";
 import ModelDetails from "@/components/DeploymentDetails/ModelDetails/ModelDetails";
 import { Outlet } from "react-router-dom";
-import NavItems from "@/components/DeploymentDetails/NavItems/NavItems";
+import NavTabs from "@/components/DeploymentDetails/NavTabs/NavTabs";
 
 const modelInfo = [
   { label: "Status", value: "Active" },
@@ -38,7 +38,7 @@ const DeploymentDetailsLayout = () => {
       <div className={classes.modelDetails}>
         <ModelName
           heading="sentiment-analyzer"
-          domain="    api.domain.com/sentiment-analyzer"
+          domain="api.domain.com/sentiment-analyzer"
         />
         <Line className={classes.line} />
         <ModelInfo items={modelInfo} />
@@ -58,7 +58,7 @@ const DeploymentDetailsLayout = () => {
         </ModelDetails>
       </div>
       <div className={classes.outletWrapper}>
-        <NavItems />
+        <NavTabs />
         <div className={classes.outlet}>
           <Outlet />
         </div>

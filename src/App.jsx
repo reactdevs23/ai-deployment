@@ -44,7 +44,7 @@ function App() {
         <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
           <Route path="playground" element={<Playground />} />
           <Route element={<SidebarLayout />}>
-            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="dashboard/" element={<Dashboard />} />
             <Route path="models" element={<ModelsPage />} />
             <Route path="deployments" element={<DeploymentPage />} />
             <Route path="deployments-list" element={<DeploymentsListPage />} />

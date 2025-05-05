@@ -5,7 +5,7 @@
   padding: 20px 16px 20px 0px;
 
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 61px);
 
   position: sticky;
   position: -webkit-sticky;
@@ -37,6 +37,7 @@
 .navActive {
   background: var(--Blue-50);
   color: var(--Blue-500);
+  font-weight: 500;
 }
 .navIcon {
   max-width: 16px;

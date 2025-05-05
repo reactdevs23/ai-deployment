@@ -18,6 +18,8 @@
   white-space: nowrap;
   padding: 8px 12px;
   text-transform: capitalize;
+  font-weight: 500;
+  color: var(--Blue-500);
 }
 .arrowContainer {
   width: 36px;

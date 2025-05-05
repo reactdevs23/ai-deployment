@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
-import classes from "./NavItems.module.css";
+import classes from "./NavTabs.module.css";
 import clsx from "clsx";
-const navItems = [
+const navTabs = [
   {
     navItem: "API",
     to: "/deployment-details/api",
   },
   {
     navItem: "Playground",
-    to: "/deployment-details/playground",
+    to: "/playground",
   },
   {
     navItem: "Setup Logs",
@@ -19,10 +19,10 @@ const navItems = [
     to: "/deployment-details/settings",
   },
 ];
-const NavItems = () => {
+const NavTabs = () => {
   return (
     <nav className={classes.navs}>
-      {navItems.map(({ navItem, to }, i) => (
+      {navTabs.map(({ navItem, to }, i) => (
         <NavLink
           key={i}
           to={to}
@@ -38,4 +38,4 @@ const NavItems = () => {
     </nav>
   );
 };
-export default NavItems;
+export default NavTabs;

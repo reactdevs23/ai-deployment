@@ -28,7 +28,11 @@ const resources = [
   { navItem: "Support", to: "/support" },
   { navItem: "Contact Us ", to: "/contact-us" },
 ];
-const Navbar = ({ isAuthenticated }) => {
+const Navbar = ({
+  isAuthenticated,
+  setShowManageAccountModal,
+  setActiveTab,
+}) => {
   const userInfo = {
     img: userImg,
     name: "Imam Hossain",
@@ -154,9 +158,11 @@ const Navbar = ({ isAuthenticated }) => {
                   setIsActive={setIsNavDropdownActive}
                 />
                 <UserDropdown
+                  setActiveTab={setActiveTab}
                   userInfo={userInfo}
                   isActive={isUserDropdownActive}
                   setIsActive={setIsUserDropdownActive}
+                  setShowManageAccountModal={setShowManageAccountModal}
                 >
                   Explorer
                 </UserDropdown>

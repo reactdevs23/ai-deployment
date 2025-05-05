@@ -28,13 +28,18 @@ const navItems = [
   { icons: [billingIcon, billingActiveIcon], navItem: "Billing" },
 ];
 
-const ManageAccountLayout = ({ isActive, onClose }) => {
+const ManageAccountLayout = ({
+  isActive,
+  onClose,
+  activeNavItem,
+  setActiveNavItem,
+}) => {
   const navigate = useNavigate();
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   const toggleSidebar = () => {
     setIsSidebarActive((prev) => !prev);
   };
-  const [activeNavItem, setActiveNavItem] = useState("General");
+
   const handleLogout = () => {};
   const parentRef = useRef(null);
   return (

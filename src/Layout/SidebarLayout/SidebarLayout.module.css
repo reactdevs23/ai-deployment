@@ -30,6 +30,22 @@
   gap: 8px;
   height: var(--headerHeight);
 }
+.breadCram {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.intermediateSegment,
+.separator {
+  font-size: 14px;
+  color: var(--Primitive-500);
+  line-height: 142.86%;
+  text-transform: capitalize;
+}
+.capitalize {
+  text-transform: capitalize;
+}
 .sidebarIcon {
   display: none;
   justify-content: center;
