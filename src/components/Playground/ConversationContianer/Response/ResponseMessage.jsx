@@ -3,10 +3,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import {
-  a11yDark,
-  atomDark,
-} from "react-syntax-highlighter/dist/esm/styles/prism";
+
 import { FaCheck } from "react-icons/fa";
 import { LuCopy } from "react-icons/lu";
 
@@ -15,7 +12,6 @@ import { AiOutlineExpandAlt } from "react-icons/ai";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiDislike } from "react-icons/bi";
 import classes from "./ResponseMessage.module.css"; // Your CSS module
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { Text } from "@/components/common";
 import { HiOutlineDownload } from "react-icons/hi";
 import { copyToClipboard, detectLanguage } from "@/utils/utils";

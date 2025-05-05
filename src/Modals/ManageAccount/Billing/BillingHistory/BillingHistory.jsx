@@ -1,7 +1,7 @@
 import classes from "./BillingHistory.module.css";
 import { Input, Dropdown, Heading, Text } from "@/components/common";
 
-import ModelsTable from "./Table/Table";
+import Table from "./Table/Table";
 import { useMemo, useState } from "react";
 
 import Pagination from "@/components/common/Pagination/Pagination";
@@ -160,7 +160,7 @@ const BillingHistory = ({ setStep }) => {
           your billing activity over time.
         </Text>
       </div>
-      <ModelsTable data={currentTableData} />
+      <Table data={currentTableData} />
       <Pagination
         className={classes.pagination}
         currentPage={currentPage}

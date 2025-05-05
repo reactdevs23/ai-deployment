@@ -1,7 +1,10 @@
-import { useTable } from "react-table";
-import classes from "./ActivityTable.module.css"; // CSS Module
-
+import classes from "./ActivityTable.module.css";
 import { Button, Heading, Text } from "@/components/common";
+import {
+  useReactTable,
+  flexRender,
+  getCoreRowModel,
+} from "@tanstack/react-table";
 import { FaArrowRight } from "react-icons/fa";
 
 // Table Data
@@ -81,60 +84,67 @@ const data = [
 ];
 
 // Columns Configuration
+// Columns Configuration
 const columns = [
   {
     id: "timeCell",
-    Header: () => (
+    header: () => (
       <Text xs primitive600 className={classes.timeHeader}>
         Time
       </Text>
     ),
-    accessor: "time",
-    Cell: ({ value }) => (
+    accessorKey: "time",
+    cell: ({ getValue }) => (
       <Text lxs primitive600 className={classes.time}>
-        {value || "-"}
+        {getValue() || "-"}
       </Text>
     ),
   },
   {
     id: "eventCell",
-    Header: () => (
+    header: () => (
       <Text xs primitive600 className={classes.eventHeader}>
         Event
       </Text>
     ),
-    accessor: "event",
-    Cell: ({ value }) => (
-      <Text lxs primitive600 className={classes.event}>
-        <span>{value?.description || "-"}</span>
-        {value?.emphasizedText && (
-          <span className={classes.emphasizedText}>
-            {" "}
-            {value.emphasizedText}
-          </span>
-        )}
-      </Text>
-    ),
+    accessorKey: "event",
+    cell: ({ getValue }) => {
+      const value = getValue();
+      return (
+        <Text lxs primitive600 className={classes.event}>
+          <span>{value?.description || "-"}</span>
+          {value?.emphasizedText && (
+            <span className={classes.emphasizedText}>
+              {" "}
+              {value.emphasizedText}
+            </span>
+          )}
+        </Text>
+      );
+    },
   },
   {
     id: "modelCell",
-    Header: () => (
+    header: () => (
       <Text xs primitive600 className={classes.modelHeader}>
         Model
       </Text>
     ),
-    accessor: "model",
-    Cell: ({ value }) => (
+    accessorKey: "model",
+    cell: ({ getValue }) => (
       <Text lxs primitive600 medium className={classes.model}>
-        {value || "-"}
+        {getValue() || "-"}
       </Text>
     ),
   },
 ];
 
 const ActivityTable = () => {
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data });
+  const table = useReactTable({
+    columns,
+    data,
+    getCoreRowModel: getCoreRowModel(),
+  });
 
   return (
     <section className={classes.wrapper}>
@@ -142,40 +152,40 @@ const ActivityTable = () => {
         Activity
       </Heading>
       <div className={classes.tableContainer}>
-        <table {...getTableProps()} className={classes.table}>
+        <table className={classes.table}>
           <thead>
-            {headerGroups?.map((headerGroup, i) => (
-              <tr key={i} className={classes.headerRow}>
-                {headerGroup?.headers.map((column) => (
-                  <th key={column.id} className={classes.headerCell}>
-                    {column.render("Header")}
+            {table.getHeaderGroups().map((headerGroup) => (
+              <tr key={headerGroup.id} className={classes.headerRow}>
+                {headerGroup.headers.map((header) => (
+                  <th key={header.id} className={classes.headerCell}>
+                    {flexRender(
+                      header.column.columnDef.header,
+                      header.getContext()
+                    )}
                   </th>
                 ))}
               </tr>
             ))}
           </thead>
 
-          <tbody {...getTableBodyProps()}>
-            {rows?.map((row, i) => {
-              prepareRow(row);
-              return (
-                <tr key={i} className={classes.row}>
-                  {row?.cells.map((cell, i) => (
-                    <td
-                      key={i}
-                      className={`${classes.cell} ${
-                        classes[cell.column.id] || ""
-                      }`}
-                    >
-                      {cell.render("Cell")}
-                    </td>
-                  ))}
-                </tr>
-              );
-            })}
+          <tbody>
+            {table.getRowModel().rows.map((row) => (
+              <tr key={row.id} className={classes.row}>
+                {row.getVisibleCells().map((cell) => (
+                  <td
+                    key={cell.id}
+                    className={`${classes.cell} ${
+                      classes[cell.column.id] || ""
+                    }`}
+                  >
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </td>
+                ))}
+              </tr>
+            ))}
           </tbody>
         </table>
-      </div>{" "}
+      </div>
       <Button sm arrowButton>
         View All Models <FaArrowRight />
       </Button>

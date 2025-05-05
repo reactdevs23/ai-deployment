@@ -1,107 +1,118 @@
-import { useTable } from "react-table";
 import { useMemo, useRef } from "react";
 import classes from "./Table.module.css";
 import { Text } from "@/components/common";
 import clsx from "clsx";
-import SingleRow from "./SingleRow"; // Make sure this path is correct
+import SingleRow from "./SingleRow";
+import {
+  useReactTable,
+  getCoreRowModel,
+  flexRender,
+} from "@tanstack/react-table";
 
 const ModelsTable = ({ data }) => {
   const columns = useMemo(
     () => [
       {
-        Header: "Model",
-        accessor: "model",
-        Cell: ({ value }) => (
+        accessorKey: "model",
+        header: "Model",
+        cell: ({ getValue }) => (
           <Text
             lxs
             medium
             primitive600
             className={clsx(classes.item, classes.model, classes.firstItem)}
           >
-            {value || "-"}
+            {getValue() || "-"}
           </Text>
         ),
       },
       {
-        Header: "Type",
-        accessor: "type",
-        Cell: ({ value }) => (
+        accessorKey: "type",
+        header: "Type",
+        cell: ({ getValue }) => (
           <Text lxs primitive600 className={clsx(classes.item, classes.type)}>
-            {value || "-"}
+            {getValue() || "-"}
           </Text>
         ),
       },
       {
-        Header: "Framework",
-        accessor: "framework",
-        Cell: ({ value }) => (
+        accessorKey: "framework",
+        header: "Framework",
+        cell: ({ getValue }) => (
           <Text
             lxs
             primitive600
             className={clsx(classes.item, classes.frameWork)}
           >
-            {value || "-"}
+            {getValue() || "-"}
           </Text>
         ),
       },
       {
-        Header: "Version",
-        accessor: "version",
-        Cell: ({ value }) => (
+        accessorKey: "version",
+        header: "Version",
+        cell: ({ getValue }) => (
           <Text
             lxs
             primitive600
             className={clsx(classes.item, classes.version)}
           >
-            {value || "-"}
+            {getValue() || "-"}
           </Text>
         ),
       },
       {
-        Header: "Last Updated",
-        accessor: "lastUpdated",
-        Cell: ({ value }) => (
+        accessorKey: "lastUpdated",
+        header: "Last Updated",
+        cell: ({ getValue }) => (
           <Text
             lxs
             primitive600
             className={clsx(classes.item, classes.lastUpdate)}
           >
-            {value || "-"}
+            {getValue() || "-"}
           </Text>
         ),
       },
       {
-        Header: "",
         id: "actions",
-        Cell: () => null, // Placeholder, actual action button is handled in ModelRow
+        header: "",
+        cell: () => null, // Placeholder for actions
       },
     ],
     []
   );
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data: data || [] });
+  const table = useReactTable({
+    data: data || [],
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+  });
+
   const parentRef = useRef(null);
+
   return (
     <section className={classes.wrapper}>
       <div className={classes.tableContainer} ref={parentRef}>
-        <table {...getTableProps()} className={classes.table}>
+        <table className={classes.table}>
           <thead>
-            {headerGroups.map((headerGroup, i) => (
-              <tr key={i} className={classes.headerRow}>
-                {headerGroup.headers.map((column) => (
-                  <th key={column.id} className={classes.headerCell}>
-                    {column.render("Header")}
+            {table.getHeaderGroups().map((headerGroup) => (
+              <tr key={headerGroup.id} className={classes.headerRow}>
+                {headerGroup.headers.map((header) => (
+                  <th key={header.id} className={classes.headerCell}>
+                    {flexRender(
+                      header.column.columnDef.header,
+                      header.getContext()
+                    )}
                   </th>
                 ))}
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps()}>
-            {rows.map((row, i) => {
-              prepareRow(row);
-              return <SingleRow key={i} row={row} parentRef={parentRef} />;
-            })}
+          <tbody>
+            {table.getRowModel().rows.map((row) => (
+              <SingleRow key={row.id} row={row} parentRef={parentRef} />
+            ))}
           </tbody>
         </table>
       </div>

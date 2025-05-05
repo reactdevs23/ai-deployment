@@ -3,8 +3,9 @@ import { ActionDropdown } from "@/components/common";
 import { HiDotsVertical } from "react-icons/hi";
 import clsx from "clsx";
 import classes from "./Table.module.css";
+import { flexRender } from "@tanstack/react-table";
 
-const allActions = ["Deployment", "Delete"]; // You can pass this as prop too
+const allActions = ["Deployment", "Delete"];
 
 const SingleRow = ({ row, parentRef }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -18,16 +19,16 @@ const SingleRow = ({ row, parentRef }) => {
 
   return (
     <tr className={classes.row}>
-      {row.cells.map((cell, j) => {
+      {row.getVisibleCells().map((cell) => {
         // Action column rendering
         if (cell.column.id === "actions") {
           return (
-            <td key={j} className={classes.cell}>
+            <td key={cell.id} className={classes.cell}>
               <div className={clsx(classes.lastItem, classes.buttonContainer)}>
                 <button
                   className={classes.actionButton}
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevent table row click conflicts
+                    e.stopPropagation();
                     setIsDropdownOpen((prev) => !prev);
                   }}
                 >
@@ -49,18 +50,10 @@ const SingleRow = ({ row, parentRef }) => {
           );
         }
 
-        // Regular cell rendering with fallback
-        const renderedContent = cell.render("Cell");
-        const safeContent =
-          renderedContent === undefined ||
-          renderedContent === null ||
-          renderedContent === ""
-            ? "-"
-            : renderedContent;
-
+        // Regular cell rendering
         return (
-          <td key={j} className={classes.cell}>
-            {safeContent}
+          <td key={cell.id} className={classes.cell}>
+            {flexRender(cell.column.columnDef.cell, cell.getContext()) || "-"}
           </td>
         );
       })}
