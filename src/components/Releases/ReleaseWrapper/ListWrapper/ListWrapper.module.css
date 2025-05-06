@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.listContainer {
+  padding-left: 28px;
+}
+
+.list {
+  font-size: 16px;
+  line-height: 162.5%;
+  color: var(--Primitive-600);
+}
+.list::marker {
+  color: var(--Primitive-600);
+}

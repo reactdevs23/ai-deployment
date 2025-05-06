@@ -24,6 +24,16 @@ import Settings from "./pages/DeploymentDetails/Settings/Settings";
 import Playground from "./pages/Playground/Playground";
 import NotFound from "./components/common/NotFound/NotFound";
 import PricingPage from "./pages/PricingPage/PricingPage";
+import BlogPage from "./pages/BlogPage/BlogPage";
+import BlogDetails from "./pages/BlogPage/BlogDetails/BlogDetails";
+import SupportPage from "./pages/SupportPage/SupportPage";
+import ContactUsPage from "./pages/ContactUsPage/ContactUsPage";
+import FaqsPage from "./pages/FaqsPage/FaqsPage";
+import ReleasesPage from "./pages/ReleasesPage/ReleasesPage";
+import PrivacyAndTOSLayout from "./Layout/PrivacyAndTOSLayout/PrivacyAndTOSLayout";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService/TermsOfService";
+import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
 
 function App() {
   // Example Authentication State
@@ -48,6 +58,18 @@ function App() {
         <Route element={<LandingLayout />}>
           <Route index element={<Home />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
+          <Route path="/support" element={<SupportPage />} />
+          <Route path="/contact-us" element={<ContactUsPage />} />
+          <Route path="/faqs" element={<FaqsPage />} />
+          <Route path="/releases" element={<ReleasesPage />} />
+
+          <Route path="/" element={<PrivacyAndTOSLayout />}>
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="terms-of-service" element={<TermsOfService />} />
+            <Route path="terms-of-use" element={<TermsOfUse />} />
+          </Route>
         </Route>
 
         {/* Protected Dashboard Routes */}

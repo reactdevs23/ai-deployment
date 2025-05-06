@@ -70,7 +70,7 @@
   background: var(--Base-White);
   color: var(--Blue-500);
   border: 1px solid var(--Primitive-200);
-  border-bottom-width: 2px;
+  border-bottom: 2px solid var(--Primitive-200);
 }
 .arrowButton {
   border: none;
@@ -107,6 +107,9 @@
   gap: 8px;
   opacity: 0.6;
 }
+.mxAuto {
+  margin: 0 auto;
+}
 
 @keyframes spin {
   0% {
@@ -122,5 +125,8 @@
   }
   .sm {
     padding: 6px 10px;
+  }
+  .lsm {
+    padding: 7px 12px;
   }
 }

@@ -1,0 +1,30 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+.serviceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.listContainer {
+  padding-left: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list {
+  font-size: 16px;
+  line-height: 133.33%;
+  color: var(--Primitive-600);
+}
+.list::marker {
+  color: var(--Primitive-600);
+}
+.link {
+  color: var(--Primitive-600);
+}

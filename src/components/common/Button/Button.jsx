@@ -27,6 +27,7 @@ const Button = ({
   sm,
   radius,
   disabled,
+  mxAuto,
   ...rest
 }) => {
   return (
@@ -45,6 +46,7 @@ const Button = ({
             xsm && classes.xsm,
             lsm && classes.lsm,
             lxs && classes.lxs,
+            mxAuto && classes.mxAuto,
             primitive100 && classes.primitive100,
             blue50 && classes.blue50,
             arrowButton && classes.arrowButton,
@@ -81,6 +83,7 @@ const Button = ({
             xsm && classes.xsm,
             lsm && classes.lsm,
             lxs && classes.lxs,
+            mxAuto && classes.mxAuto,
             primitive100 && classes.primitive100,
             blue50 && classes.blue50,
             arrowButton && classes.arrowButton,
@@ -117,6 +120,7 @@ const Button = ({
             xsm && classes.xsm,
             lsm && classes.lsm,
             lxs && classes.lxs,
+            mxAuto && classes.mxAuto,
             primitive100 && classes.primitive100,
             blue50 && classes.blue50,
             arrowButton && classes.arrowButton,
@@ -150,6 +154,7 @@ const Button = ({
             xsm && classes.xsm,
             lsm && classes.lsm,
             lxs && classes.lxs,
+            mxAuto && classes.mxAuto,
             primitive100 && classes.primitive100,
             blue50 && classes.blue50,
             arrowButton && classes.arrowButton,

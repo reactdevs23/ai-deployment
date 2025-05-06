@@ -1,0 +1,22 @@
+.wrapper,
+.mainWrapper {
+  gap: 12px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: calc(var(--navHeight) + 30px);
+}
+.wrapper .input {
+  text-align: center;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+@media only screen and (max-width: 1199px) {
+  .mainWrapper {
+    position: static;
+    top: 0;
+  }
+}

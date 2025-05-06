@@ -1,0 +1,28 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+.listContainer {
+  padding-left: 28px;
+}
+
+.list {
+  font-size: 18px;
+  line-height: 177.77%;
+  color: var(--Primitive-600);
+}
+.list::marker {
+  color: var(--Blue-500);
+}
+.link {
+  color: var(--Blue-500);
+  text-decoration: underline;
+}
+@media only screen and (max-width: 520px) {
+  .list {
+    font-size: 16px;
+  }
+}

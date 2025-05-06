@@ -76,6 +76,7 @@ const Input = memo(
           <div
             className={clsx(
               classes.inputContainer,
+              textarea && classes.textareaContainer,
               isFocused && classes.focused,
               className,
               search && classes.searchIconInputContainer,
@@ -90,7 +91,7 @@ const Input = memo(
                 name={name}
                 value={value}
                 onChange={handleChange}
-                className={classes.input}
+                className={clsx(classes.input, classes.textarea)}
                 placeholder={placeholder}
                 required
                 readOnly={readonly}

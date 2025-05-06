@@ -1,0 +1,25 @@
+.blogContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+.blogs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.date {
+  margin-bottom: 4px;
+}
+@media only screen and (max-width: 767px) {
+  .blogContainer {
+    gap: 20px;
+  }
+}

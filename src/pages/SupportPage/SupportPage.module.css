@@ -1,0 +1,37 @@
+.wrapper {
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  max-width: 640px;
+  width: 90%;
+  margin: 0 auto;
+}
+.link {
+  color: var(--Blue-500);
+  font-weight: 500;
+  text-decoration: underline;
+}
+.arrow {
+  font-size: 12px;
+  transform: translateY(1px);
+}
+.wrapper .button {
+  padding: 8px 16px;
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    padding: 48px 0;
+    gap: 48px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+  }
+  .wrapper .button {
+    padding: 7px 16px;
+  }
+}

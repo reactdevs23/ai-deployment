@@ -66,10 +66,12 @@ const Navbar = ({
         )}
       >
         <header className={[classes.header, "container"].join(" ")}>
-          <NavLink to="/" onClick={() => setSidebar((prev) => !prev)}>
-            <span className={classes.logo}>
-              <Logo color="#336FE1" />
-            </span>
+          <NavLink
+            to="/"
+            onClick={() => setSidebar(false)}
+            className={classes.logo}
+          >
+            <Logo color="#336FE1" />
           </NavLink>
           <div
             className={clsx(classes.navItems, sidebar && classes.sidebar)}
@@ -84,7 +86,7 @@ const Navbar = ({
                   })
                 }
                 to={to}
-                // onClick={() => setSidebar((prev) => !prev)}
+                onClick={() => setSidebar(false)}
               >
                 {navItem}
               </NavLink>

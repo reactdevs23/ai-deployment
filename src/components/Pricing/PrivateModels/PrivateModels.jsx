@@ -5,9 +5,9 @@ import {
   Text,
 } from "@/components/common";
 import classes from "./PrivateModels.module.css";
-const PrivateModels = () => {
+const PrivateModels = ({ ...rest }) => {
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} {...rest}>
       <SectionHeading># Private Models</SectionHeading>
       <ParagraphWrapper>
         <Text base primitive700>

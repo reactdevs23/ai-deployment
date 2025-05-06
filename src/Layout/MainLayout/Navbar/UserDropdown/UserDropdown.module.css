@@ -59,7 +59,7 @@
   font-weight: 500;
 }
 .dropdownMain {
-  min-width: calc(100% + 5px);
+  min-width: 180px;
   width: max-content;
   position: absolute;
   right: 0;

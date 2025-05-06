@@ -5,9 +5,9 @@ import {
   Text,
 } from "@/components/common";
 import classes from "./PublicModels.module.css";
-const PublicModels = () => {
+const PublicModels = ({ ...rest }) => {
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} {...rest}>
       <SectionHeading># Public Models</SectionHeading>
       <ParagraphWrapper>
         <Text base primitive700>

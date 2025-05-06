@@ -54,7 +54,11 @@ const columns = [
     cell: ({ getValue }) => {
       const value = getValue();
       return (
-        <Text sm primitive800 className={clsx(classes.price, classes.lastItem)}>
+        <Text
+          sm
+          primitive800
+          className={clsx(classes.price, classes.lastItem, classes.item)}
+        >
           {value || <Blank />}
         </Text>
       );

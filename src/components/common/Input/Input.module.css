@@ -23,6 +23,9 @@
   border-bottom: 1px solid var(--Primitive-200);
   background: var(--Primitive-50);
 }
+.textareaContainer {
+  padding: 0;
+}
 .lsm {
   padding: 8px 14px;
 }
@@ -57,7 +60,7 @@
   color: var(--Primitive-400);
 }
 .input {
-  color: var(--Primitive-900);
+  color: var(--Primitive-600);
   background: transparent;
   font-size: 14px;
   font-style: normal;
@@ -69,6 +72,9 @@
   outline: none;
   height: 100%;
   resize: none;
+}
+.textarea {
+  padding: 8px 12px;
 }
 .lsm .input {
   font-size: 15px;

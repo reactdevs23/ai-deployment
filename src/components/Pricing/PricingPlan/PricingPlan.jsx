@@ -1,6 +1,7 @@
+import { Heading } from "@/components/common";
 import AdditonalHardwareTable from "./AdditonalHardwareTable/AdditonalHardwareTable";
 import HardwareTable from "./HardwareTable/HardwareTable";
-
+import classes from "./PricingPlan.module.css";
 const hardwareData = [
   {
     hardware: { name: "CPU", model: "cpu" },
@@ -73,9 +74,12 @@ const additonalHardwareData = [
   },
 ];
 
-const PricingPlan = () => {
+const PricingPlan = ({ ...rest }) => {
   return (
-    <div>
+    <div {...rest} className={classes.wrapper}>
+      <Heading lxl blue500 regular>
+        # Pricing Plan
+      </Heading>
       <HardwareTable data={hardwareData} />
       <AdditonalHardwareTable data={additonalHardwareData} />
     </div>

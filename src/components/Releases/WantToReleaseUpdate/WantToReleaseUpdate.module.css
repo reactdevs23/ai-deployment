@@ -1,0 +1,21 @@
+.wrapper,
+.mainWrapper {
+  gap: 12px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.info {
+  line-height: 153.846%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  width: 100%;
+}

@@ -6,9 +6,9 @@ import {
   Text,
 } from "@/components/common";
 import classes from "./Conclussion.module.css";
-const Conclussion = () => {
+const Conclussion = ({ ...rest }) => {
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} {...rest}>
       <SectionHeading># Conclusion</SectionHeading>
       <ParagraphWrapper>
         <Text base primitive700>
