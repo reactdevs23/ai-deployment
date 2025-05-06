@@ -11,6 +11,8 @@ import NavItems from "./NavItems";
 import AuthSection from "./AuthSection";
 import { MdClose } from "react-icons/md";
 import SearchSection from "./SearchSection";
+import LogoSection from "./LogoSection";
+import Overlay from "@/components/common/Overlay/Overlay";
 // resource dropdownItems
 
 const Navbar = ({
@@ -36,13 +38,7 @@ const Navbar = ({
         )}
       >
         <header className={[classes.header, "container"].join(" ")}>
-          <NavLink
-            to="/"
-            onClick={() => setSidebar(false)}
-            className={classes.logo}
-          >
-            <Logo color="#336FE1" />
-          </NavLink>
+          <LogoSection setSidebar={setSidebar} />
           <NavItems sidebar={sidebar} setSidebar={setSidebar} />
           <SearchSection sidebar={sidebar} setSidebar={setSidebar} />
           <AuthSection
@@ -53,12 +49,7 @@ const Navbar = ({
           />
         </header>
       </div>
-      <div className={clsx(classes.overlay, sidebar && classes.sidebarActive)}>
-        {" "}
-        <button className={classes.closeIcon}>
-          <MdClose />
-        </button>
-      </div>
+      <Overlay sidebar={sidebar} onClose={() => setSidebar(false)} />
     </>
   );
 };

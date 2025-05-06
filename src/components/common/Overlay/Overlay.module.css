@@ -1,0 +1,34 @@
+.closeIcon {
+  display: none;
+}
+@media only screen and (max-width: 1199px) {
+  .overlay {
+    width: 100vw;
+    background: rgba(17, 24, 39, 40%);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 99;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
+    cursor: pointer;
+  }
+  .overlay.sidebarActive {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .closeIcon {
+    display: block;
+    font-size: 24px;
+    color: var(--Base-White);
+    position: fixed;
+    left: calc(240px + 10px);
+    z-index: 100;
+    top: calc(var(--navHeight) + 10px);
+    cursor: pointer;
+  }
+}

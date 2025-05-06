@@ -1,0 +1,35 @@
+.mobileButton {
+  cursor: pointer;
+  padding: 7px;
+  padding-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background: var(--Base-White);
+  border: 1px solid var(--Primitive-200);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  display: none;
+}
+.mobileButton.active {
+  border-color: var(--Blue-500);
+}
+
+.searchIcon {
+  font-size: 20px;
+  color: var(--Primitive-400);
+}
+@media only screen and (max-width: 1199px) {
+  .mobileButton {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .mobileButton {
+    display: flex;
+  }
+}

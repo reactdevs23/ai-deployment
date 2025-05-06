@@ -96,52 +96,6 @@
   display: none;
 }
 
-.mobileButton {
-  cursor: pointer;
-  padding: 7px;
-  padding-bottom: 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  background: var(--Base-White);
-  border: 1px solid var(--Primitive-200);
-  border-bottom-width: 2px;
-  border-radius: 6px;
-  transition: transform 0.3s ease;
-  display: none;
-}
-.mobileButton.active {
-  border-color: var(--Blue-500);
-}
-
-.searchIcon {
-  font-size: 20px;
-  color: var(--Primitive-400);
-}
-.searchWrapper {
-  display: none;
-  width: 100%;
-  background: var(--Base-White);
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--Primitive-200);
-}
-.searchWrapper.show {
-  position: absolute;
-  top: calc(100% + 1px);
-  left: 0;
-  right: 0;
-  display: flex;
-}
-.searchWrapper .searchContainer {
-  max-width: 100%;
-  width: 100%;
-}
-.closeIcon {
-  display: none;
-}
-
 @media only screen and (max-width: 1199px) {
   .header {
     grid-template-columns: auto 1fr auto;
@@ -175,51 +129,37 @@
   .buttonContainer {
     margin-left: auto;
   }
-  .searchContainer {
-    margin: 0;
+  .searchWrapper {
+    margin-left: auto;
   }
-}
 
-@media only screen and (max-width: 1199px) {
-  .mobileButton {
-    display: flex;
-  }
-  .searchAndMobileButton .searchContainer {
-    display: none;
-  }
   .dropdownItem {
     font-size: 12px;
     color: var(--Primitive-400);
     font-weight: 500;
     line-height: 133.33%;
   }
-  .overlay {
-    width: 100vw;
-    background: rgba(17, 24, 39, 40%);
-    backdrop-filter: blur(12px);
-    position: fixed;
+}
+
+@media only screen and (max-width: 767px) {
+  .searchWrapper {
+    width: 100%;
+    background: var(--Base-White);
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--Primitive-200);
+  }
+  .searchWrapper .searchContainer {
+    max-width: 100%;
+    width: 100%;
+  }
+  .searchWrapper.show {
+    position: absolute;
+    top: calc(100% + 1px);
     left: 0;
-    top: 0;
     right: 0;
-    bottom: 0;
-    opacity: 0;
-    z-index: 99;
-    transition: 0.3s ease-in-out;
-    pointer-events: none;
-    cursor: pointer;
+    display: flex;
   }
-  .overlay.sidebarActive {
-    opacity: 1;
-    pointer-events: all;
-  }
-  .closeIcon {
-    display: block;
-    font-size: 24px;
-    color: var(--Base-White);
-    position: fixed;
-    left: calc(240px + 10px);
-    z-index: 100;
-    top: calc(var(--navHeight) + 10px);
-    cursor: pointer;
+  .searchWrapper.hide {
+    display: none;
   }
 }
