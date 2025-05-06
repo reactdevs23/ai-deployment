@@ -35,16 +35,15 @@ const ResourceDropdown = ({
         <div className={clsx(classes.list, "overflow")}>
           {dropdownItems?.map((item, idx) => {
             return (
-              <Link to={item.to} key={idx}>
-                <Text
-                  key={"id-" + idx}
-                  className={clsx(classes.listItem)}
-                  onClick={() => {
-                    setIsActive(false);
-                  }}
-                >
-                  {item.navItem}
-                </Text>
+              <Link
+                to={item.to}
+                key={idx}
+                className={clsx(classes.listItem)}
+                onClick={() => {
+                  setIsActive(false);
+                }}
+              >
+                {item.navItem}
               </Link>
             );
           })}

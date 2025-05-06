@@ -33,6 +33,10 @@
   padding: 0 !important;
   max-width: 700px;
   margin: 0 auto;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  display: flex;
+  white-space: nowrap;
 }
 
 .item {
@@ -79,11 +83,13 @@
 @media only screen and (max-width: 520px) {
   .heading {
     text-align: left;
+    display: none;
   }
   .tabContainer {
     width: calc(100% + 16px);
   }
   .items {
     flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 }

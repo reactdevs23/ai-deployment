@@ -58,7 +58,7 @@
   pointer-events: all;
 }
 
-.listItem {
+.list .listItem {
   display: flex;
   align-items: center;
   gap: 6px;

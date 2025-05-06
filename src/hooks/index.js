@@ -1,12 +1,20 @@
 import { useEffect } from "react";
 
-const useOnClickOutside = (ref, handler) => {
+const useOnClickOutside = (refs, handler) => {
   useEffect(() => {
     const listener = (event) => {
-      // Do nothing if clicking ref's element or descendent elements
-      if (!ref.current || ref.current.contains(event.target)) {
+      // Normalize to array
+      const refArray = Array.isArray(refs) ? refs : [refs];
+
+      // If click is inside any of the refs, do nothing
+      if (
+        refArray.some(
+          (ref) => ref.current && ref.current.contains(event.target)
+        )
+      ) {
         return;
       }
+
       handler(event);
     };
 
@@ -17,10 +25,11 @@ const useOnClickOutside = (ref, handler) => {
       document.removeEventListener("mousedown", listener);
       document.removeEventListener("touchstart", listener);
     };
-  }, [ref, handler]);
+  }, [refs, handler]);
 };
 
 export default useOnClickOutside;
+
 export const handleKeyDown = (event) => {
   const allowedKeys = [
     "Backspace",

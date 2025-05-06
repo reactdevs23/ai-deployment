@@ -20,6 +20,7 @@
 }
 .slidingNavs.nav {
   display: none;
+  background: var(--Primitive-50);
 }
 .scrollToSectionNav.nav {
   background: var(--Primitive-50);

@@ -18,6 +18,14 @@
 .date {
   margin-bottom: 4px;
 }
+@media only screen and (max-width: 1199px) {
+  .blogContainer {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .blogContainer {
     gap: 20px;

@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 const HamburgerButton = ({ sidebar, setSidebar }) => {
   const toggleMenu = () => {
-    setSidebar(true);
+    setSidebar((prev) => !prev);
   };
 
   return (
