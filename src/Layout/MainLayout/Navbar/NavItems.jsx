@@ -46,6 +46,7 @@ const NavItems = ({ sidebar, setSidebar }) => {
         ))}
 
         <ResourceDropdown
+          setSidebar={setSidebar}
           isActive={isResourcesDropdownActive}
           setIsActive={setIsResourcesDropdownActive}
           onSelect={() => {

@@ -62,8 +62,8 @@ const SingleToken = ({ name, token }) => {
         {STEPS.SUCCESS === step && (
           <SuccessMessage
             onClose={handleCancel}
-            heading="Top-up Successful!"
-            description="✅ Your account has been successfully topped up. The added balance is now available for use."
+            heading="API token deleted"
+            description="✅Your API token has been successfully deleted. All associated access has been revoked."
           />
         )}
       </MiniModal>

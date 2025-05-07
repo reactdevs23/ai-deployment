@@ -12,6 +12,7 @@ const ResourceDropdown = ({
   isActive,
   dropdownItems,
   setIsActive,
+  setSidebar,
 }) => {
   const ref = useRef();
 
@@ -41,6 +42,7 @@ const ResourceDropdown = ({
                 className={clsx(classes.listItem)}
                 onClick={() => {
                   setIsActive(false);
+                  setSidebar(false);
                 }}
               >
                 {item.navItem}

@@ -3,7 +3,14 @@ import { Text } from "..";
 import classes from "./ScrollToSectionNav.module.css";
 import clsx from "clsx";
 
-const ScrollToSectionNav = ({ heading, items, className, type2, type3 }) => {
+const ScrollToSectionNav = ({
+  heading,
+  items,
+  className,
+  type2,
+  type3,
+  ...rest
+}) => {
   return (
     <div
       className={clsx(
@@ -27,6 +34,7 @@ const ScrollToSectionNav = ({ heading, items, className, type2, type3 }) => {
             offset={offset ? offset : -90}
             className={classes.item}
             activeClass={classes.active}
+            {...rest}
           >
             {title}
           </Link>

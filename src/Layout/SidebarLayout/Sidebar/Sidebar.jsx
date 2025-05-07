@@ -37,7 +37,7 @@ const navItems = [
   {
     icons: [supportActiveIcon, supportIcon],
     navItem: "Support",
-    to: "/supports",
+    to: "/support",
   },
 ];
 

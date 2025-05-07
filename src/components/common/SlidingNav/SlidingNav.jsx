@@ -12,9 +12,10 @@ const SlidingNav = ({ items, heading, className }) => {
   const tabRefs = useRef([]);
   const scrollContainerRef = useRef();
 
-  const activeTabIndex = items.findIndex(
-    (tab) => tab.title === activeTab.title
-  );
+  // const activeTabIndex = items.findIndex(
+  //   (tab) => tab.title === activeTab.title
+  // );
+  const activeTabIndex = items.findIndex((tab) => tab.to === location.pathname);
 
   const onTabClick = (e, index) => {
     setActiveTab(items[index]);

@@ -11,10 +11,10 @@ import {
   generalActiveIcon,
   generalIcon,
 } from "@/images";
-import General from "@/components/ManageAccount/General/General";
+import General from "@/pages/ManageAccount/General/General";
 import Sidebar from "./Sidebar/Sidebar";
-import ApiToken from "@/components/ManageAccount/ApiToken/ApiToken";
-import Billing from "@/components/ManageAccount/Billing/Billing";
+import ApiToken from "@/pages/ManageAccount/ApiToken/ApiToken";
+import Billing from "@/pages/ManageAccount/Billing/Billing";
 
 const navItems = [
   { icons: [generalIcon, generalActiveIcon], navItem: "General" },

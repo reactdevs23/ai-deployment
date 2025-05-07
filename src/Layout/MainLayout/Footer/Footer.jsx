@@ -38,7 +38,7 @@ const companyLinks = [
 const resoucesLinks = [
   {
     navItem: "Documentation",
-    to: "/documentation",
+    to: "/docs",
   },
   {
     navItem: "FAQ’s",

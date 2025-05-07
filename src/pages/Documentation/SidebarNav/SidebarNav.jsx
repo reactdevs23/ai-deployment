@@ -14,6 +14,8 @@ const SidebarNav = ({ sidebar, items, setSidebar }) => {
         {items.map((section, index) => (
           <React.Fragment key={section.heading}>
             <ScrollToSectionNav
+              offset={-130}
+              onClick={() => setSidebar((prev) => !prev)}
               className={clsx(classes.scrollNav, classes.nav)}
               type3
               heading={section.heading}

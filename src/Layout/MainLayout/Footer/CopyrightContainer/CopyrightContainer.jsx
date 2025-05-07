@@ -3,6 +3,7 @@ import classes from "./CopyrightContainer.module.css";
 
 import clsx from "clsx";
 import { Text } from "@/components/common";
+import { Link } from "react-router-dom";
 const CopyrightContainer = () => {
   return (
     <div className={classes.wrapper}>
@@ -13,7 +14,10 @@ const CopyrightContainer = () => {
         </Text>
 
         <Text xs primitive0 className={classes.policyAndCondition}>
-          <a href="#/">Terms and Condition</a> <a href="#/">Privacy Policy</a>
+          <Link to="terms-of-service">Terms and Condition</Link>{" "}
+          <Link to="privacy-policy" href="#/">
+            Privacy Policy
+          </Link>
         </Text>
       </div>
     </div>

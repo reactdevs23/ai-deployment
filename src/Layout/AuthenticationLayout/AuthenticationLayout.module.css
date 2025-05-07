@@ -46,9 +46,7 @@
     background-image: radial-gradient(var(--Blue-100) 5%, transparent 5%);
     background-size: 20px 20px;
   }
-  .wrapper {
-    justify-content: space-between;
-  }
+
   .footer {
     gap: 8px;
     flex-direction: column;
