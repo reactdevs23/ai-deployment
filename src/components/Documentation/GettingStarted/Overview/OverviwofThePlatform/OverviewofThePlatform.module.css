@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info {
+  line-height: 177.778%;
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    gap: 20px;
+  }
+}

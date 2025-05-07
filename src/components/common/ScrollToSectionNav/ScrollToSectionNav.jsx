@@ -3,10 +3,17 @@ import { Text } from "..";
 import classes from "./ScrollToSectionNav.module.css";
 import clsx from "clsx";
 
-const ScrollToSectionNav = ({ heading, items, className }) => {
+const ScrollToSectionNav = ({ heading, items, className, type2, type3 }) => {
   return (
-    <div className={clsx(classes.wrapper, className)}>
-      <Text primitive500 xs uppercase>
+    <div
+      className={clsx(
+        classes.wrapper,
+        className,
+        type2 && classes.type2,
+        type3 && classes.type3
+      )}
+    >
+      <Text primitive500 xs uppercase className={classes.heading}>
         {heading}
       </Text>
       <div className={classes.items}>

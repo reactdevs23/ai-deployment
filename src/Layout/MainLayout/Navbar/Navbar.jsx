@@ -26,7 +26,7 @@ const Navbar = ({
     email: "example@gmail.com",
   };
 
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
   const isScrolled = useScroll(90);
 
   return (

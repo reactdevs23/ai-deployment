@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { LuSearch } from "react-icons/lu";
 import { HamburgerButton, Input } from "@/components/common";
 import classes from "./Navbar.module.css";
@@ -6,7 +6,7 @@ import clsx from "clsx";
 import useOnClickOutside from "@/hooks";
 import SearchIconButton from "@/components/common/SearchIconButton/SearchIconButton";
 
-const SearchSection = forwardRef(({ sidebar, setSidebar }) => {
+const SearchSection = ({ sidebar, setSidebar }) => {
   const [showSeacrhField, setShowSearchField] = useState(false);
 
   const inputRef = useRef(null);
@@ -49,6 +49,6 @@ const SearchSection = forwardRef(({ sidebar, setSidebar }) => {
       </div>
     </>
   );
-});
+};
 
 export default SearchSection;

@@ -1,0 +1,23 @@
+.scrollNav.nav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: calc(var(--navHeight) + 30px);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.arrow {
+  font-size: 18px;
+}
+.container .button {
+  margin-left: auto;
+  gap: 4px;
+}
+@media only screen and (max-width: 991px) {
+  .scrollNav.nav {
+    display: none;
+  }
+}

@@ -19,7 +19,7 @@ const resources = [
   { navItem: "Contact Us", to: "/contact-us" },
 ];
 
-const NavItems = React.forwardRef(({ sidebar, setSidebar }) => {
+const NavItems = ({ sidebar, setSidebar }) => {
   const sidebarRef = useRef(null);
   const [isResourcesDropdownActive, setIsResourcesDropdownActive] =
     useState(false);
@@ -66,6 +66,6 @@ const NavItems = React.forwardRef(({ sidebar, setSidebar }) => {
       </div>
     </>
   );
-});
+};
 
 export default NavItems;

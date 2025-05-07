@@ -3,7 +3,7 @@ import classes from "./ContentWrapper.module.css";
 import clsx from "clsx";
 
 const ContentWrapper = ({
-  infolist,
+  infolist = [],
   title,
   children,
   className,

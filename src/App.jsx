@@ -34,6 +34,7 @@ import PrivacyAndTOSLayout from "./Layout/PrivacyAndTOSLayout/PrivacyAndTOSLayou
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService/TermsOfService";
 import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
+import Documentaton from "./pages/Documentation/Documentaton";
 
 function App() {
   // Example Authentication State
@@ -58,6 +59,7 @@ function App() {
         <Route element={<LandingLayout />}>
           <Route index element={<Home />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/docs" element={<Documentaton />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogDetails />} />
           <Route path="/support" element={<SupportPage />} />
