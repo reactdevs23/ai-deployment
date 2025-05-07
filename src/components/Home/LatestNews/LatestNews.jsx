@@ -59,7 +59,7 @@ const LatestNews = () => {
             </Text>
           </div>
         ))}
-        <Button transparent className={classes.button}>
+        <Button transparent className={classes.button} to="/blogs">
           See more blog
         </Button>
       </div>

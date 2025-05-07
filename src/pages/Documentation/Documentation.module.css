@@ -11,7 +11,7 @@
   padding: 12px 0px;
   background: var(--Base-White);
   position: fixed;
-  z-index: 100;
+  z-index: 98;
   top: var(--navHeight);
   left: 50%;
   transform: translateX(-50%);

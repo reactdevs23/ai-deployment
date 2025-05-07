@@ -3,13 +3,18 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   border: 1px solid var(--Blue-200);
+  border-bottom: none;
   background: var(--Base-White);
 
   /* drop-shadow/xs */
   box-shadow: 0px 1px 2px 0px rgba(3, 7, 18, 0.06),
     0px 1px 1px 0px rgba(3, 7, 18, 0.04);
+}
+.createDeployment.button {
+  border-radius: none;
+  border-radius: 0 0 8px 8px;
 }
 .inputWrapper {
   display: flex;

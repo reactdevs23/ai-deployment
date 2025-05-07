@@ -48,8 +48,10 @@ const HeroSection = () => {
         info="Say goodbye to infrastructure headaches. Whether you're pushing open-source models or custom-trained magic, our platform lets you deploy in seconds, scale automatically, and run predictions with ease."
       >
         <div className={classes.buttonContainer}>
-          <Button>Get Started Now</Button>
-          <Button transparent>View Docs</Button>
+          <Button to="/sign-up">Get Started Now</Button>
+          <Button transparent to="/docs">
+            View Docs
+          </Button>
         </div>{" "}
       </HeaderWrapper>
 

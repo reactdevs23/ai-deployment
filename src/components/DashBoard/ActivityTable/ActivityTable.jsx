@@ -186,7 +186,7 @@ const ActivityTable = () => {
           </tbody>
         </table>
       </div>
-      <Button sm arrowButton>
+      <Button sm arrowButton to="/models">
         View All Models <FaArrowRight />
       </Button>
     </section>

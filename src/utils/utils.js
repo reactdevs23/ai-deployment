@@ -45,3 +45,19 @@ export const maskDigits = (num) => {
   const str = String(num);
   return "****" + str.slice(-4);
 };
+export const getLocalStorage = (key, defaultValue) => {
+  try {
+    const stored = localStorage.getItem(key);
+    return stored !== null ? JSON.parse(stored) : defaultValue;
+  } catch (e) {
+    return defaultValue;
+  }
+};
+
+export const setLocalStorage = (key, value) => {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (e) {
+    console.error(`Failed to save ${key} to localStorage`, e);
+  }
+};

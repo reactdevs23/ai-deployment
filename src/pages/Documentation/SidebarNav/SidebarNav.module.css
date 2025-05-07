@@ -21,8 +21,8 @@
 }
 @media only screen and (max-width: 1199px) {
   .sideNav {
-    transform: translateX(-250%);
-    transition: 0.3s;
+    transform: translateY(-150%);
+    transition: 0.6s;
     position: fixed;
     top: calc(var(--navHeight) + calc(--headerHeight));
     left: 0;
@@ -35,7 +35,7 @@
     z-index: 100;
   }
   .sideNav.show {
-    transform: translateX(0);
+    transform: translateY(0);
     right: 0;
   }
 }

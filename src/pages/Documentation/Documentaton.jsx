@@ -12,41 +12,41 @@ const navSections = [
   {
     heading: "GETTING STARTED",
     items: [
-      { title: "Overview of the Platform", id: "overview" },
-      { title: "Creating Your First Deployment", id: "firstDeployment" },
-      { title: "Uploading a Model", id: "uploadModel" },
-      { title: "Setting Up Billing", id: "billing" },
-      { title: "Using the Dashboard", id: "dashboard" },
+      { title: "Overview of the Platform", to: "overview" },
+      { title: "Creating Your First Deployment", to: "firstDeployment" },
+      { title: "Uploading a Model", to: "uploadModel" },
+      { title: "Setting Up Billing", to: "billing" },
+      { title: "Using the Dashboard", to: "dashboard" },
     ],
   },
   {
     heading: "DEPLOYMENTS",
     items: [
-      { title: "Deployment Configuration Options", id: "deploymentConfig" },
-      { title: "Hardware & Autoscaling Settings", id: "hardwareAutoscaling" },
-      { title: "Monitoring Deployment Status", id: "monitoring" },
-      { title: "Deployment Logs & Debugging", id: "logsDebugging" },
-      { title: "Managing Deployment Versions", id: "versionManagement" },
+      { title: "Deployment Configuration Options", to: "deploymentConfig" },
+      { title: "Hardware & Autoscaling Settings", to: "hardwareAutoscaling" },
+      { title: "Monitoring Deployment Status", to: "monitoring" },
+      { title: "Deployment Logs & Debugging", to: "logsDebugging" },
+      { title: "Managing Deployment Versions", to: "versionManagement" },
     ],
   },
   {
     heading: "API REFERENCE",
     items: [
-      { title: "Authentication with API Tokens", id: "apiAuthentication" },
-      { title: "Running Predictions via API", id: "apiPredictions" },
-      { title: "Input/Output Format Reference", id: "ioReference" },
-      { title: "Error Codes & Troubleshooting", id: "errorHandling" },
-      { title: "Rate Limits & Usage Tracking", id: "rateLimits" },
+      { title: "Authentication with API Tokens", to: "apiAuthentication" },
+      { title: "Running Predictions via API", to: "apiPredictions" },
+      { title: "Input/Output Format Reference", to: "ioReference" },
+      { title: "Error Codes & Troubleshooting", to: "errorHandling" },
+      { title: "Rate Limits & Usage Tracking", to: "rateLimits" },
     ],
   },
   {
     heading: "MODEL MANAGEMENT",
     items: [
-      { title: "Supported Model Formats", id: "modelFormats" },
-      { title: "Version Control for Models", id: "modelVersioning" },
-      { title: "Importing from GitHub or URL", id: "importModels" },
-      { title: "Model Optimization Tips", id: "optimization" },
-      { title: "Rollback & Restore Options", id: "rollback" },
+      { title: "Supported Model Formats", to: "modelFormats" },
+      { title: "Version Control for Models", to: "modelVersioning" },
+      { title: "Importing from GitHub or URL", to: "importModels" },
+      { title: "Model Optimization Tips", to: "optimization" },
+      { title: "Rollback & Restore Options", to: "rollback" },
     ],
   },
 ];
@@ -80,7 +80,7 @@ const Documentation = () => {
       />
 
       <PatternContainer className={classes.outlet}>
-        <Overview />
+        <Overview id="overview" />
       </PatternContainer>
     </div>
   );

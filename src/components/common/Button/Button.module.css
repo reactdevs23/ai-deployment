@@ -17,6 +17,7 @@
   border: none;
   border-bottom: 2px solid var(--Blue-600);
   transition: 0.3s;
+  width: max-content;
 }
 .button:hover {
   transform: translateY(-3px);

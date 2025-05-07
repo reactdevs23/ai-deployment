@@ -98,10 +98,10 @@ const sectionIds = [
   { title: "Key Features", to: "keyFeatures" },
   { title: "Platform Workflow", to: "platformWorkflow" },
 ];
-const Overview = () => {
+const Overview = ({ ...rest }) => {
   return (
     <>
-      <div className={classes.wrapper}>
+      <div className={classes.wrapper} {...rest}>
         <Heading base blue500>
           Getting Started:
         </Heading>

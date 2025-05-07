@@ -10,7 +10,7 @@
   z-index: 1;
 }
 .type3 {
-  gap: 4px;
+  gap: 6px;
 }
 .type3 .heading {
   color: var(--Primitive-900);
@@ -44,8 +44,7 @@
   background: var(--Blue-10);
   position: relative;
 }
-.type2 .item.active,
-.type3 .item.active {
+.type2 .item.active {
   background: transparent;
 }
 .item.active::before {

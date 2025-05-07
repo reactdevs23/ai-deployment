@@ -57,9 +57,6 @@ const EstimatedCost = () => {
           </React.Fragment>
         ))}{" "}
       </div>
-      <Button sm arrowButton>
-        Learn more about pricing <FaArrowRight />
-      </Button>
     </div>
   );
 };

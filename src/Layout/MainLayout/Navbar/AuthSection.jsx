@@ -34,7 +34,12 @@ const AuthSection = ({
           <Button xsm transparent to="/sign-in">
             Login
           </Button>
-          <Button xsm className={classes.getStartedButton} btnPrimary>
+          <Button
+            xsm
+            className={classes.getStartedButton}
+            btnPrimary
+            to="/sign-up"
+          >
             Get Started
           </Button>
         </>

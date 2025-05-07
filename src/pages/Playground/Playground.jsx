@@ -8,7 +8,7 @@ import useViewportHeight from "@/hooks/useViewportHeight";
 
 const Playground = () => {
   useViewportHeight();
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
   return (
     <div
       className={clsx(

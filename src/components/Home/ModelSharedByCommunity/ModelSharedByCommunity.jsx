@@ -19,8 +19,10 @@ const ModleSharedByCommunity = () => {
         info="Discover the latest AI models on DeployIQ — not just demos, but fully functional with production-ready APIs. We believe AI should be accessible, not locked in papers or prototypes. Bring your models to life and share them with the world on DeployIQ."
       >
         <div className={classes.buttonContainer}>
-          <Button>Explore Models</Button>
-          <Button transparent>View Docs</Button>
+          <Button to="/models">Explore Models</Button>
+          <Button transparent to="/docs">
+            View Docs
+          </Button>
         </div>
       </HeaderWrapper>
 

@@ -43,6 +43,7 @@ function App() {
   const routeLayoutMap = {
     "/create-deployment": { cancelDeployment: true },
     "/deployments": { createDeployment: true },
+    "/deployments-list": { createDeployment: true },
   };
   const layoutProps =
     routeLayoutMap[pathname] ||

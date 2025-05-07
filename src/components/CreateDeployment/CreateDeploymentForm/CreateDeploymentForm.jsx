@@ -1,9 +1,10 @@
-import { Input, Text } from "@/components/common";
+import { Button, Input, Text } from "@/components/common";
 import classes from "./CreateDeploymentForm.module.css";
 import { useState } from "react";
 import { handleKeyDown } from "@/hooks";
 import Dropdown from "../Dropdown/Dropdown";
 import HardwareDropdown from "../HardwareDropdown/HardwareDropdown";
+import clsx from "clsx";
 const allModels = [
   "sentiment-analyzer",
   "text-generator-gpt2",
@@ -57,94 +58,103 @@ const CreateDeploymentForm = () => {
   const [showHardwareDropdown, setShowHardwareDropdown] = useState(false);
   const [selectedHardware, setSelectedHardware] = useState("");
   return (
-    <div className={classes.formContainer}>
-      <div className={classes.inputWrapper}>
-        <Text primitive600 medium lxs>
-          Deployment name
-        </Text>
-        <Input
-          name="deploymentName"
-          value={deploymentName}
-          setValue={setDeploymentName}
-          placeholder="e.g. app-1-text-generator"
-        />
-        <Text xs primitive600 medium>
-          Give your deployment a name—use lowercase letters and dashes to keep
-          it code-friendly.
-        </Text>
-      </div>
-      <Dropdown
-        label="Model"
-        placholder="Select a model"
-        dropdownItems={allModels}
-        isActive={showModelDropdown}
-        setIsActive={setShowModelDropdown}
-        selectedValue={selectedModel}
-        setSelectedValue={setSelectedModel}
-        onSelect={(val) => setSelectedModel(val)}
-      />
-      <Dropdown
-        label="Version"
-        placholder="Select a version"
-        dropdownItems={allVersions}
-        isActive={showVersionDropdown}
-        setIsActive={setShowVersionDropdown}
-        selectedValue={selectedVersion}
-        setSelectedValue={setSelectedVersion}
-        onSelect={(val) => setSelectedVersion(val)}
-      />
-      <HardwareDropdown
-        label="Hardware"
-        placholder="Select hardware"
-        dropdownItems={hardwareItems}
-        isActive={showHardwareDropdown}
-        setIsActive={setShowHardwareDropdown}
-        selectedValue={selectedHardware}
-        setSelectedValue={setSelectedHardware}
-        onSelect={(val) => setSelectedHardware(val)}
-      />
-      <div className={classes.inputWrapper}>
-        <div className={classes.labelContainer}>
+    <div>
+      <div className={classes.formContainer}>
+        <div className={classes.inputWrapper}>
           <Text primitive600 medium lxs>
-            Minimum Instances
+            Deployment name
           </Text>
-          <Text primitive600 lxs>
-            0 min / 0 min
+          <Input
+            name="deploymentName"
+            value={deploymentName}
+            setValue={setDeploymentName}
+            placeholder="e.g. app-1-text-generator"
+          />
+          <Text xs primitive600 medium>
+            Give your deployment a name—use lowercase letters and dashes to keep
+            it code-friendly.
           </Text>
         </div>
-        <Input
-          onKeyDown={handleKeyDown}
-          type="number"
-          name="minimamInstances"
-          value={minimumInstances}
-          setValue={setMinimumInstances}
-          placeholder="0"
+        <Dropdown
+          label="Model"
+          placholder="Select a model"
+          dropdownItems={allModels}
+          isActive={showModelDropdown}
+          setIsActive={setShowModelDropdown}
+          selectedValue={selectedModel}
+          setSelectedValue={setSelectedModel}
+          onSelect={(val) => setSelectedModel(val)}
         />
-        <Text xs primitive600 medium>
-          Keep one or more instance running at all times to avoid cold boots.
-        </Text>
-      </div>
-      <div className={classes.inputWrapper}>
-        <div className={classes.labelContainer}>
-          <Text primitive600 medium lxs>
-            Maximum Instances
-          </Text>
-          <Text primitive600 lxs>
-            0 min / 0 min
+        <Dropdown
+          label="Version"
+          placholder="Select a version"
+          dropdownItems={allVersions}
+          isActive={showVersionDropdown}
+          setIsActive={setShowVersionDropdown}
+          selectedValue={selectedVersion}
+          setSelectedValue={setSelectedVersion}
+          onSelect={(val) => setSelectedVersion(val)}
+        />
+        <HardwareDropdown
+          label="Hardware"
+          placholder="Select hardware"
+          dropdownItems={hardwareItems}
+          isActive={showHardwareDropdown}
+          setIsActive={setShowHardwareDropdown}
+          selectedValue={selectedHardware}
+          setSelectedValue={setSelectedHardware}
+          onSelect={(val) => setSelectedHardware(val)}
+        />
+        <div className={classes.inputWrapper}>
+          <div className={classes.labelContainer}>
+            <Text primitive600 medium lxs>
+              Minimum Instances
+            </Text>
+            <Text primitive600 lxs>
+              0 min / 0 min
+            </Text>
+          </div>
+          <Input
+            onKeyDown={handleKeyDown}
+            type="number"
+            name="minimamInstances"
+            value={minimumInstances}
+            setValue={setMinimumInstances}
+            placeholder="0"
+          />
+          <Text xs primitive600 medium>
+            Keep one or more instance running at all times to avoid cold boots.
           </Text>
         </div>
-        <Input
-          onKeyDown={handleKeyDown}
-          type="number"
-          name="maximamInstances"
-          value={MaximumInstances}
-          setValue={setMaximumInstances}
-          placeholder="1"
-        />
-        <Text xs primitive600 medium>
-          Limit the number of concurrent predictions to run at once.{" "}
-        </Text>
+        <div className={classes.inputWrapper}>
+          <div className={classes.labelContainer}>
+            <Text primitive600 medium lxs>
+              Maximum Instances
+            </Text>
+            <Text primitive600 lxs>
+              0 min / 0 min
+            </Text>
+          </div>
+          <Input
+            onKeyDown={handleKeyDown}
+            type="number"
+            name="maximamInstances"
+            value={MaximumInstances}
+            setValue={setMaximumInstances}
+            placeholder="1"
+          />
+          <Text xs primitive600 medium>
+            Limit the number of concurrent predictions to run at once.{" "}
+          </Text>
+        </div>
       </div>
+      <Button
+        lsm
+        wFull
+        className={clsx(classes.button, classes.createDeployment)}
+      >
+        Create Deployment
+      </Button>
     </div>
   );
 };

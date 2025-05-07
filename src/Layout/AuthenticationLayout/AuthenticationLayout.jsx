@@ -7,12 +7,14 @@ const AuthenticationLayout = () => {
   const links = [
     { item: "Support", to: "/support" },
     { item: "Privacy Policy", to: "/privacy-policy" },
-    { item: "Terms & Condition", to: "/term-and-condition" },
+    { item: "Terms & Condition", to: "/terms-of-service" },
   ];
   return (
     <div className={classes.mainWrapper}>
       <div className={classes.wrapper}>
-        <img src={brandLogo} alt="Logo" className={classes.logo} />
+        <Link to="/">
+          <img src={brandLogo} alt="Logo" className={classes.logo} />
+        </Link>
         <Outlet />
 
         <div className={classes.footer}>
