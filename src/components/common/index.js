@@ -8,7 +8,7 @@ import SectionHeading from "./SectionHeading/SectionHeading";
 import HamburgerButton from "./HamburgerButton/HamburgerButton";
 
 import CheckBox from "./CheckBox/CheckBox";
-import ProgressBar from "./ProgressBar/ProgressBar";
+
 import TextArea from "./TextArea/TextArea";
 import HeaderWrapper from "./HeaderWrapper/HeaderWrapper";
 import Header from "./Header/Header";
@@ -32,7 +32,6 @@ export {
   Input,
   SectionHeading,
   CheckBox,
-  ProgressBar,
   TextArea,
   HamburgerButton,
   Header,

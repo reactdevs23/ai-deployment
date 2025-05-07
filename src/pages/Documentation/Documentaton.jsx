@@ -12,7 +12,7 @@ const navSections = [
   {
     heading: "GETTING STARTED",
     items: [
-      { title: "Overview of the Platform", to: "overview" },
+      { title: "Overview of the Platform", to: "overview", offset: -80 },
       { title: "Creating Your First Deployment", to: "firstDeployment" },
       { title: "Uploading a Model", to: "uploadModel" },
       { title: "Setting Up Billing", to: "billing" },

@@ -89,10 +89,10 @@ const Dashboard = () => {
           items={usagesSnapshot}
         />
         <div className={classes.buttonContainer}>
-          <Button sm wFull>
+          <Button sm wFull to="/create-deployment">
             Create a Deployment
           </Button>{" "}
-          <Button sm wFull transparent>
+          <Button sm wFull transparent to="/docs">
             View Documentation
           </Button>
         </div>

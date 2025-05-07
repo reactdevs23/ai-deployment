@@ -1,13 +1,8 @@
 import classes from "./ManageAccountLayout.module.css";
 import { useRef, useState } from "react";
-import { PiSidebar } from "react-icons/pi";
-
 import { useNavigate } from "react-router-dom";
 import clsx from "clsx";
-
-import { Heading, Line, Modal, Text } from "@/components/common";
-import { IoClose } from "react-icons/io5";
-import { RiLogoutCircleRLine } from "react-icons/ri";
+import { Modal } from "@/components/common";
 import {
   apiTokenActiveIcon,
   apiTokenIcon,
@@ -15,12 +10,11 @@ import {
   billingIcon,
   generalActiveIcon,
   generalIcon,
-  logoutIcon,
 } from "@/images";
-import General from "@/Modals/ManageAccount/General/General";
+import General from "@/components/ManageAccount/General/General";
 import Sidebar from "./Sidebar/Sidebar";
-import ApiToken from "@/Modals/ManageAccount/ApiToken/ApiToken";
-import Billing from "@/Modals/ManageAccount/Billing/Billing";
+import ApiToken from "@/components/ManageAccount/ApiToken/ApiToken";
+import Billing from "@/components/ManageAccount/Billing/Billing";
 
 const navItems = [
   { icons: [generalIcon, generalActiveIcon], navItem: "General" },
